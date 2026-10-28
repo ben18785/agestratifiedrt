@@ -22,6 +22,7 @@ python -m cmdstanpy.install_cmdstan    # about 10 minutes; skip if CmdStan is in
 python worked_example.py     # Section 3 numbers (seconds)
 python run_two_groups.py     # Table 1 and Figure 1 (about 5 minutes)
 python run_more_groups.py    # 4 and 8 groups (about 25 minutes)
+python run_waves.py          # survey waves, change date unknown (about 15 minutes)
 ```
 
 Tables and posterior summaries are written to `results/` and figures to `figures/`.
@@ -37,3 +38,4 @@ Seeds are fixed. Results can differ slightly between machines and CmdStan versio
 | `worked_example.py` | Reporting changes the matrix but not its spectral radius |
 | `run_two_groups.py` | Two groups, scenarios S1 and S2 |
 | `run_more_groups.py` | 4 and 8 age-like groups |
+| `run_waves.py` | Two-week survey waves instead of a known change date: noisy survey matrices per wave, free matrices linked across waves, a gradual change, drifting infectiousness |

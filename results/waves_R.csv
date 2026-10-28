@@ -1,0 +1,581 @@
+dataset,model,block,start,median,lo,hi,truth
+A,"Free matrices per wave, random walk",1,1,0.9920102749999999,0.80437618525,1.2320979950000002,1.1
+A,"Free matrices per wave, random walk",2,9,1.05960945,0.93676648175,1.19196864,1.1
+A,"Free matrices per wave, random walk",3,16,1.04221875,0.92591193125,1.1680031275,1.1
+A,"Free matrices per wave, random walk",4,23,1.1184357999999999,1.0052659825,1.252402105,1.1
+A,"Free matrices per wave, random walk",5,30,1.12312455,1.0063277275,1.25374552,1.1
+A,"Free matrices per wave, random walk",6,37,1.1184083500000002,1.00276679,1.247138725,1.1
+A,"Free matrices per wave, random walk",7,44,1.0678046,0.95545618125,1.1920559525,1.1
+A,"Free matrices per wave, random walk",8,51,1.0898587,0.966038317,1.2148247025,1.1
+A,"Free matrices per wave, random walk",9,58,1.1070621,0.9897176585,1.222672075,1.1
+A,"Free matrices per wave, random walk",10,65,1.0964325499999998,0.98743826775,1.208120185,1.1
+A,"Free matrices per wave, random walk",11,72,1.0817034,0.9788577159999999,1.19261071,1.1
+A,"Free matrices per wave, random walk",12,79,1.1314703499999998,1.02705607,1.2477381025,1.1
+A,"Free matrices per wave, random walk",13,86,1.06402815,0.9608421432500001,1.1783961975,1.1
+A,"Free matrices per wave, random walk",14,93,0.9889550899999999,0.8690003635000001,1.1836764825000001,1.1
+A,"Free matrices per wave, random walk",15,100,0.67839726,0.5624367690000001,0.8538192625000001,1.1
+A,"Free matrices per wave, random walk",16,107,0.689352985,0.552652441,0.8746689540000001,1.1
+A,"Free matrices per wave, random walk",17,114,0.77791915,0.6484877795,0.93710086825,1.1
+A,"Free matrices per wave, random walk",18,121,0.864206185,0.7530678885,0.9991025435,1.1
+A,"Free matrices per wave, random walk",19,128,0.92187386,0.8094066492499999,1.048113935,1.1
+A,"Free matrices per wave, random walk",20,135,1.0265585499999998,0.89757597725,1.1786724924999998,1.1
+A,"Free matrices per wave, random walk",21,142,1.1044786,0.976902942,1.252047735,1.1
+A,"Free matrices per wave, random walk",22,149,0.9871525649999999,0.8642606245000001,1.1176250699999999,1.1
+A,"Free matrices per wave, random walk",23,156,1.03092355,0.9107180535,1.16558163,1.1
+A,"Free matrices per wave, random walk",24,163,1.13067725,0.9996338365,1.2681507975,1.1
+A,"Free matrices per wave, random walk",25,170,1.2023701500000001,1.0688442200000001,1.3475538200000001,1.1
+A,"Free matrices per wave, random walk",26,177,1.1549585,1.0310350025,1.2951761800000001,1.1
+A,"Free matrices per wave, random walk",27,184,1.1292436000000001,1.0103508950000002,1.257423175,1.1
+A,"Free matrices per wave, random walk",28,191,1.1076728,0.997556904,1.23651756,1.1
+A,"Free matrices per wave, random walk",29,198,1.1220770500000001,0.970456935,1.3102508650000002,1.1
+A,"Free matrices linked across waves, random walk",1,1,0.95105667,0.78833016,1.1285795450000002,1.1
+A,"Free matrices linked across waves, random walk",2,9,1.0456021,0.9272921802499999,1.1747122425,1.1
+A,"Free matrices linked across waves, random walk",3,16,1.0401864,0.9258942815,1.1643383425,1.1
+A,"Free matrices linked across waves, random walk",4,23,1.1240956500000001,1.0054083725,1.2528455225,1.1
+A,"Free matrices linked across waves, random walk",5,30,1.1271993500000002,1.012131645,1.2591272575,1.1
+A,"Free matrices linked across waves, random walk",6,37,1.1294385,1.012564215,1.255554445,1.1
+A,"Free matrices linked across waves, random walk",7,44,1.07585475,0.96782070025,1.1899143625000002,1.1
+A,"Free matrices linked across waves, random walk",8,51,1.08406995,0.9732561365,1.199612215,1.1
+A,"Free matrices linked across waves, random walk",9,58,1.0984279,0.9951528470000001,1.2223675175000002,1.1
+A,"Free matrices linked across waves, random walk",10,65,1.08955245,0.983599368,1.1990174599999999,1.1
+A,"Free matrices linked across waves, random walk",11,72,1.07780475,0.9767521532500001,1.1890883425,1.1
+A,"Free matrices linked across waves, random walk",12,79,1.1345345500000001,1.032295895,1.2516585599999999,1.1
+A,"Free matrices linked across waves, random walk",13,86,1.0685978500000002,0.9659059595,1.1827266650000001,1.1
+A,"Free matrices linked across waves, random walk",14,93,0.9908052949999999,0.871715432,1.1864272700000003,1.1
+A,"Free matrices linked across waves, random walk",15,100,0.67631734,0.5585400695,0.8880684862500001,1.1
+A,"Free matrices linked across waves, random walk",16,107,0.69124337,0.55404796325,0.925538206,1.1
+A,"Free matrices linked across waves, random walk",17,114,0.78862616,0.6581906325,0.9812814007500001,1.1
+A,"Free matrices linked across waves, random walk",18,121,0.88429543,0.76144850625,1.0441307275000002,1.1
+A,"Free matrices linked across waves, random walk",19,128,0.93600802,0.8194891195,1.084729085,1.1
+A,"Free matrices linked across waves, random walk",20,135,1.0358866500000001,0.9116226795,1.1798479224999998,1.1
+A,"Free matrices linked across waves, random walk",21,142,1.1080824,0.988376796,1.248259775,1.1
+A,"Free matrices linked across waves, random walk",22,149,0.98159169,0.86345742925,1.1050153225000001,1.1
+A,"Free matrices linked across waves, random walk",23,156,1.0293717500000001,0.912758395,1.1558211850000002,1.1
+A,"Free matrices linked across waves, random walk",24,163,1.1281829499999998,1.002688825,1.2665097125,1.1
+A,"Free matrices linked across waves, random walk",25,170,1.2038449,1.0749526325,1.3452257875,1.1
+A,"Free matrices linked across waves, random walk",26,177,1.16545335,1.04395242,1.2977474375000002,1.1
+A,"Free matrices linked across waves, random walk",27,184,1.13401545,1.0201636725,1.2616822025,1.1
+A,"Free matrices linked across waves, random walk",28,191,1.1102855,0.991964981,1.2388681275000002,1.1
+A,"Free matrices linked across waves, random walk",29,198,1.12566625,0.9608065379999999,1.3066149425000002,1.1
+A,"Survey waves x multipliers, weekly blocks",1,1,0.81640661,0.646085529,1.0226690175,1.1
+A,"Survey waves x multipliers, weekly blocks",2,9,1.0511688000000001,0.908230586,1.2054376575,1.1
+A,"Survey waves x multipliers, weekly blocks",3,16,1.00645285,0.86296165525,1.158208665,1.1
+A,"Survey waves x multipliers, weekly blocks",4,23,1.1780598,1.02842425,1.3411932475,1.1
+A,"Survey waves x multipliers, weekly blocks",5,30,1.1579910500000001,1.0124115775,1.3150493775,1.1
+A,"Survey waves x multipliers, weekly blocks",6,37,1.1540885,1.014317935,1.3031775300000001,1.1
+A,"Survey waves x multipliers, weekly blocks",7,44,1.0414513,0.91959452025,1.1744640075000001,1.1
+A,"Survey waves x multipliers, weekly blocks",8,51,0.99706973,0.86893619075,1.13271073,1.1
+A,"Survey waves x multipliers, weekly blocks",9,58,1.0453511999999998,0.9251877457500001,1.1779879325,1.1
+A,"Survey waves x multipliers, weekly blocks",10,65,1.1129300999999998,0.98671365775,1.2497051875,1.1
+A,"Survey waves x multipliers, weekly blocks",11,72,1.113264,0.98566600525,1.2496363725000001,1.1
+A,"Survey waves x multipliers, weekly blocks",12,79,1.1998432,1.0765471325,1.338022915,1.1
+A,"Survey waves x multipliers, weekly blocks",13,86,1.12052445,0.99873109725,1.25294817,1.1
+A,"Survey waves x multipliers, weekly blocks",14,93,1.3386833999999999,1.16586803,1.5568026925,1.1
+A,"Survey waves x multipliers, weekly blocks",15,100,0.752894965,0.63359948425,0.89803367525,1.1
+A,"Survey waves x multipliers, weekly blocks",16,107,0.9591315149999999,0.784559598,1.17136876,1.1
+A,"Survey waves x multipliers, weekly blocks",17,114,1.0240892000000001,0.8616619780000001,1.2173018075,1.1
+A,"Survey waves x multipliers, weekly blocks",18,121,1.0954826,0.93060569425,1.270764135,1.1
+A,"Survey waves x multipliers, weekly blocks",19,128,1.04144125,0.887827557,1.2119710575,1.1
+A,"Survey waves x multipliers, weekly blocks",20,135,1.0767894999999998,0.92594336475,1.247361415,1.1
+A,"Survey waves x multipliers, weekly blocks",21,142,1.1598866,1.007319655,1.3305881,1.1
+A,"Survey waves x multipliers, weekly blocks",22,149,0.89277927,0.76506171775,1.03601908,1.1
+A,"Survey waves x multipliers, weekly blocks",23,156,1.0132653,0.86907012675,1.16942358,1.1
+A,"Survey waves x multipliers, weekly blocks",24,163,1.1546984500000002,1.004375965,1.3277837875,1.1
+A,"Survey waves x multipliers, weekly blocks",25,170,1.2527452000000001,1.0931166550000002,1.4237811625,1.1
+A,"Survey waves x multipliers, weekly blocks",26,177,1.1580507999999998,1.010453155,1.32339329,1.1
+A,"Survey waves x multipliers, weekly blocks",27,184,1.1097373,0.977733608,1.263997795,1.1
+A,"Survey waves x multipliers, weekly blocks",28,191,1.09902185,0.964892157,1.2503224775000001,1.1
+A,"Survey waves x multipliers, weekly blocks",29,198,1.13771025,0.93735132725,1.37353598,1.1
+A,"Survey waves x multipliers, random walk",1,1,0.934343695,0.784821722,1.0902550125,1.1
+A,"Survey waves x multipliers, random walk",2,9,1.01379735,0.9059754565,1.133750955,1.1
+A,"Survey waves x multipliers, random walk",3,16,1.0398721499999999,0.92987315225,1.1539690825000002,1.1
+A,"Survey waves x multipliers, random walk",4,23,1.1271954499999999,1.0151700799999999,1.2602447775,1.1
+A,"Survey waves x multipliers, random walk",5,30,1.135281,1.0280985425,1.2648882425,1.1
+A,"Survey waves x multipliers, random walk",6,37,1.11973605,1.0171860675000002,1.2356148925,1.1
+A,"Survey waves x multipliers, random walk",7,44,1.05968755,0.95387848325,1.161976125,1.1
+A,"Survey waves x multipliers, random walk",8,51,1.02983475,0.92383770275,1.13371369,1.1
+A,"Survey waves x multipliers, random walk",9,58,1.0564588,0.95516860775,1.15857436,1.1
+A,"Survey waves x multipliers, random walk",10,65,1.09662065,1.0015064225,1.2051169350000002,1.1
+A,"Survey waves x multipliers, random walk",11,72,1.1156009999999998,1.0174684475,1.2270694199999999,1.1
+A,"Survey waves x multipliers, random walk",12,79,1.1615237999999999,1.058004585,1.284232315,1.1
+A,"Survey waves x multipliers, random walk",13,86,1.1333902,1.0308930825,1.2416010875,1.1
+A,"Survey waves x multipliers, random walk",14,93,1.1615641,1.0342109975,1.3215929,1.1
+A,"Survey waves x multipliers, random walk",15,100,0.899740005,0.7613272935,1.0633176825000001,1.1
+A,"Survey waves x multipliers, random walk",16,107,0.9473875549999999,0.810581493,1.0909048325,1.1
+A,"Survey waves x multipliers, random walk",17,114,1.0002479499999999,0.87323673625,1.13753514,1.1
+A,"Survey waves x multipliers, random walk",18,121,1.04297525,0.92919276175,1.1775917675,1.1
+A,"Survey waves x multipliers, random walk",19,128,1.0439218499999998,0.9246798322500001,1.1768221374999999,1.1
+A,"Survey waves x multipliers, random walk",20,135,1.0598915,0.9439991325,1.1900428024999998,1.1
+A,"Survey waves x multipliers, random walk",21,142,1.0777654,0.96507391425,1.2107392125,1.1
+A,"Survey waves x multipliers, random walk",22,149,0.98175046,0.8619844877499999,1.1006833675,1.1
+A,"Survey waves x multipliers, random walk",23,156,1.03092175,0.91146241075,1.1505986475,1.1
+A,"Survey waves x multipliers, random walk",24,163,1.119291,1.006172205,1.2514203750000001,1.1
+A,"Survey waves x multipliers, random walk",25,170,1.1779104,1.0566105125,1.3232319775,1.1
+A,"Survey waves x multipliers, random walk",26,177,1.14320265,1.0320235075,1.2657072724999998,1.1
+A,"Survey waves x multipliers, random walk",27,184,1.1090259,0.99892039375,1.2283261675000001,1.1
+A,"Survey waves x multipliers, random walk",28,191,1.0978951000000001,0.9853763935,1.223432005,1.1
+A,"Survey waves x multipliers, random walk",29,198,1.1118214,0.9645515005,1.2826615575,1.1
+A,"Single group, reported totals",1,1,0.86942276,0.6902807185000001,1.085567635,1.1
+A,"Single group, reported totals",2,9,1.08761785,0.94439887425,1.24177648,1.1
+A,"Single group, reported totals",3,16,1.01327925,0.88092854425,1.1583175875,1.1
+A,"Single group, reported totals",4,23,1.1494426,1.011496225,1.30822279,1.1
+A,"Single group, reported totals",5,30,1.13272775,1.0011502325,1.27554872,1.1
+A,"Single group, reported totals",6,37,1.15201455,1.0186840325,1.3004472575,1.1
+A,"Single group, reported totals",7,44,1.0590684000000001,0.94004040025,1.1908562975,1.1
+A,"Single group, reported totals",8,51,1.0790137,0.9548842345,1.21711297,1.1
+A,"Single group, reported totals",9,58,1.1041575,0.9836329725,1.2337585225,1.1
+A,"Single group, reported totals",10,65,1.08719015,0.96660941225,1.2127211949999999,1.1
+A,"Single group, reported totals",11,72,1.0611109,0.94941635975,1.18779648,1.1
+A,"Single group, reported totals",12,79,1.1613552,1.045028985,1.2903725725,1.1
+A,"Single group, reported totals",13,86,1.0705889000000002,0.95656087275,1.1948509375,1.1
+A,"Single group, reported totals",14,93,1.03655645,0.93164919925,1.1477108175000001,1.1
+A,"Single group, reported totals",15,100,0.56439841,0.486121788,0.6517028557500001,1.1
+A,"Single group, reported totals",16,107,0.611105495,0.5288474215,0.706454566,1.1
+A,"Single group, reported totals",17,114,0.74906122,0.6445134825000001,0.86129576775,1.1
+A,"Single group, reported totals",18,121,0.8849009,0.7641522315,1.01659407,1.1
+A,"Single group, reported totals",19,128,0.9082611899999999,0.77282925025,1.0558590975000002,1.1
+A,"Single group, reported totals",20,135,1.0342711,0.8898064857500001,1.1977043075,1.1
+A,"Single group, reported totals",21,142,1.1869032000000002,1.030818875,1.3576909425,1.1
+A,"Single group, reported totals",22,149,0.9261716799999999,0.79061086575,1.07601913,1.1
+A,"Single group, reported totals",23,156,1.01291975,0.8809750190000001,1.15604514,1.1
+A,"Single group, reported totals",24,163,1.14682395,1.00382914,1.3122050425,1.1
+A,"Single group, reported totals",25,170,1.2474539500000001,1.1043173849999999,1.4035747175000002,1.1
+A,"Single group, reported totals",26,177,1.1493867999999998,1.01653417,1.2969327325000002,1.1
+A,"Single group, reported totals",27,184,1.13306395,1.00018350125,1.2714577825,1.1
+A,"Single group, reported totals",28,191,1.1003734,0.97229673525,1.24042177,1.1
+A,"Single group, reported totals",29,198,1.1393559,0.9509912025,1.3589290175,1.1
+B,"Free matrices per wave, random walk",1,1,1.41107255,1.1888294675,1.6739237075,1.3
+B,"Free matrices per wave, random walk",2,9,1.28849085,1.1303107125,1.4606842775,1.3
+B,"Free matrices per wave, random walk",3,16,1.3186627999999998,1.1745709475,1.4711948575,1.3
+B,"Free matrices per wave, random walk",4,23,1.32108605,1.1867134875,1.4767907075000002,1.3
+B,"Free matrices per wave, random walk",5,30,1.28257135,1.158192525,1.4248889775000002,1.3
+B,"Free matrices per wave, random walk",6,37,1.2179647500000002,1.104213905,1.3497241,1.3
+B,"Free matrices per wave, random walk",7,44,1.3218816,1.2015408125,1.4577456574999998,1.3
+B,"Free matrices per wave, random walk",8,51,1.260363,1.144148095,1.3839374325,1.3
+B,"Free matrices per wave, random walk",9,58,1.28545305,1.1669551575,1.4054565024999999,1.3
+B,"Free matrices per wave, random walk",10,65,1.1831022,1.0781723775,1.29897546,1.3
+B,"Free matrices per wave, random walk",11,72,0.9068704000000001,0.82449972275,0.9982742569999999,0.9
+B,"Free matrices per wave, random walk",12,79,0.88117666,0.7975186967500001,0.970566531,0.9
+B,"Free matrices per wave, random walk",13,86,0.8561262999999999,0.7709205057499999,0.94761693825,0.9
+B,"Free matrices per wave, random walk",14,93,0.8849302,0.77192805475,1.0396497325,0.9
+B,"Free matrices per wave, random walk",15,100,0.53423708,0.44703600499999996,0.6572033552500001,0.9
+B,"Free matrices per wave, random walk",16,107,0.5879124899999999,0.45801648250000004,0.7508016365,0.9
+B,"Free matrices per wave, random walk",17,114,0.665501815,0.5326036685000001,0.83574682975,0.9
+B,"Free matrices per wave, random walk",18,121,0.764070035,0.6298932105,0.931660476,0.9
+B,"Free matrices per wave, random walk",19,128,0.99935793,0.86208990675,1.177853365,1.2
+B,"Free matrices per wave, random walk",20,135,0.9977203800000001,0.872021592,1.1329807775,1.2
+B,"Free matrices per wave, random walk",21,142,1.0892670500000001,0.9629414705,1.22850696,1.2
+B,"Free matrices per wave, random walk",22,149,1.15542655,1.0246468425,1.3017328225,1.2
+B,"Free matrices per wave, random walk",23,156,1.207053,1.0735911224999999,1.35746143,1.2
+B,"Free matrices per wave, random walk",24,163,1.22621435,1.0935830775000002,1.36877776,1.2
+B,"Free matrices per wave, random walk",25,170,1.22469985,1.09247556,1.3629986374999998,1.2
+B,"Free matrices per wave, random walk",26,177,1.2256576,1.09920519,1.37131877,1.2
+B,"Free matrices per wave, random walk",27,184,1.30620965,1.1820635775000001,1.4462589525,1.2
+B,"Free matrices per wave, random walk",28,191,1.29799705,1.17300213,1.430144525,1.2
+B,"Free matrices per wave, random walk",29,198,1.2272183,1.063081735,1.4099044325000003,1.2
+B,"Free matrices linked across waves, random walk",1,1,1.43016605,1.2149456324999999,1.6854193725000002,1.3
+B,"Free matrices linked across waves, random walk",2,9,1.27624925,1.1235937599999999,1.4453161225,1.3
+B,"Free matrices linked across waves, random walk",3,16,1.3074809,1.163083085,1.459020245,1.3
+B,"Free matrices linked across waves, random walk",4,23,1.3242336,1.1980339924999999,1.4765959949999998,1.3
+B,"Free matrices linked across waves, random walk",5,30,1.28809235,1.1620652249999999,1.4278626200000002,1.3
+B,"Free matrices linked across waves, random walk",6,37,1.2195282,1.101960995,1.3510787850000001,1.3
+B,"Free matrices linked across waves, random walk",7,44,1.3249529500000001,1.20473155,1.4634683425000001,1.3
+B,"Free matrices linked across waves, random walk",8,51,1.2668042499999999,1.15205769,1.396111185,1.3
+B,"Free matrices linked across waves, random walk",9,58,1.2893424,1.1752511075,1.4098583925000001,1.3
+B,"Free matrices linked across waves, random walk",10,65,1.1886857499999999,1.0864593800000002,1.3073039050000002,1.3
+B,"Free matrices linked across waves, random walk",11,72,0.9118453950000001,0.8288271265,1.006117205,0.9
+B,"Free matrices linked across waves, random walk",12,79,0.886322555,0.8034905047500001,0.98229172225,0.9
+B,"Free matrices linked across waves, random walk",13,86,0.86598076,0.78235819625,0.9702087960000001,0.9
+B,"Free matrices linked across waves, random walk",14,93,0.91984608,0.796681677,1.1072339800000002,0.9
+B,"Free matrices linked across waves, random walk",15,100,0.556036805,0.452112727,0.7078036795,0.9
+B,"Free matrices linked across waves, random walk",16,107,0.606275875,0.455944129,0.79304641125,0.9
+B,"Free matrices linked across waves, random walk",17,114,0.6941347849999999,0.53644210075,0.879765588,0.9
+B,"Free matrices linked across waves, random walk",18,121,0.8236393200000001,0.66735447575,0.994643915,0.9
+B,"Free matrices linked across waves, random walk",19,128,1.04560435,0.8979937595,1.232803445,1.2
+B,"Free matrices linked across waves, random walk",20,135,1.0116461,0.8861880425,1.1575294250000001,1.2
+B,"Free matrices linked across waves, random walk",21,142,1.0994673,0.9652901785,1.245903205,1.2
+B,"Free matrices linked across waves, random walk",22,149,1.164208,1.0252339650000002,1.3260177475,1.2
+B,"Free matrices linked across waves, random walk",23,156,1.20913445,1.0695179075,1.3657269125,1.2
+B,"Free matrices linked across waves, random walk",24,163,1.2267581,1.088190445,1.375594535,1.2
+B,"Free matrices linked across waves, random walk",25,170,1.2256281,1.0950239375,1.3666393125,1.2
+B,"Free matrices linked across waves, random walk",26,177,1.24587925,1.1147135875,1.3939376749999999,1.2
+B,"Free matrices linked across waves, random walk",27,184,1.3171167,1.188493015,1.4596929175,1.2
+B,"Free matrices linked across waves, random walk",28,191,1.2946814,1.1639049225,1.43703759,1.2
+B,"Free matrices linked across waves, random walk",29,198,1.2245389000000002,1.0467255775,1.4169387125000001,1.2
+B,"Survey waves x multipliers, weekly blocks",1,1,1.4739273,1.217237015,1.7783428099999998,1.3
+B,"Survey waves x multipliers, weekly blocks",2,9,1.2097547,1.0527614724999999,1.3796658375,1.3
+B,"Survey waves x multipliers, weekly blocks",3,16,1.3011766,1.1455461800000002,1.4749437125,1.3
+B,"Survey waves x multipliers, weekly blocks",4,23,1.3107045,1.1656712325,1.46967291,1.3
+B,"Survey waves x multipliers, weekly blocks",5,30,1.2989576999999999,1.154520335,1.4605863825,1.3
+B,"Survey waves x multipliers, weekly blocks",6,37,1.2293357999999999,1.08932754,1.374522625,1.3
+B,"Survey waves x multipliers, weekly blocks",7,44,1.3879736,1.2416342175,1.54218965,1.3
+B,"Survey waves x multipliers, weekly blocks",8,51,1.3073077,1.1725271449999999,1.46080954,1.3
+B,"Survey waves x multipliers, weekly blocks",9,58,1.3321928,1.20287145,1.4885354425,1.3
+B,"Survey waves x multipliers, weekly blocks",10,65,1.2462266,1.1319931349999999,1.369924515,1.3
+B,"Survey waves x multipliers, weekly blocks",11,72,0.9066227,0.8155179960000001,1.00630407,0.9
+B,"Survey waves x multipliers, weekly blocks",12,79,0.89804034,0.8064725567500001,1.0030292875,0.9
+B,"Survey waves x multipliers, weekly blocks",13,86,0.87102016,0.77855744925,0.97163093125,0.9
+B,"Survey waves x multipliers, weekly blocks",14,93,1.20777805,1.04504703,1.3841554375,0.9
+B,"Survey waves x multipliers, weekly blocks",15,100,0.621530115,0.52066159925,0.739478514,0.9
+B,"Survey waves x multipliers, weekly blocks",16,107,0.82204744,0.67873239025,0.9829628095,0.9
+B,"Survey waves x multipliers, weekly blocks",17,114,0.8444987399999999,0.7055182945,1.0016801100000001,0.9
+B,"Survey waves x multipliers, weekly blocks",18,121,0.90166989,0.76692328525,1.0531480375,0.9
+B,"Survey waves x multipliers, weekly blocks",19,128,1.1434319,0.987378882,1.3149989475,1.2
+B,"Survey waves x multipliers, weekly blocks",20,135,1.0263763,0.87930315475,1.1855697375,1.2
+B,"Survey waves x multipliers, weekly blocks",21,142,1.1439545,0.9902445585,1.3198449175,1.2
+B,"Survey waves x multipliers, weekly blocks",22,149,1.1345135000000002,0.9941366519999999,1.3016780650000002,1.2
+B,"Survey waves x multipliers, weekly blocks",23,156,1.1798947499999999,1.02860877,1.33790147,1.2
+B,"Survey waves x multipliers, weekly blocks",24,163,1.2448543,1.0900242025,1.406648535,1.2
+B,"Survey waves x multipliers, weekly blocks",25,170,1.2523824000000001,1.106430735,1.40985309,1.2
+B,"Survey waves x multipliers, weekly blocks",26,177,1.36967725,1.2136178275,1.5382026450000001,1.2
+B,"Survey waves x multipliers, weekly blocks",27,184,1.41390255,1.2649002275,1.58350647,1.2
+B,"Survey waves x multipliers, weekly blocks",28,191,1.2342509000000002,1.1076459275,1.3838299025,1.2
+B,"Survey waves x multipliers, weekly blocks",29,198,1.1483538,0.97167022725,1.3507123775,1.2
+B,"Survey waves x multipliers, random walk",1,1,1.39654145,1.1800581675000001,1.65111536,1.3
+B,"Survey waves x multipliers, random walk",2,9,1.2451693000000001,1.10219855,1.4101547374999999,1.3
+B,"Survey waves x multipliers, random walk",3,16,1.28998375,1.1526114674999999,1.4428308825,1.3
+B,"Survey waves x multipliers, random walk",4,23,1.3051654,1.1700197775,1.449506565,1.3
+B,"Survey waves x multipliers, random walk",5,30,1.29444985,1.1676359,1.431920455,1.3
+B,"Survey waves x multipliers, random walk",6,37,1.2528562,1.1288944425,1.3809519825,1.3
+B,"Survey waves x multipliers, random walk",7,44,1.3594922999999999,1.2313867275000001,1.500681645,1.3
+B,"Survey waves x multipliers, random walk",8,51,1.29884455,1.1789752850000002,1.4352767825000001,1.3
+B,"Survey waves x multipliers, random walk",9,58,1.30715715,1.1880529175,1.432103235,1.3
+B,"Survey waves x multipliers, random walk",10,65,1.2132711500000002,1.109856025,1.3341441649999999,1.3
+B,"Survey waves x multipliers, random walk",11,72,0.933424085,0.8470594005,1.025981375,0.9
+B,"Survey waves x multipliers, random walk",12,79,0.899692575,0.817230873,0.99493314525,0.9
+B,"Survey waves x multipliers, random walk",13,86,0.893657155,0.80903986475,0.9834077605,0.9
+B,"Survey waves x multipliers, random walk",14,93,1.06874525,0.943294186,1.2308132825,0.9
+B,"Survey waves x multipliers, random walk",15,100,0.6940889,0.589428464,0.8135222305,0.9
+B,"Survey waves x multipliers, random walk",16,107,0.780970445,0.67080393625,0.91143799675,0.9
+B,"Survey waves x multipliers, random walk",17,114,0.8300041149999999,0.7139044315,0.96224244225,0.9
+B,"Survey waves x multipliers, random walk",18,121,0.90865871,0.789454997,1.031653675,0.9
+B,"Survey waves x multipliers, random walk",19,128,1.07205665,0.9475511967500001,1.21092483,1.2
+B,"Survey waves x multipliers, random walk",20,135,1.0388264,0.914138715,1.1778627025000001,1.2
+B,"Survey waves x multipliers, random walk",21,142,1.1129744499999998,0.9850861585,1.2597591350000001,1.2
+B,"Survey waves x multipliers, random walk",22,149,1.1303675499999999,0.9988695355,1.2703301175000001,1.2
+B,"Survey waves x multipliers, random walk",23,156,1.1697278,1.036210965,1.31210899,1.2
+B,"Survey waves x multipliers, random walk",24,163,1.22736965,1.094823205,1.372058645,1.2
+B,"Survey waves x multipliers, random walk",25,170,1.2552226499999999,1.12683957,1.39441632,1.2
+B,"Survey waves x multipliers, random walk",26,177,1.34302925,1.2053504025,1.4946039775000002,1.2
+B,"Survey waves x multipliers, random walk",27,184,1.36951095,1.23625425,1.5174207149999999,1.2
+B,"Survey waves x multipliers, random walk",28,191,1.23379915,1.1191600625,1.3606586950000001,1.2
+B,"Survey waves x multipliers, random walk",29,198,1.1605599,1.0050593125,1.331858825,1.2
+B,"Single group, reported totals",1,1,1.48676045,1.2327768799999999,1.76647153,1.3
+B,"Single group, reported totals",2,9,1.2557746,1.095712625,1.4333274674999998,1.3
+B,"Single group, reported totals",3,16,1.3151103,1.1654315524999999,1.4824826949999999,1.3
+B,"Single group, reported totals",4,23,1.3353085,1.1968500375,1.4985122475000001,1.3
+B,"Single group, reported totals",5,30,1.28403995,1.1511190825,1.4342228925,1.3
+B,"Single group, reported totals",6,37,1.20196295,1.0750621075,1.3419026725,1.3
+B,"Single group, reported totals",7,44,1.3478070500000001,1.2164018349999999,1.4884943325,1.3
+B,"Single group, reported totals",8,51,1.2448639,1.124033905,1.3748836375,1.3
+B,"Single group, reported totals",9,58,1.3123946499999999,1.1966496925,1.44216304,1.3
+B,"Single group, reported totals",10,65,1.20606725,1.101833095,1.3237805025,1.3
+B,"Single group, reported totals",11,72,0.88751209,0.803005921,0.97790476375,0.9
+B,"Single group, reported totals",12,79,0.87390037,0.7888322605,0.9638811255,0.9
+B,"Single group, reported totals",13,86,0.858100855,0.775453292,0.95047087575,0.9
+B,"Single group, reported totals",14,93,0.9388016800000001,0.8475953589999999,1.040799775,0.9
+B,"Single group, reported totals",15,100,0.44278623500000003,0.38301253125,0.507475815,0.9
+B,"Single group, reported totals",16,107,0.487317385,0.42153323375,0.5620720822499999,0.9
+B,"Single group, reported totals",17,114,0.5812566699999999,0.49623136525,0.6759409855,0.9
+B,"Single group, reported totals",18,121,0.7158408300000001,0.61100961125,0.82906590025,0.9
+B,"Single group, reported totals",19,128,1.0502801499999999,0.9131702785,1.20735184,1.2
+B,"Single group, reported totals",20,135,0.9881571250000001,0.849551243,1.1352154749999999,1.2
+B,"Single group, reported totals",21,142,1.09765095,0.9527226772499999,1.2575142425,1.2
+B,"Single group, reported totals",22,149,1.1592611,1.0129761925,1.3172718225,1.2
+B,"Single group, reported totals",23,156,1.2122747999999999,1.0687898475,1.3713442175,1.2
+B,"Single group, reported totals",24,163,1.23594325,1.09205645,1.3948613375,1.2
+B,"Single group, reported totals",25,170,1.22484585,1.0859982375000001,1.3774676250000002,1.2
+B,"Single group, reported totals",26,177,1.2113926,1.0740234524999999,1.36680681,1.2
+B,"Single group, reported totals",27,184,1.32439365,1.1865230375,1.4769233275,1.2
+B,"Single group, reported totals",28,191,1.29911085,1.1678539575,1.4410871725,1.2
+B,"Single group, reported totals",29,198,1.2217861,1.04221075,1.4250913425,1.2
+C,"Free matrices per wave, random walk",1,1,1.23483885,1.1095316375,1.45814477,1.3
+C,"Free matrices per wave, random walk",2,9,1.21949195,1.1311950425,1.37388263,1.3
+C,"Free matrices per wave, random walk",3,16,1.2850492999999998,1.15494844,1.44072023,1.3
+C,"Free matrices per wave, random walk",4,23,1.213814,1.129992535,1.3851709900000002,1.3
+C,"Free matrices per wave, random walk",5,30,1.31398145,1.1181393849999999,1.47136266,1.3
+C,"Free matrices per wave, random walk",6,37,1.3070637,1.11298991,1.4409455649999998,1.3
+C,"Free matrices per wave, random walk",7,44,1.32199255,1.0716926725,1.4465324825,1.3
+C,"Free matrices per wave, random walk",8,51,1.27493025,1.0493311725,1.3953936325,1.3
+C,"Free matrices per wave, random walk",9,58,1.2784284000000001,1.0160086074999999,1.392183045,1.3
+C,"Free matrices per wave, random walk",10,65,1.07807655,0.99676493525,1.1752162925,1.3
+C,"Free matrices per wave, random walk",11,72,0.94175308,0.8586448107500001,0.99604156975,0.9
+C,"Free matrices per wave, random walk",12,79,0.916425475,0.835941828,0.999424802,0.9
+C,"Free matrices per wave, random walk",13,86,0.886588905,0.80734426775,1.00936457,0.9
+C,"Free matrices per wave, random walk",14,93,0.89923383,0.816727065,0.98012954625,0.9
+C,"Free matrices per wave, random walk",15,100,0.8689305549999999,0.776697999,0.988595609,0.9
+C,"Free matrices per wave, random walk",16,107,0.777872255,0.62238422425,0.959063117,0.9
+C,"Free matrices per wave, random walk",17,114,0.73210112,0.5889102455,0.95338265275,0.9
+C,"Free matrices per wave, random walk",18,121,0.7345892700000001,0.583457617,0.9864759860000001,0.9
+C,"Free matrices per wave, random walk",19,128,0.82604935,0.69233427425,1.00184716,1.2
+C,"Free matrices per wave, random walk",20,135,0.915716545,0.79048200275,1.0067310425,1.2
+C,"Free matrices per wave, random walk",21,142,1.0982636000000001,1.016233485,1.258239945,1.2
+C,"Free matrices per wave, random walk",22,149,1.1374151499999998,1.0485117425000001,1.309163815,1.2
+C,"Free matrices per wave, random walk",23,156,1.0910621,1.0018400325,1.2265865925,1.2
+C,"Free matrices per wave, random walk",24,163,1.1224129,1.02725084,1.25043536,1.2
+C,"Free matrices per wave, random walk",25,170,1.1642869,1.0838763550000001,1.305981805,1.2
+C,"Free matrices per wave, random walk",26,177,1.2480814,1.1625576175,1.396753775,1.2
+C,"Free matrices per wave, random walk",27,184,1.23539545,1.161954785,1.36815507,1.2
+C,"Free matrices per wave, random walk",28,191,1.2035889,1.1060755925,1.3094563075,1.2
+C,"Free matrices per wave, random walk",29,198,1.3034297499999998,1.1819989125,1.4983231399999999,1.2
+C,"Free matrices linked across waves, random walk",1,1,1.27743535,1.1016342025,1.4822585775000001,1.3
+C,"Free matrices linked across waves, random walk",2,9,1.2527100500000001,1.12666725,1.397972445,1.3
+C,"Free matrices linked across waves, random walk",3,16,1.31851595,1.193939805,1.4569798725,1.3
+C,"Free matrices linked across waves, random walk",4,23,1.2569352,1.1402334424999998,1.3866385074999998,1.3
+C,"Free matrices linked across waves, random walk",5,30,1.3480236,1.2359953000000001,1.4792146925,1.3
+C,"Free matrices linked across waves, random walk",6,37,1.32734315,1.2122420125,1.440869885,1.3
+C,"Free matrices linked across waves, random walk",7,44,1.3393435500000002,1.2327758599999998,1.44666253,1.3
+C,"Free matrices linked across waves, random walk",8,51,1.2964163499999999,1.198675195,1.3958443825,1.3
+C,"Free matrices linked across waves, random walk",9,58,1.2952503499999999,1.195472935,1.3947709875,1.3
+C,"Free matrices linked across waves, random walk",10,65,1.0785559999999998,0.9929578955,1.1694504000000001,1.3
+C,"Free matrices linked across waves, random walk",11,72,0.913627675,0.842233883,0.988131114,0.9
+C,"Free matrices linked across waves, random walk",12,79,0.9002045999999999,0.83094745025,0.9741681825,0.9
+C,"Free matrices linked across waves, random walk",13,86,0.878279675,0.8076730357499999,0.96013052275,0.9
+C,"Free matrices linked across waves, random walk",14,93,0.91024591,0.82831630075,1.022034905,0.9
+C,"Free matrices linked across waves, random walk",15,100,0.876771655,0.78613773725,1.004123565,0.9
+C,"Free matrices linked across waves, random walk",16,107,0.776145205,0.6322356775,0.9460850305,0.9
+C,"Free matrices linked across waves, random walk",17,114,0.732807215,0.597642116,0.8907188840000001,0.9
+C,"Free matrices linked across waves, random walk",18,121,0.741514525,0.60630745775,0.8974565357500001,0.9
+C,"Free matrices linked across waves, random walk",19,128,0.836833945,0.711960178,0.9951378612499999,1.2
+C,"Free matrices linked across waves, random walk",20,135,0.931897325,0.80771337675,1.0812314200000002,1.2
+C,"Free matrices linked across waves, random walk",21,142,1.18414325,1.0499374975,1.3398338225000002,1.2
+C,"Free matrices linked across waves, random walk",22,149,1.2430132,1.1028265524999998,1.4185642875,1.2
+C,"Free matrices linked across waves, random walk",23,156,1.1739454999999999,1.04664314,1.323879975,1.2
+C,"Free matrices linked across waves, random walk",24,163,1.184272,1.0609476425000002,1.3231143,1.2
+C,"Free matrices linked across waves, random walk",25,170,1.22642225,1.1063686625,1.3621543950000001,1.2
+C,"Free matrices linked across waves, random walk",26,177,1.3017516,1.1833061075000002,1.440796685,1.2
+C,"Free matrices linked across waves, random walk",27,184,1.2688076,1.159963705,1.3880908950000002,1.2
+C,"Free matrices linked across waves, random walk",28,191,1.19048925,1.0785223775,1.3039041175,1.2
+C,"Free matrices linked across waves, random walk",29,198,1.3209433000000002,1.162409215,1.4980747424999998,1.2
+C,"Survey waves x multipliers, weekly blocks",1,1,1.3320245,1.1058675,1.597432475,1.3
+C,"Survey waves x multipliers, weekly blocks",2,9,1.2883731,1.1368216775000002,1.453566835,1.3
+C,"Survey waves x multipliers, weekly blocks",3,16,1.44091685,1.283312055,1.6000558349999998,1.3
+C,"Survey waves x multipliers, weekly blocks",4,23,1.27317495,1.1370984899999999,1.4253924949999999,1.3
+C,"Survey waves x multipliers, weekly blocks",5,30,1.3943983,1.2613251375,1.5401964625,1.3
+C,"Survey waves x multipliers, weekly blocks",6,37,1.23968125,1.1207892400000001,1.3708341525,1.3
+C,"Survey waves x multipliers, weekly blocks",7,44,1.2681635999999998,1.1460681625,1.3955823875,1.3
+C,"Survey waves x multipliers, weekly blocks",8,51,1.25277375,1.1437651675,1.375228385,1.3
+C,"Survey waves x multipliers, weekly blocks",9,58,1.28948475,1.183275705,1.4030950075,1.3
+C,"Survey waves x multipliers, weekly blocks",10,65,1.0618793499999999,0.9708349049999999,1.156446025,1.3
+C,"Survey waves x multipliers, weekly blocks",11,72,0.89553065,0.8158292112500001,0.9767582340000001,0.9
+C,"Survey waves x multipliers, weekly blocks",12,79,0.91781414,0.8404602095,1.00400146,0.9
+C,"Survey waves x multipliers, weekly blocks",13,86,0.90154291,0.82201046675,0.98431755225,0.9
+C,"Survey waves x multipliers, weekly blocks",14,93,0.97192753,0.88012927025,1.0689207674999999,0.9
+C,"Survey waves x multipliers, weekly blocks",15,100,0.9480469499999999,0.85712407125,1.04642299,0.9
+C,"Survey waves x multipliers, weekly blocks",16,107,0.91272519,0.7753686009999999,1.06780278,0.9
+C,"Survey waves x multipliers, weekly blocks",17,114,0.82649672,0.7093167437500001,0.9607453622500001,0.9
+C,"Survey waves x multipliers, weekly blocks",18,121,0.925750375,0.78219843825,1.10196332,0.9
+C,"Survey waves x multipliers, weekly blocks",19,128,1.04527065,0.8907469505,1.2251410600000001,1.2
+C,"Survey waves x multipliers, weekly blocks",20,135,0.97515723,0.8292554350000001,1.13333615,1.2
+C,"Survey waves x multipliers, weekly blocks",21,142,1.3412677,1.17388283,1.5217635325,1.2
+C,"Survey waves x multipliers, weekly blocks",22,149,1.31150705,1.15467548,1.4897805925,1.2
+C,"Survey waves x multipliers, weekly blocks",23,156,1.1646749,1.01888487,1.3191099975,1.2
+C,"Survey waves x multipliers, weekly blocks",24,163,1.2298966,1.0878905425,1.382660675,1.2
+C,"Survey waves x multipliers, weekly blocks",25,170,1.25363585,1.1127129949999999,1.4036288675000002,1.2
+C,"Survey waves x multipliers, weekly blocks",26,177,1.29741155,1.1673855175,1.448621905,1.2
+C,"Survey waves x multipliers, weekly blocks",27,184,1.23706315,1.12025438,1.36672467,1.2
+C,"Survey waves x multipliers, weekly blocks",28,191,1.1229117,1.017746065,1.2429410950000002,1.2
+C,"Survey waves x multipliers, weekly blocks",29,198,1.3556903999999999,1.177056885,1.5455006775,1.2
+C,"Survey waves x multipliers, random walk",1,1,1.3165432,1.1515751825,1.5036722275,1.3
+C,"Survey waves x multipliers, random walk",2,9,1.3171932,1.1970699550000001,1.4481045225,1.3
+C,"Survey waves x multipliers, random walk",3,16,1.37132245,1.2566294574999999,1.5023608824999999,1.3
+C,"Survey waves x multipliers, random walk",4,23,1.3113761,1.1996706875,1.42247293,1.3
+C,"Survey waves x multipliers, random walk",5,30,1.3414312,1.2322484975,1.4571835675,1.3
+C,"Survey waves x multipliers, random walk",6,37,1.2583103,1.1566002975,1.366319485,1.3
+C,"Survey waves x multipliers, random walk",7,44,1.2567833,1.1610744425000001,1.3587535375,1.3
+C,"Survey waves x multipliers, random walk",8,51,1.2462148499999999,1.155675625,1.344229805,1.3
+C,"Survey waves x multipliers, random walk",9,58,1.235911,1.14304732,1.3419710825,1.3
+C,"Survey waves x multipliers, random walk",10,65,1.06158,0.982687815,1.14299504,1.3
+C,"Survey waves x multipliers, random walk",11,72,0.92625409,0.8547187825,0.99650800675,0.9
+C,"Survey waves x multipliers, random walk",12,79,0.915481435,0.8505046332499999,0.9860079795,0.9
+C,"Survey waves x multipliers, random walk",13,86,0.9115730200000001,0.84507080475,0.980257095,0.9
+C,"Survey waves x multipliers, random walk",14,93,0.9502260499999999,0.8801523615,1.022555655,0.9
+C,"Survey waves x multipliers, random walk",15,100,0.9395588349999999,0.8634612,1.025497285,0.9
+C,"Survey waves x multipliers, random walk",16,107,0.912210945,0.8121863495,1.0243117350000002,0.9
+C,"Survey waves x multipliers, random walk",17,114,0.88011328,0.7740397725,0.995160202,0.9
+C,"Survey waves x multipliers, random walk",18,121,0.940402045,0.82641722275,1.066321825,0.9
+C,"Survey waves x multipliers, random walk",19,128,1.01750465,0.90428951525,1.1442486275000001,1.2
+C,"Survey waves x multipliers, random walk",20,135,1.05558935,0.9375348947500001,1.1725767975,1.2
+C,"Survey waves x multipliers, random walk",21,142,1.2339177000000001,1.113125685,1.3726708175,1.2
+C,"Survey waves x multipliers, random walk",22,149,1.2582252,1.1436272575,1.3892129375,1.2
+C,"Survey waves x multipliers, random walk",23,156,1.20279355,1.086484145,1.32623146,1.2
+C,"Survey waves x multipliers, random walk",24,163,1.2271253,1.11033152,1.3489748000000001,1.2
+C,"Survey waves x multipliers, random walk",25,170,1.2473638500000002,1.13431873,1.3705612075,1.2
+C,"Survey waves x multipliers, random walk",26,177,1.267311,1.162847075,1.3835741875,1.2
+C,"Survey waves x multipliers, random walk",27,184,1.2247910499999999,1.129508365,1.3313516475,1.2
+C,"Survey waves x multipliers, random walk",28,191,1.17314295,1.0743616925,1.2780674024999998,1.2
+C,"Survey waves x multipliers, random walk",29,198,1.2724401,1.136838995,1.4325452650000001,1.2
+C,"Single group, reported totals",1,1,1.30299915,1.0708881625,1.55862187,1.3
+C,"Single group, reported totals",2,9,1.2201168500000001,1.0762678449999998,1.381389465,1.3
+C,"Single group, reported totals",3,16,1.35590575,1.2144518375,1.5082128725,1.3
+C,"Single group, reported totals",4,23,1.1968934999999998,1.06891006,1.3382787900000002,1.3
+C,"Single group, reported totals",5,30,1.363826,1.232277495,1.5065736525,1.3
+C,"Single group, reported totals",6,37,1.33017235,1.2050824375,1.462516385,1.3
+C,"Single group, reported totals",7,44,1.3577427499999999,1.2402952625,1.4860782600000002,1.3
+C,"Single group, reported totals",8,51,1.2927096,1.1812762675,1.4104971899999998,1.3
+C,"Single group, reported totals",9,58,1.33455295,1.2314688200000001,1.4425685,1.3
+C,"Single group, reported totals",10,65,1.08614015,0.99728418575,1.1798861575,1.3
+C,"Single group, reported totals",11,72,0.8980721899999999,0.82184349975,0.9764488532500001,0.9
+C,"Single group, reported totals",12,79,0.901688805,0.8208498547499999,0.98773977675,0.9
+C,"Single group, reported totals",13,86,0.8617262,0.78497908475,0.94284518975,0.9
+C,"Single group, reported totals",14,93,0.898194635,0.817580026,0.98087804425,0.9
+C,"Single group, reported totals",15,100,0.84793377,0.7657846374999999,0.938183535,0.9
+C,"Single group, reported totals",16,107,0.626716735,0.557745062,0.70159922225,0.9
+C,"Single group, reported totals",17,114,0.60366797,0.5294949715,0.686362683,0.9
+C,"Single group, reported totals",18,121,0.59707392,0.5178418465,0.6891587005,0.9
+C,"Single group, reported totals",19,128,0.75045576,0.65489843425,0.85690498,1.2
+C,"Single group, reported totals",20,135,0.82183458,0.71122731225,0.94477969725,1.2
+C,"Single group, reported totals",21,142,1.2160761,1.0760062750000001,1.363786545,1.2
+C,"Single group, reported totals",22,149,1.2057737,1.0671250625000002,1.3593240675,1.2
+C,"Single group, reported totals",23,156,1.08546495,0.9606740725,1.2201874625000002,1.2
+C,"Single group, reported totals",24,163,1.1211224,0.99811063325,1.2576964875,1.2
+C,"Single group, reported totals",25,170,1.1836267999999999,1.060486585,1.31310191,1.2
+C,"Single group, reported totals",26,177,1.3086449,1.175699595,1.4509544399999998,1.2
+C,"Single group, reported totals",27,184,1.2788992000000001,1.1511515075,1.4103189,1.2
+C,"Single group, reported totals",28,191,1.16499395,1.0454283925,1.293158795,1.2
+C,"Single group, reported totals",29,198,1.39362955,1.2140201375000002,1.59493681,1.2
+D,"Free matrices per wave, random walk",1,1,1.02559495,0.86810182725,1.1948678925,1.1
+D,"Free matrices per wave, random walk",2,9,1.1031112,0.9872902127500001,1.232359775,1.1
+D,"Free matrices per wave, random walk",3,16,1.1061317499999999,0.994140069,1.2291492775,1.1
+D,"Free matrices per wave, random walk",4,23,1.1425928,1.0349300825,1.2686027,1.1
+D,"Free matrices per wave, random walk",5,30,1.15006005,1.0424568425,1.2787596600000002,1.1
+D,"Free matrices per wave, random walk",6,37,1.05170715,0.9440741055,1.16827294,1.1
+D,"Free matrices per wave, random walk",7,44,1.0975766,0.99194306275,1.2206510975,1.1
+D,"Free matrices per wave, random walk",8,51,1.0607672,0.9385660855,1.2273374975,1.1
+D,"Free matrices per wave, random walk",9,58,0.9913231849999999,0.8780624665,1.1321407225,1.1
+D,"Free matrices per wave, random walk",10,65,1.0459234,0.94327328925,1.1548404374999999,1.1
+D,"Free matrices per wave, random walk",11,72,1.1376323,1.038073285,1.25709564,1.1
+D,"Free matrices per wave, random walk",12,79,1.1237529,1.0210694025,1.236759295,1.1
+D,"Free matrices per wave, random walk",13,86,1.06460325,0.96339748175,1.1715479225,1.1
+D,"Free matrices per wave, random walk",14,93,1.0357443,0.936502341,1.160475175,1.1
+D,"Free matrices per wave, random walk",15,100,0.78638136,0.6845253440000001,0.91381435175,1.1
+D,"Free matrices per wave, random walk",16,107,0.76662734,0.62295451025,0.9321660292500001,1.1
+D,"Free matrices per wave, random walk",17,114,0.9046249099999999,0.7715875059999999,1.0585180324999999,1.1
+D,"Free matrices per wave, random walk",18,121,0.97387924,0.85381195575,1.1126839525,1.1
+D,"Free matrices per wave, random walk",19,128,0.992335545,0.88139502925,1.1104007075000002,1.1
+D,"Free matrices per wave, random walk",20,135,0.977085085,0.86526979,1.1030931,1.1
+D,"Free matrices per wave, random walk",21,142,1.03125235,0.925535136,1.1606940600000002,1.1
+D,"Free matrices per wave, random walk",22,149,1.0412224,0.937605018,1.1609842775,1.1
+D,"Free matrices per wave, random walk",23,156,1.00193895,0.8899540155000001,1.1170997125,1.1
+D,"Free matrices per wave, random walk",24,163,1.13961875,1.0230480450000001,1.27761692,1.1
+D,"Free matrices per wave, random walk",25,170,1.09644765,0.9874685895,1.2168051425,1.1
+D,"Free matrices per wave, random walk",26,177,1.04419565,0.9375436855,1.1645627825,1.1
+D,"Free matrices per wave, random walk",27,184,1.02846375,0.9223914744999999,1.1417340900000001,1.1
+D,"Free matrices per wave, random walk",28,191,1.1777639500000001,1.0531003349999999,1.3028318025,1.1
+D,"Free matrices per wave, random walk",29,198,1.2611953,1.0876836900000002,1.45892191,1.1
+D,"Free matrices linked across waves, random walk",1,1,1.0339221,0.8709650710000001,1.2004445575,1.1
+D,"Free matrices linked across waves, random walk",2,9,1.1047443499999998,0.98817191925,1.237204915,1.1
+D,"Free matrices linked across waves, random walk",3,16,1.1083545,0.9981224545,1.2320680175,1.1
+D,"Free matrices linked across waves, random walk",4,23,1.1434567,1.04100982,1.270136695,1.1
+D,"Free matrices linked across waves, random walk",5,30,1.14922035,1.0436063649999998,1.273308905,1.1
+D,"Free matrices linked across waves, random walk",6,37,1.05663565,0.9492259820000001,1.16837496,1.1
+D,"Free matrices linked across waves, random walk",7,44,1.0972970499999999,0.99240718225,1.214817515,1.1
+D,"Free matrices linked across waves, random walk",8,51,1.06442805,0.95577844325,1.199642675,1.1
+D,"Free matrices linked across waves, random walk",9,58,0.999166435,0.8888149395,1.1214358500000001,1.1
+D,"Free matrices linked across waves, random walk",10,65,1.05054955,0.95221673725,1.1532718300000002,1.1
+D,"Free matrices linked across waves, random walk",11,72,1.1375777,1.0381007325,1.2526222025,1.1
+D,"Free matrices linked across waves, random walk",12,79,1.1256308000000002,1.0238991450000001,1.244801515,1.1
+D,"Free matrices linked across waves, random walk",13,86,1.08011845,0.97779748125,1.191676655,1.1
+D,"Free matrices linked across waves, random walk",14,93,1.0771505000000001,0.963098077,1.232532215,1.1
+D,"Free matrices linked across waves, random walk",15,100,0.838619735,0.7045229387499999,1.031691565,1.1
+D,"Free matrices linked across waves, random walk",16,107,0.8188499499999999,0.6490265590000001,1.038333215,1.1
+D,"Free matrices linked across waves, random walk",17,114,0.948082935,0.79183210475,1.1231463174999998,1.1
+D,"Free matrices linked across waves, random walk",18,121,1.00906525,0.8703773357500001,1.167035435,1.1
+D,"Free matrices linked across waves, random walk",19,128,1.02671515,0.91266615675,1.1621744175000002,1.1
+D,"Free matrices linked across waves, random walk",20,135,1.02146435,0.8980370240000001,1.1528248125,1.1
+D,"Free matrices linked across waves, random walk",21,142,1.0644037499999999,0.9483376545000001,1.191692745,1.1
+D,"Free matrices linked across waves, random walk",22,149,1.04974945,0.93764280325,1.176120375,1.1
+D,"Free matrices linked across waves, random walk",23,156,1.005099,0.8921777065000001,1.1236777675,1.1
+D,"Free matrices linked across waves, random walk",24,163,1.1365915,1.0236503275,1.2698180825,1.1
+D,"Free matrices linked across waves, random walk",25,170,1.10556595,0.993863316,1.224800785,1.1
+D,"Free matrices linked across waves, random walk",26,177,1.0602327,0.94665637975,1.1807441425,1.1
+D,"Free matrices linked across waves, random walk",27,184,1.03827555,0.92982181325,1.1545344275,1.1
+D,"Free matrices linked across waves, random walk",28,191,1.162036,1.0327906574999999,1.292369345,1.1
+D,"Free matrices linked across waves, random walk",29,198,1.2374849,1.05827653,1.4357014675000002,1.1
+D,"Survey waves x multipliers, weekly blocks",1,1,0.98031678,0.7831725595,1.2079767125,1.1
+D,"Survey waves x multipliers, weekly blocks",2,9,1.1614387000000002,1.008370055,1.3301559349999998,1.1
+D,"Survey waves x multipliers, weekly blocks",3,16,1.1297508,0.9924317145,1.2768207475,1.1
+D,"Survey waves x multipliers, weekly blocks",4,23,1.21192815,1.073119005,1.36296608,1.1
+D,"Survey waves x multipliers, weekly blocks",5,30,1.23927425,1.0923718075,1.3948274475,1.1
+D,"Survey waves x multipliers, weekly blocks",6,37,1.0024165,0.88406546425,1.1300244925,1.1
+D,"Survey waves x multipliers, weekly blocks",7,44,1.13565185,1.0045228875,1.27499713,1.1
+D,"Survey waves x multipliers, weekly blocks",8,51,1.07061885,0.9501378075,1.20797079,1.1
+D,"Survey waves x multipliers, weekly blocks",9,58,0.9331913350000001,0.82357638325,1.05604739,1.1
+D,"Survey waves x multipliers, weekly blocks",10,65,1.0186886,0.89998289,1.1482128725,1.1
+D,"Survey waves x multipliers, weekly blocks",11,72,1.1536151000000001,1.0254992625,1.2896549375,1.1
+D,"Survey waves x multipliers, weekly blocks",12,79,1.1222862999999998,1.0023223725,1.2554414925000001,1.1
+D,"Survey waves x multipliers, weekly blocks",13,86,1.06644275,0.949207851,1.1915989125,1.1
+D,"Survey waves x multipliers, weekly blocks",14,93,1.2998876,1.1443256849999999,1.4794124675000002,1.1
+D,"Survey waves x multipliers, weekly blocks",15,100,0.8514449399999999,0.733544834,0.987600539,1.1
+D,"Survey waves x multipliers, weekly blocks",16,107,0.907024955,0.75833725325,1.075828625,1.1
+D,"Survey waves x multipliers, weekly blocks",17,114,1.12716615,0.9653241659999999,1.3140066725000001,1.1
+D,"Survey waves x multipliers, weekly blocks",18,121,1.11819575,0.964978875,1.290830505,1.1
+D,"Survey waves x multipliers, weekly blocks",19,128,1.09866555,0.9529691204999999,1.25801601,1.1
+D,"Survey waves x multipliers, weekly blocks",20,135,1.0413271499999999,0.90691114375,1.1922793200000001,1.1
+D,"Survey waves x multipliers, weekly blocks",21,142,1.1228148,0.97960982875,1.2740242925,1.1
+D,"Survey waves x multipliers, weekly blocks",22,149,1.0564919000000002,0.9203927479999999,1.2028460875,1.1
+D,"Survey waves x multipliers, weekly blocks",23,156,0.917926475,0.80427918625,1.04817134,1.1
+D,"Survey waves x multipliers, weekly blocks",24,163,1.1709706,1.0340710775000002,1.3234721375,1.1
+D,"Survey waves x multipliers, weekly blocks",25,170,1.0897728,0.95889356425,1.231345345,1.1
+D,"Survey waves x multipliers, weekly blocks",26,177,1.0434619,0.91702360075,1.1798333,1.1
+D,"Survey waves x multipliers, weekly blocks",27,184,0.978430065,0.85978730275,1.110151935,1.1
+D,"Survey waves x multipliers, weekly blocks",28,191,1.2208478999999999,1.0912901075,1.3681231075000002,1.1
+D,"Survey waves x multipliers, weekly blocks",29,198,1.3462459500000001,1.13165923,1.584462085,1.1
+D,"Survey waves x multipliers, random walk",1,1,1.0686827,0.9057078285,1.2233212450000002,1.1
+D,"Survey waves x multipliers, random walk",2,9,1.1238063999999999,1.0146173049999998,1.248070695,1.1
+D,"Survey waves x multipliers, random walk",3,16,1.13727845,1.0341308775,1.25986909,1.1
+D,"Survey waves x multipliers, random walk",4,23,1.1746466,1.0635408,1.2943449550000001,1.1
+D,"Survey waves x multipliers, random walk",5,30,1.1704221000000001,1.0616192475,1.2955534000000002,1.1
+D,"Survey waves x multipliers, random walk",6,37,1.0689772,0.95988385775,1.1698396375,1.1
+D,"Survey waves x multipliers, random walk",7,44,1.0944266,1.000311085,1.202753785,1.1
+D,"Survey waves x multipliers, random walk",8,51,1.0558450000000001,0.96050036625,1.1602046725,1.1
+D,"Survey waves x multipliers, random walk",9,58,0.991503315,0.8907649759999999,1.1029245975000002,1.1
+D,"Survey waves x multipliers, random walk",10,65,1.03824825,0.9372131954999999,1.1319652925,1.1
+D,"Survey waves x multipliers, random walk",11,72,1.1127294499999998,1.0170439674999998,1.2263386975,1.1
+D,"Survey waves x multipliers, random walk",12,79,1.1115098,1.0180285775,1.2193678025,1.1
+D,"Survey waves x multipliers, random walk",13,86,1.09419045,1.005201,1.1927829049999998,1.1
+D,"Survey waves x multipliers, random walk",14,93,1.1509664499999999,1.0353690975,1.293242355,1.1
+D,"Survey waves x multipliers, random walk",15,100,0.9477294549999999,0.82602164575,1.0846244575000001,1.1
+D,"Survey waves x multipliers, random walk",16,107,0.95641172,0.8271056175,1.0893583025000002,1.1
+D,"Survey waves x multipliers, random walk",17,114,1.0596298000000002,0.94198374675,1.1973436775000001,1.1
+D,"Survey waves x multipliers, random walk",18,121,1.08062535,0.96657296325,1.2166612125,1.1
+D,"Survey waves x multipliers, random walk",19,128,1.074984,0.966932924,1.200609345,1.1
+D,"Survey waves x multipliers, random walk",20,135,1.05777255,0.948877214,1.1689950325,1.1
+D,"Survey waves x multipliers, random walk",21,142,1.0782148999999999,0.97250960325,1.1970157475,1.1
+D,"Survey waves x multipliers, random walk",22,149,1.0414656,0.9404346714999999,1.1518428575000002,1.1
+D,"Survey waves x multipliers, random walk",23,156,0.996485995,0.88505301475,1.1068037450000001,1.1
+D,"Survey waves x multipliers, random walk",24,163,1.0947013,0.9953155655,1.2153269725,1.1
+D,"Survey waves x multipliers, random walk",25,170,1.0757359,0.9749857395,1.1834767874999998,1.1
+D,"Survey waves x multipliers, random walk",26,177,1.0495357,0.947629503,1.1533716775,1.1
+D,"Survey waves x multipliers, random walk",27,184,1.04396305,0.93261010775,1.1504153725000001,1.1
+D,"Survey waves x multipliers, random walk",28,191,1.17376175,1.0620377600000002,1.2987771000000001,1.1
+D,"Survey waves x multipliers, random walk",29,198,1.24786905,1.0832137725,1.440977935,1.1
+D,"Single group, reported totals",1,1,0.94922058,0.7503283702500001,1.18154038,1.1
+D,"Single group, reported totals",2,9,1.1415463,0.995224118,1.3011441975,1.1
+D,"Single group, reported totals",3,16,1.09713085,0.9597749455,1.240701295,1.1
+D,"Single group, reported totals",4,23,1.1616225500000001,1.020648095,1.3148500875000002,1.1
+D,"Single group, reported totals",5,30,1.19550725,1.0566967374999998,1.348564175,1.1
+D,"Single group, reported totals",6,37,1.0047048,0.88732823475,1.1378868899999999,1.1
+D,"Single group, reported totals",7,44,1.11758775,0.9906994845,1.2566947625,1.1
+D,"Single group, reported totals",8,51,1.04649525,0.92703235175,1.17495534,1.1
+D,"Single group, reported totals",9,58,0.9333132,0.81584229725,1.0529683075,1.1
+D,"Single group, reported totals",10,65,1.0361916500000001,0.9133076155,1.1686398199999999,1.1
+D,"Single group, reported totals",11,72,1.1766310500000001,1.0482225600000001,1.31506783,1.1
+D,"Single group, reported totals",12,79,1.1372285500000001,1.01668157,1.2679402425,1.1
+D,"Single group, reported totals",13,86,1.0605984,0.94844101525,1.1872145324999999,1.1
+D,"Single group, reported totals",14,93,1.11757305,0.998223357,1.2439641424999999,1.1
+D,"Single group, reported totals",15,100,0.71288145,0.62056414925,0.8093054452500001,1.1
+D,"Single group, reported totals",16,107,0.64699231,0.55957226125,0.74476445775,1.1
+D,"Single group, reported totals",17,114,0.873646145,0.7654878500000001,0.99226874875,1.1
+D,"Single group, reported totals",18,121,0.9573464,0.83536923025,1.0852420825,1.1
+D,"Single group, reported totals",19,128,1.0004813,0.8776763439999999,1.13841002,1.1
+D,"Single group, reported totals",20,135,0.953928695,0.8369371635,1.0878427975,1.1
+D,"Single group, reported totals",21,142,1.05225805,0.9249285985,1.19366688,1.1
+D,"Single group, reported totals",22,149,1.05585595,0.92319477675,1.2056543849999999,1.1
+D,"Single group, reported totals",23,156,0.93601081,0.81442321575,1.0665397175,1.1
+D,"Single group, reported totals",24,163,1.227766,1.0858419799999999,1.378194165,1.1
+D,"Single group, reported totals",25,170,1.1029545,0.974233501,1.2419920199999999,1.1
+D,"Single group, reported totals",26,177,1.0260810500000002,0.9047515035,1.1571316575000001,1.1
+D,"Single group, reported totals",27,184,0.979393425,0.861575678,1.1089401225,1.1
+D,"Single group, reported totals",28,191,1.21238415,1.0799124975,1.3576792425,1.1
+D,"Single group, reported totals",29,198,1.33211375,1.1334910075,1.5451806525,1.1

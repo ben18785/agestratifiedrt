@@ -53,12 +53,18 @@ def simulate(C1, C2, p, q, R_of_day, w, n0, rng):
     switches from C1 to C2 on day T_CHANGE, and transmission scaled so that the long-run
     R_t (spectral radius of the next-generation matrix) equals R_of_day(day).
     Reported cases Y are binomial thinnings of X with group-specific probabilities q."""
-    N = len(p)
+    return simulate_general(lambda day: C2 if day >= T_CHANGE else C1, lambda day: p, q, R_of_day, w, n0, rng)
+
+
+def simulate_general(C_of_day, p_of_day, q, R_of_day, w, n0, rng):
+    """As simulate(), but contacts C_of_day(day) and relative infectiousness p_of_day(day)
+    can be any functions of the day."""
+    N = len(q)
     X = np.zeros((T, N), dtype=np.int64)
-    X[0] = rng.multinomial(n0, settled_mix(p[:, None] * C1))
+    X[0] = rng.multinomial(n0, settled_mix(p_of_day(1)[:, None] * C_of_day(1)))
     for t in range(1, T):
         day = t + 1
-        M = p[:, None] * (C2 if day >= T_CHANGE else C1)
+        M = p_of_day(day)[:, None] * C_of_day(day)
         s = min(S, t)
         Lam = np.array([w[i, :s] @ X[t - 1::-1, i][:s] for i in range(N)])
         X[t] = rng.poisson(R_of_day(day) / spectral_radius(M) * (M.T @ Lam))
@@ -82,17 +88,24 @@ def _diagnostics(fit, names):
     return float(summ.loc[rows, rhat_col].max()), int(np.sum(fit.divergences))
 
 
-def fit_route_b(Y, w, Cs, structured, rw, seed=1):
-    """Multi-group renewal model fitted to reported cases by group (stan/route_b.stan)."""
+def fit_route_b(Y, w, Cs, structured, rw, seed=1, period=None, link=False):
+    """Multi-group renewal model fitted to reported cases by group (stan/route_b.stan).
+    Cs: one contact matrix per period. period: period (1, 2, ...) of each day; by default,
+    with two matrices, period 2 starts on day T_CHANGE. link: free matrices follow a random
+    walk across periods instead of being independent."""
     Tn, N = Y.shape
+    if period is None:
+        period = [2 if (len(Cs) == 2 and d >= T_CHANGE) else 1 for d in range(1, Tn + 1)]
     data = dict(T=Tn, N=N, S=S, Y=Y.astype(int).tolist(), w=w, B=NB, block=BLOCK.tolist(),
-                nP=len(Cs), period=[2 if (len(Cs) == 2 and d >= T_CHANGE) else 1 for d in range(1, Tn + 1)],
-                structured=int(structured), C=np.stack(Cs), rw=int(rw))
-    # Start the overdispersion and random-walk scale away from zero: a chain started near
+                nP=len(Cs), period=list(period), structured=int(structured), C=np.stack(Cs), rw=int(rw),
+                link=int(link))
+    # Start the overdispersion and random-walk scales away from zero: a chain started near
     # zero for both can get stuck there (8 groups, S1).
+    inits = {"inv_phi": 0.05, "tau": 0.05}
+    if link and not structured:
+        inits["sigG"] = [0.1]
     fit = model("route_b").sample(data=data, chains=4, parallel_chains=4, seed=seed, adapt_delta=0.95,
-                                  inits={"inv_phi": 0.05, "tau": 0.05},
-                                  show_progress=False, show_console=False)
+                                  inits=inits, show_progress=False, show_console=False)
     rhat, div = _diagnostics(fit, ["R", "a_raw", "b_raw"] if structured else ["R"])
     out = dict(R=fit.stan_variable("R"), max_rhat=rhat, divergences=div)
     if structured:
@@ -139,6 +152,10 @@ COLOURS = {
     "Free matrices, random walk": "#a0711c",
     "Survey shape x multipliers, weekly blocks": "#3b75af",
     "Survey shape x multipliers, random walk": "#1b3f6b",
+    "Free matrices per wave, random walk": "#e0a100",
+    "Free matrices linked across waves, random walk": "#a0711c",
+    "Survey waves x multipliers, weekly blocks": "#3b75af",
+    "Survey waves x multipliers, random walk": "#1b3f6b",
 }
 
 

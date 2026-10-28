@@ -3,7 +3,9 @@
 // radius 1, so that R is the long-run reproduction number. Options:
 //   structured = 1: G = diag(a) C diag(b), with known contact matrices C (one per
 //                   period) and estimated multipliers a, b (a[1] = b[1] = 1);
-//   structured = 0: G free (all entries estimated), one matrix per period.
+//   structured = 0: G free (all entries estimated), one matrix per period; with
+//                   link = 1 the log entries follow a random walk from period to period
+//                   (entry [1, 1] fixed at 1, since the normalisation removes the scale).
 //   rw = 1: log R follows a random walk across weekly blocks; rw = 0: independent blocks.
 // Constant group-specific reporting only changes G by a similarity transform, which
 // the multipliers absorb (a / q, b * q), so R is unaffected.
@@ -20,8 +22,11 @@ data {
   int<lower=0, upper=1> structured;        // 1: G built from the contact matrices C; 0: G free
   array[nP] matrix[N, N] C;                // contact matrix for each period (rows: infectors); used only if structured = 1
   int<lower=0, upper=1> rw;                // 1: random walk on log R; 0: independent R per block
+  int<lower=0, upper=1> link;              // free matrices only: 1: random walk across periods; 0: independent
 }
 transformed data {
+  int nfree = (structured == 0 && link == 0) ? nP : 0;      // number of independent free matrices
+  int nlink = (structured == 0 && link == 1) ? N * N - 1 : 0;  // free log entries per period, if linked
   // Lam[t, i]: infection pressure from group i on day t, computed from reported cases,
   // sum over s of w[i, s] * Y[t - s, i]
   matrix[T, N] Lam = rep_matrix(0, T, N);
@@ -30,7 +35,10 @@ transformed data {
 parameters {
   vector<lower=0>[structured ? N - 1 : 0] a_raw;   // infectiousness multipliers, groups 2..N (group 1 fixed at 1); estimate infectiousness / reporting
   vector<lower=0>[structured ? N - 1 : 0] b_raw;   // susceptibility multipliers, groups 2..N (group 1 fixed at 1); estimate susceptibility x reporting
-  array[structured ? 0 : nP] matrix<lower=0>[N, N] Gfree;  // free (unnormalised) matrix for each period, if structured = 0
+  array[nfree] matrix<lower=0>[N, N] Gfree;        // free (unnormalised) matrix for each period, if structured = 0, link = 0
+  vector[nlink] lG1;                               // log entries of the first period's matrix (except [1, 1]), if link = 1
+  array[nlink > 0 ? nP - 1 : 0] vector[nlink] eG;  // standardised period-to-period steps in the log entries, if link = 1
+  array[nlink > 0 ? 1 : 0] real<lower=0> sigG;     // sd of those steps, if link = 1
   vector<lower=0>[rw ? 0 : B] R_blk;               // R in each block, if rw = 0
   real logR1;                                      // log R in the first block (used only if rw = 1)
   vector[rw ? B - 1 : 0] z;                        // standardised week-to-week steps in log R, if rw = 1
@@ -54,6 +62,10 @@ transformed parameters {
       vector[N] a = append_row(1, a_raw);   // infectiousness multipliers, a[1] = 1
       vector[N] b = append_row(1, b_raw);   // susceptibility multipliers, b[1] = 1
       G = diag_pre_multiply(a, diag_post_multiply(C[k], b));   // diag(a) C diag(b)
+    } else if (link) {
+      vector[nlink] lg = lG1;                 // log entries in period k
+      for (m in 2:k) lg += sigG[1] * eG[m - 1];
+      G = to_matrix(exp(append_row(0, lg)), N, N);   // column-major, so element 1 is [1, 1]
     } else {
       G = Gfree[k];
     }
@@ -66,7 +78,10 @@ model {
   // priors (parameters unused under the chosen options are simply drawn from their priors)
   a_raw ~ lognormal(0, 1);
   b_raw ~ lognormal(0, 1);
-  for (k in 1:(structured ? 0 : nP)) to_vector(Gfree[k]) ~ lognormal(0, 1);
+  for (k in 1:nfree) to_vector(Gfree[k]) ~ lognormal(0, 1);
+  lG1 ~ normal(0, 1);
+  for (k in 1:size(eG)) eG[k] ~ std_normal();
+  sigG ~ normal(0, 0.3);   // half-normal (sigG >= 0)
   R_blk ~ gamma(1, 0.2);
   logR1 ~ normal(0, 1);
   z ~ std_normal();

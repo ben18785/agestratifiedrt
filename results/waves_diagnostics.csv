@@ -1,0 +1,21 @@
+dataset,model,max_rhat,divergences
+A,"Free matrices per wave, random walk",1.0017,0
+A,"Free matrices linked across waves, random walk",1.00614,0
+A,"Survey waves x multipliers, weekly blocks",1.00428,0
+A,"Survey waves x multipliers, random walk",1.00273,0
+A,"Single group, reported totals",1.00468,0
+B,"Free matrices per wave, random walk",1.00347,0
+B,"Free matrices linked across waves, random walk",1.00437,0
+B,"Survey waves x multipliers, weekly blocks",1.00474,0
+B,"Survey waves x multipliers, random walk",1.00116,0
+B,"Single group, reported totals",1.00539,0
+C,"Free matrices per wave, random walk",1.59333,0
+C,"Free matrices linked across waves, random walk",1.00212,0
+C,"Survey waves x multipliers, weekly blocks",1.00477,0
+C,"Survey waves x multipliers, random walk",1.00185,0
+C,"Single group, reported totals",1.00353,0
+D,"Free matrices per wave, random walk",1.00193,0
+D,"Free matrices linked across waves, random walk",1.00389,0
+D,"Survey waves x multipliers, weekly blocks",1.00463,0
+D,"Survey waves x multipliers, random walk",1.00291,0
+D,"Single group, reported totals",1.00383,1
