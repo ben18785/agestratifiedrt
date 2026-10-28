@@ -1,0 +1,11 @@
+scenario,model,max_rhat,divergences
+S1,"Free matrices, weekly blocks",1.00486,0
+S1,"Free matrices, random walk",1.00258,0
+S1,"Survey shape x multipliers, weekly blocks",1.00386,0
+S1,"Survey shape x multipliers, random walk",1.00235,0
+S1,"Single group, reported totals",1.00684,0
+S2,"Free matrices, weekly blocks",1.00381,2
+S2,"Free matrices, random walk",1.00157,0
+S2,"Survey shape x multipliers, weekly blocks",1.0029,0
+S2,"Survey shape x multipliers, random walk",1.00121,0
+S2,"Single group, reported totals",1.0037,0

@@ -1,0 +1,5 @@
+.venv/
+__pycache__/
+stan/*
+!stan/*.stan
+*_log.txt

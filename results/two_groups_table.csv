@@ -1,0 +1,11 @@
+scenario,model,5 weeks after change,other weeks
+S1,"Single group, reported totals",0.31 (20%),0.05 (100%)
+S1,"Free matrices, weekly blocks",0.29 (40%),0.05 (100%)
+S1,"Free matrices, random walk",0.01 (100%),0.02 (100%)
+S1,"Survey shape x multipliers, weekly blocks",0.09 (80%),0.06 (87%)
+S1,"Survey shape x multipliers, random walk",0.01 (100%),0.03 (100%)
+S2,"Single group, reported totals",0.36 (0%),0.06 (87%)
+S2,"Free matrices, weekly blocks",0.32 (40%),0.06 (87%)
+S2,"Free matrices, random walk",0.05 (100%),0.05 (93%)
+S2,"Survey shape x multipliers, weekly blocks",0.03 (100%),0.06 (93%)
+S2,"Survey shape x multipliers, random walk",0.04 (100%),0.05 (93%)

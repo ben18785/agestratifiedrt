@@ -1,0 +1,5 @@
+cmdstanpy>=1.2
+numpy
+pandas
+scipy
+matplotlib
