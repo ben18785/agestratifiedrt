@@ -72,17 +72,17 @@ def survey_matrices(C_of_day, rng):
 
 def plot_waves(res, path):
     plt.rcParams.update({"font.size": 9})
-    fig, axes = plt.subplots(2, 2, figsize=(9, 5.5), sharey=True)
+    fig, axes = plt.subplots(1, 4, figsize=(10, 2.7), sharey=True)
     for ax, (name, ds) in zip(axes.flat, datasets.items()):
         plot_panel(ax, res[(res.dataset == name) & (res.start >= 61)], ds["title"])
         for b in np.unique(DAYS[np.r_[True, np.diff(WAVE) > 0]])[1:]:
             ax.axvline(b, color="grey", lw=0.3, alpha=0.5)
         ax.set_xlim(60, 205)
-    for ax in axes[:, 0]:
-        ax.set_ylabel("$R_t$")
-    h, l = axes[0, 0].get_legend_handles_labels()
+        ax.set_xticks([75, 100, 125, 150, 175, 200])
+    axes[0].set_ylabel("$R_t$")
+    h, l = axes[0].get_legend_handles_labels()
     fig.legend(h, l, loc="lower center", ncol=3, fontsize=7.5, frameon=False)
-    fig.tight_layout(rect=(0, 0.08, 1, 1), pad=0.3)
+    fig.tight_layout(rect=(0, 0.17, 1, 1), pad=0.3)
     fig.savefig(path, dpi=200)
 
 
