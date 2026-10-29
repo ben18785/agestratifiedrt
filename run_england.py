@@ -3,6 +3,9 @@
               secondary pupils from the same day, so contacts and reporting changed together (as in R1).
   autumn2020  3 August to 29 November 2020: schools reopened in early September without routine
               testing of pupils; universities returned in late September; November lockdown.
+  autumn2021  16 August to 5 December 2021 (Delta): schools reopened in early September with
+              lateral-flow testing that tailed off; 12-15s vaccinated from late September; in the
+              fits that use the survey, susceptibility also falls with infections in the window.
 Inputs from data/processed/england*/ (see data/prepare_england.py). Fits:
   - single group, total cases (the usual approach);
   - single group, total cases, weekly reporting + ONS Infection Survey;
@@ -11,7 +14,7 @@ Inputs from data/processed/england*/ (see data/prepare_england.py). Fits:
   - CoMix waves x multipliers, weekly reporting + ONS Infection Survey.
 All with a random walk on weekly R_t, group-specific day-of-week effects and (multi-group fits)
 vaccination as a known reduction in susceptibility.
-Usage: python run_england.py [spring2021|autumn2020] [--plot-only]
+Usage: python run_england.py [spring2021|autumn2020|autumn2021] [--plot-only]
 """
 import sys
 
@@ -30,7 +33,8 @@ PERIODS = {
         waves=["2021-01-04", "2021-01-25", "2021-02-08", "2021-02-22", "2021-03-08", "2021-03-22",
                "2021-04-05", "2021-04-19", "2021-05-03"],
         events={"2021-03-08": "Schools reopen", "2021-04-02": "Easter", "2021-04-09": "", "2021-04-12": ""},
-        main="2021-03-08", plot_from="2021-01-25", ons_from="2021-01-30", ylim=(0.5, 1.3)),
+        main="2021-03-08", plot_from="2021-01-25", ons_from="2021-01-30", ylim=(0.5, 1.3),
+        gt=(5.5, 2.1), ve=(0.6, 0.85, 0.85), deplete=False),
     "autumn2020": dict(
         folder="england_autumn2020", tag="england_autumn2020",
         # CoMix waves: two weeks where possible; one-week waves for the week schools reopened
@@ -39,17 +43,29 @@ PERIODS = {
                "2020-10-19", "2020-10-26", "2020-11-02", "2020-11-16"],
         events={"2020-09-03": "Schools reopen", "2020-09-21": "Universities", "2020-10-26": "Half-term",
                 "2020-11-05": "Lockdown"},
-        main="2020-09-03", plot_from="2020-08-10", ons_from="2020-08-29", ylim=(0.5, 3.0)),
+        main="2020-09-03", plot_from="2020-08-10", ons_from="2020-08-29", ylim=(0.5, 3.0),
+        gt=(5.5, 2.1), ve=(0.6, 0.85, 0.85), deplete=False),
+    "autumn2021": dict(
+        folder="england_autumn2021", tag="england_autumn2021",
+        # CoMix waves: two weeks where possible; one-week waves for the week schools reopened
+        # (30 Aug), the week before half-term (18 Oct), half-term (25 Oct) and the last week
+        waves=["2021-08-16", "2021-08-30", "2021-09-06", "2021-09-20", "2021-10-04", "2021-10-18",
+               "2021-10-25", "2021-11-01", "2021-11-15", "2021-11-29"],
+        events={"2021-09-02": "Schools reopen", "2021-09-20": "12-15s vaccinated", "2021-10-25": "Half-term"},
+        main="2021-09-02", plot_from="2021-08-23", ons_from="2021-08-28", ylim=(0.5, 2.0),
+        # Delta: shorter generation time (Hart et al. 2022) and lower protection against infection
+        gt=(4.7, 2.6), ve=(0.45, 0.65, 0.85), deplete=True),
 }
 PERIOD = next((a for a in sys.argv[1:] if a in PERIODS), "spring2021")
 CFG = PERIODS[PERIOD]
 IN = ROOT / "data" / "processed" / CFG["folder"]
 GROUPS = ["0-9", "10-19", "20-49", "50-69", "70+"]
 S = 21                                   # generation time support (days)
-GT_MEAN, GT_SD = 5.5, 2.1                # generation time (days)
+GT_MEAN, GT_SD = CFG["gt"]               # generation time (days)
 DELTA = 6                                # infection to specimen date (days)
 D = 30                                   # days an infection can test PCR positive
-VE1, VE2 = 0.6, 0.85                     # protection against infection: one dose (from 21 days), two (from 14 days)
+VE1, VE2, VE3 = CFG["ve"]                # protection against infection: one dose (from 21 days), two and three (from 14 days)
+S0 = 0.7                                 # susceptible fraction at the start (for depletion): ~30% infected before
 WAVE_STARTS = pd.to_datetime(CFG["waves"])
 EVENTS = CFG["events"]
 FITS = {
@@ -101,7 +117,8 @@ def load():
     # susceptibility factor from vaccination
     c1 = vac[[f"cov1_{g}" for g in GROUPS]].shift(21).reindex(days).values
     c2 = vac[[f"cov2_{g}" for g in GROUPS]].shift(14).reindex(days).values
-    sv = 1 - VE1 * np.clip(c1 - c2, 0, 1) - VE2 * c2
+    c3 = vac[[f"cov3_{g}" for g in GROUPS]].shift(14).reindex(days).values
+    sv = 1 - VE1 * np.clip(c1 - c2, 0, 1) - VE2 * np.clip(c2 - c3, 0, 1) - VE3 * c3
     return dict(cases=cases, days=days, pop=pop, Cw=np.array(Cw), wave=wave, sv=sv, ons=ons)
 
 
@@ -135,6 +152,8 @@ def stan_data(dat, N, est_q, ons):
     win_end = [days.get_loc(o[o.start == s].end.iloc[0]) + 1 for s in k_ok]
     return dict(T=T, N=N, S=S, t0=S + 1, Y=Y.astype(int).tolist(), w=np.tile(gen_time(), (N, 1)),
                 B=int(week.max()), block=week.tolist(), nP=int(nP), period=week.tolist(), C=C, v=v,
+                pstart=[int(np.argmax(week == k)) + 1 for k in range(1, nP + 1)],
+                deplete=int(CFG["deplete"] and ons and N > 1), s0=np.full(N, S0),
                 dow=(days.day_of_week + 1).tolist(), est_q=est_q, W=int(week.max()), qweek=week.tolist(),
                 ons=ons, Npop=Npop, D=D, d=detection(), delta=DELTA, K=len(k_ok), win_start=win_start,
                 win_end=win_end, n_tested=n_tst.astype(int).tolist(), n_pos=n_pos.astype(int).tolist())
@@ -173,12 +192,17 @@ def summarise(f, data, dat, name):
                                     observed=obs, median=np.median(p[:, :, j], 0),
                                     lo=np.quantile(p[:, :, j], 0.025, 0), hi=np.quantile(p[:, :, j], 0.975, 0))))
     rhat, div = _diagnostics(f, ["R"])
+    summ = f.summary()
+    ess_col = [c for c in summ.columns if c.lower().replace("_", "") in ("essbulk", "nessbulk")][0]
+    ess = float(summ.loc[[i for i in summ.index if i.startswith("R[")], ess_col].min())
+    treedepth = float(np.mean(f.method_variables()["treedepth__"] >= f.metadata.cmdstan_config.get("max_depth", 10)))
     ab = {}
     if data["N"] > 1:
         for nm in ["a_raw", "b_raw"]:
             x = f.stan_variable(nm)
             ab[nm] = "; ".join(f"{np.median(x[:, i]):.2f}" for i in range(x.shape[1]))
-    return r, pd.concat(qs), pd.concat(ps), dict(model=name, max_rhat=rhat, divergences=div, **ab)
+    return r, pd.concat(qs), pd.concat(ps), dict(model=name, max_rhat=rhat, min_ess_R=round(ess), divergences=div,
+                                                     share_max_treedepth=round(treedepth, 3), **ab)
 
 
 def plot(res, qres, pres, path):
@@ -207,7 +231,7 @@ def plot(res, qres, pres, path):
         ax.plot(t, y["median"], color=c, lw=1.2, label=g)
         ax.fill_between(t, y.lo, y.hi, color=c, alpha=0.2, lw=0)
     ax.set_ylabel("P(infection reported)")
-    ax.set_ylim(0, 0.7)
+    ax.set_ylim(0, 1)
     ax.legend(title="Age", fontsize=7, title_fontsize=7.5, frameon=False, loc="upper left", ncol=2)
     ax.set_title("B. Reporting by age (CoMix + ONS fit)", fontsize=9, loc="left")
     top.append(ax)
@@ -235,7 +259,7 @@ def plot(res, qres, pres, path):
         ax.errorbar(ons.start + pd.Timedelta(days=7), ob, yerr=[ob - lo, hi - ob], fmt="o", ms=3, color="black",
                     lw=0.8, label="ONS survey")
         ax.set_yscale("log")
-        ax.set_ylim(0.01, 3)
+        ax.set_ylim(0.01, 12)
         ax.set_title(g, fontsize=9)
         ax.xaxis.set_major_locator(mdates.MonthLocator())
         ax.xaxis.set_major_formatter(mdates.DateFormatter("%b"))

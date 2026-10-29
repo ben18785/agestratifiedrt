@@ -12,7 +12,9 @@
 //   mu[t, j] = q[t, j] * 7 * dow[j, weekday(t)] * R[block(t)] * sum_i Gn[i, j] * sum_s w[i, s] X_hat[t - s, i],
 // with G = diag(a) C diag(b .* v) for the week's contact matrix C and susceptibility factor v
 // (1 - vaccine protection), normalised to spectral radius 1, so R is the long-run reproduction
-// number at that week's contacts and immunity.
+// number at that week's contacts and immunity. Optionally (deplete = 1, which needs the survey
+// so that X_hat is on an absolute scale) v also falls with each group's infections since day 1:
+// v_eff = v - (cumulative X_hat / population) / s0, with s0 the susceptible fraction on day 1.
 data {
   int<lower=1> T;                          // number of days
   int<lower=1> N;                          // number of groups
@@ -26,6 +28,9 @@ data {
   array[T] int<lower=1, upper=nP> period;  // matrix period of each day
   array[nP] matrix<lower=0>[N, N] C;       // contact matrix per period (rows: infectors)
   array[nP] vector<lower=0, upper=1>[N] v; // susceptibility factor from vaccination per period
+  array[nP] int<lower=1, upper=T> pstart;  // first day of each period
+  int<lower=0, upper=1> deplete;           // 1: susceptibility falls with infections in the window
+  vector<lower=0, upper=1>[N] s0;          // susceptible fraction on day 1 (for deplete)
   array[T] int<lower=1, upper=7> dow;      // day of the week of each day
   int<lower=0, upper=1> est_q;             // 1: reporting varies by week; 0: constant
   int<lower=1> W;                          // number of weeks for reporting
@@ -66,15 +71,6 @@ transformed parameters {
     R = exp(lr);
   }
   {
-    vector[N] a = append_row(1, a_raw);
-    vector[N] b = append_row(1, b_raw);
-    for (k in 1:nP) {
-      matrix[N, N] G = diag_pre_multiply(a, diag_post_multiply(C[k], b .* v[k]));
-      if (is_inf(sum(G)) || is_nan(sum(G)) || sum(G) <= 0) reject("G not finite and positive");
-      Gn[k] = G / max(abs(eigenvalues(G)));
-    }
-  }
-  {
     matrix[N, W] u = rep_matrix(0, N, W);  // weekly log (or logit) reporting relative to week 1
     if (est_q) for (k in 2:W) u[, k] = u[, k - 1] + tau_q[1] * uz[1][, k - 1];
     for (t in 1:T) for (i in 1:N) {
@@ -83,6 +79,23 @@ transformed parameters {
     }
   }
   Xhat = to_matrix(Y) ./ rep;
+  {
+    vector[N] a = append_row(1, a_raw);
+    vector[N] b = append_row(1, b_raw);
+    vector[N] cum = rep_vector(0, N);      // infections since day 1 as a fraction of the population
+    int t_done = 1;
+    for (k in 1:nP) {
+      vector[N] veff = v[k];
+      if (deplete) {
+        for (t in t_done:(pstart[k] - 1)) cum += Xhat[t]' ./ Npop;
+        t_done = pstart[k];
+        veff = fmax(v[k] - cum ./ s0, 0.02);
+      }
+      matrix[N, N] G = diag_pre_multiply(a, diag_post_multiply(C[k], b .* veff));
+      if (is_inf(sum(G)) || is_nan(sum(G)) || sum(G) <= 0) reject("G not finite and positive");
+      Gn[k] = G / max(abs(eigenvalues(G)));
+    }
+  }
 }
 model {
   a_raw ~ lognormal(0, 1);

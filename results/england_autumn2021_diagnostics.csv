@@ -1,0 +1,6 @@
+model,max_rhat,divergences,a_raw,b_raw
+"Single group, totals",1.00275,1,,
+"Single group, totals + ONS, weekly reporting",1.00255,1,,
+"CoMix x multipliers, constant reporting",1.00226,0,1.37; 3.88; 1.02; 4.22,2.03; 3.17; 4.30; 3.12
+"CoMix x multipliers, weekly reporting",1.00641,0,0.20; 2.79; 0.41; 0.85,1.17; 1.02; 1.85; 1.81
+"CoMix x multipliers, weekly reporting + ONS",1.00389,0,0.43; 2.79; 0.42; 0.68,1.81; 1.45; 2.12; 2.60
