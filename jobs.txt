@@ -41,9 +41,53 @@ run_susceptibility.py --fit S3 truth
 run_susceptibility.py --fit S3 guessed
 run_susceptibility.py --fit S3 adapt
 
+# New periods: summer 2021 (Delta) and Omicron (December 2021 to February 2022), all models
+run_england.py summer2021 --fit totals
+run_england.py summer2021 --fit totals_ons
+run_england.py summer2021 --fit comix_const
+run_england.py summer2021 --fit comix_weekly
+run_england.py summer2021 --fit comix_weekly_ons
+run_england.py summer2021 --fit comix_weekly_ons_gq
+run_england.py summer2021 --fit latent_ons_gq
+run_england.py summer2021 --fit comix_adapt_ons
+run_england.py summer2021 --fit latent_adapt_ons
+run_england.py omicron --fit totals
+run_england.py omicron --fit totals_ons
+run_england.py omicron --fit comix_const
+run_england.py omicron --fit comix_weekly
+run_england.py omicron --fit comix_weekly_ons
+run_england.py omicron --fit comix_weekly_ons_gq
+run_england.py omicron --fit latent_ons_gq
+run_england.py omicron --fit comix_adapt_ons
+run_england.py omicron --fit latent_adapt_ons
+
+# Hold-out check for the new periods
+run_holdout.py summer2021 0 --models totals_ons
+run_holdout.py summer2021 1 --models totals_ons
+run_holdout.py summer2021 0 --models comix_weekly_ons_gq
+run_holdout.py summer2021 1 --models comix_weekly_ons_gq
+run_holdout.py summer2021 0 --models latent_ons_gq
+run_holdout.py summer2021 1 --models latent_ons_gq
+run_holdout.py summer2021 0 --models comix_adapt_ons
+run_holdout.py summer2021 1 --models comix_adapt_ons
+run_holdout.py summer2021 0 --models latent_adapt_ons
+run_holdout.py summer2021 1 --models latent_adapt_ons
+run_holdout.py omicron 0 --models totals_ons
+run_holdout.py omicron 1 --models totals_ons
+run_holdout.py omicron 0 --models comix_weekly_ons_gq
+run_holdout.py omicron 1 --models comix_weekly_ons_gq
+run_holdout.py omicron 0 --models latent_ons_gq
+run_holdout.py omicron 1 --models latent_ons_gq
+run_holdout.py omicron 0 --models comix_adapt_ons
+run_holdout.py omicron 1 --models comix_adapt_ons
+run_holdout.py omicron 0 --models latent_adapt_ons
+run_holdout.py omicron 1 --models latent_adapt_ons
+
 after: run_england.py spring2021 --combine
 after: run_england.py autumn2020 --combine
 after: run_england.py autumn2021 --combine
+after: run_england.py summer2021 --combine
+after: run_england.py omicron --combine
 after: run_holdout.py --summarise
 after: plot_england_summary.py
 after: run_susceptibility.py --combine
