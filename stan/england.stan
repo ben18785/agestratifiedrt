@@ -31,6 +31,8 @@ data {
   array[nP] int<lower=1, upper=T> pstart;  // first day of each period
   int<lower=0, upper=1> deplete;           // 1: susceptibility falls with infections in the window
   vector<lower=0, upper=1>[N] s0;          // susceptible fraction on day 1 (for deplete)
+  int<lower=0, upper=1> adapt;             // 1: each group's susceptibility and infectiousness follow
+                                           //    a weekly random walk (log A), split by rho
   array[T] int<lower=1, upper=7> dow;      // day of the week of each day
   int<lower=0, upper=1> est_q;             // 1: reporting varies by week; 0: constant
   int<lower=0, upper=1> tau_by_group;      // 1: each group has its own sd of weekly reporting steps
@@ -58,10 +60,14 @@ parameters {
   array[est_q] matrix[N, W - 1] uz;        // standardised weekly steps in log (or logit) reporting
   array[est_q] vector<lower=0>[tau_by_group ? N : 1] tau_q;  // sd of those steps (one, or one per group)
   vector[ons ? N : 0] lq0;                 // logit reporting in week 1, if the survey is used
+  matrix[adapt ? N - 1 : 0, adapt ? nP - 1 : 0] Az;  // standardised weekly steps in log A, groups 2..N
+  array[adapt] real<lower=0> sigA;         // sd of those steps
+  array[adapt] real<lower=0, upper=1> rho; // share of log A that is susceptibility (rest: infectiousness)
 }
 transformed parameters {
   vector[B] R;                             // long-run reproduction number by block
   array[nP] matrix[N, N] Gn;               // normalised matrix shape by period
+  matrix[N, nP] logA;                      // log A by group and period (group 1 = 0; 0 if adapt = 0)
   matrix[T, N] q;                          // reporting probability (or relative reporting)
   matrix[T, N] rep;                        // q times the day-of-week effect
   matrix[T, N] Xhat;                       // reconstructed infections
@@ -88,14 +94,19 @@ transformed parameters {
     vector[N] b = append_row(1, b_raw);
     vector[N] cum = rep_vector(0, N);      // infections since day 1 as a fraction of the population
     int t_done = 1;
+    vector[N] lA = rep_vector(0, N);
     for (k in 1:nP) {
+      if (adapt && k > 1) lA[2:N] += sigA[1] * Az[, k - 1];
+      logA[, k] = lA;
+      vector[N] sus = adapt ? exp(rho[1] * lA) : rep_vector(1, N);
+      vector[N] inf = adapt ? exp((1 - rho[1]) * lA) : rep_vector(1, N);
       vector[N] veff = v[k];
       if (deplete) {
         for (t in t_done:(pstart[k] - 1)) cum += Xhat[t]' ./ Npop;
         t_done = pstart[k];
         veff = fmax(v[k] - cum ./ s0, 0.02);
       }
-      matrix[N, N] G = diag_pre_multiply(a, diag_post_multiply(C[k], b .* veff));
+      matrix[N, N] G = diag_pre_multiply(a .* inf, diag_post_multiply(C[k], b .* veff .* sus));
       if (is_inf(sum(G)) || is_nan(sum(G)) || sum(G) <= 0) reject("G not finite and positive");
       Gn[k] = G / max(abs(eigenvalues(G)));
     }
@@ -114,6 +125,9 @@ model {
     tau_q[k] ~ normal(0, 0.3);
   }
   lq0 ~ normal(-1, 1.5);
+  to_vector(Az) ~ std_normal();
+  sigA ~ normal(0, 0.15);                  // about 0.2 per fortnight, as in Hinch et al. 2025
+  rho ~ beta(2, 2);
   // cases
   for (t in t0:T) {
     vector[N] Lam = rep_vector(0, N);      // infection pressure from reconstructed infections

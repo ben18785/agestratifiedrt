@@ -14,7 +14,8 @@ PERIODS = [("england_autumn2020", "Autumn 2020", {"2020-09-03": "Schools", "2020
                                                    "2020-10-26": "Half-term", "2020-11-05": "Lockdown"}),
            ("england", "Spring 2021", {"2021-03-08": "Schools + LFD", "2021-04-02": "Easter"}),
            ("england_autumn2021", "Autumn 2021 (Delta)", {"2021-09-02": "Schools", "2021-10-25": "Half-term"})]
-MAIN = ["Hidden infections, CoMix, reporting sd by age + ONS", "CoMix x multipliers, reporting sd by age + ONS",
+MAIN = ["Hidden infections, random-walk susceptibility by age + ONS", "CoMix x random-walk susceptibility by age + ONS",
+        "Hidden infections, CoMix, reporting sd by age + ONS", "CoMix x multipliers, reporting sd by age + ONS",
         "CoMix x multipliers, weekly reporting + ONS"]
 SHOW = {"Single group, totals": ("Totals", "#d1495b"),
         "Single group, totals + ONS, weekly reporting": ("Totals + ONS", "#e89aa5")}

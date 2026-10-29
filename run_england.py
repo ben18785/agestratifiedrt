@@ -15,6 +15,10 @@ Inputs from data/processed/england*/ (see data/prepare_england.py). Fits (keys i
   comix_weekly_ons_gq  as comix_weekly_ons, with a separate sd of weekly reporting steps per group
   latent_ons_gq        hidden-infections model (stan/england_latent.stan), CoMix, reporting sd
                        per group, + ONS
+  comix_adapt_ons      as comix_weekly_ons_gq, but no vaccine coverage or assumed depletion: each
+                       group's susceptibility and infectiousness follow a weekly random walk
+                       (estimated), which picks up vaccination, waning and natural immunity
+  latent_adapt_ons     the same, in the hidden-infections model
 All with a random walk on weekly R_t, group-specific day-of-week effects and (multi-group fits)
 vaccination as a known reduction in susceptibility.
 Usage:
@@ -90,9 +94,14 @@ FITS = {
                                 opt=dict(N=5, est_q=1, ons=1, tau_by_group=1)),
     "latent_ons_gq": dict(name="Hidden infections, CoMix, reporting sd by age + ONS", col="#7b2d8b",
                           opt=dict(N=5, est_q=1, ons=1, tau_by_group=1, latent=1)),
+    "comix_adapt_ons": dict(name="CoMix x random-walk susceptibility by age + ONS", col="#e9a23b",
+                            opt=dict(N=5, est_q=1, ons=1, tau_by_group=1, adapt=1, vacc=0)),
+    "latent_adapt_ons": dict(name="Hidden infections, random-walk susceptibility by age + ONS", col="#5c3c92",
+                             opt=dict(N=5, est_q=1, ons=1, tau_by_group=1, latent=1, adapt=1, vacc=0)),
 }
 DEFAULT_FITS = ["totals", "totals_ons", "comix_const", "comix_weekly", "comix_weekly_ons"]
-MAIN_PREFERENCE = ["latent_ons_gq", "comix_weekly_ons_gq", "comix_weekly_ons"]   # shown in panels B and C
+MAIN_PREFERENCE = ["latent_adapt_ons", "comix_adapt_ons", "latent_ons_gq", "comix_weekly_ons_gq",
+                   "comix_weekly_ons"]                   # the first available is shown in panels B and C
 NAME = {k: v["name"] for k, v in FITS.items()}
 COL = {v["name"]: v["col"] for v in FITS.values()}
 PARTS = ROOT / "results" / ("parts_smoke" if "--smoke" in sys.argv else "parts")   # --smoke: quick test run
@@ -148,7 +157,7 @@ def load():
     return dict(cases=cases, days=days, pop=pop, Cw=np.array(Cw), wave=wave, sv=sv, ons=ons)
 
 
-def stan_data(dat, N, est_q, ons, tau_by_group=0, latent=0):
+def stan_data(dat, N, est_q, ons, tau_by_group=0, latent=0, adapt=0, vacc=1):
     days, T = dat["days"], len(dat["days"])
     week = (np.arange(T) // 7) + 1                          # Monday-based weeks (both periods start on a Monday)
     nP = week.max()
@@ -160,7 +169,7 @@ def stan_data(dat, N, est_q, ons, tau_by_group=0, latent=0):
     else:
         Y = dat["cases"].values
         C = np.array([dat["Cw"][dat["wave"][week == k][0]] for k in range(1, nP + 1)])
-        v = np.array([dat["sv"][week == k].mean(0) for k in range(1, nP + 1)])
+        v = np.array([dat["sv"][week == k].mean(0) for k in range(1, nP + 1)]) if vacc else np.ones((nP, N))
         Npop = dat["pop"]
     o = dat["ons"]
     starts = sorted(o.start.unique())
@@ -186,13 +195,13 @@ def stan_data(dat, N, est_q, ons, tau_by_group=0, latent=0):
                 tau_by_group=tau_by_group,
                 B=int(week.max()), block=week.tolist(), nP=int(nP), period=week.tolist(), C=C, v=v,
                 pstart=[int(np.argmax(week == k)) + 1 for k in range(1, nP + 1)],
-                deplete=int(CFG["deplete"] and ons and N > 1), s0=np.full(N, S0),
+                deplete=int(CFG["deplete"] and ons and N > 1 and vacc), s0=np.full(N, S0), adapt=adapt,
                 dow=(days.day_of_week + 1).tolist(), est_q=est_q, W=int(week.max()), qweek=week.tolist(),
                 ons=ons, Npop=Npop, D=D, d=detection(), delta=DELTA, K=len(k_ok), win_start=win_start,
                 win_end=win_end, n_tested=n_tst.astype(int).tolist(), n_pos=n_pos.astype(int).tolist())
 
 
-def inits_for(data, est_q, ons, tau_by_group=0, latent=0):
+def inits_for(data, est_q, ons, tau_by_group=0, latent=0, adapt=0, vacc=1):
     N = data["N"]
     inits = {"inv_phi": 0.05, "tau": 0.05, "logR1": -0.2}
     if est_q:
@@ -201,16 +210,19 @@ def inits_for(data, est_q, ons, tau_by_group=0, latent=0):
         inits["lq0"] = [-1.0] * N
     if latent:
         inits.update(sigma_eta=0.05, r0=0.0, lx0=list(data["lx0_mean"]), eta=np.zeros((N, data["B"])))
+    if adapt:
+        inits.update(sigA=[0.05], rho=[0.5], Az=np.zeros((N - 1, data["nP"] - 1)))
     return inits
 
 
-def fit(dat, N, est_q, ons, tau_by_group=0, latent=0, data=None):
+def fit(dat, N, est_q, ons, tau_by_group=0, latent=0, adapt=0, vacc=1, data=None):
     if data is None:
-        data = stan_data(dat, N, est_q, ons, tau_by_group, latent)
+        data = stan_data(dat, N, est_q, ons, tau_by_group, latent, adapt, vacc)
     iters = dict(iter_warmup=30, iter_sampling=30) if "--smoke" in sys.argv else {}
     f = model("england_latent" if latent else "england").sample(
         data=data, chains=4, parallel_chains=4, seed=1, adapt_delta=0.95,
-        inits=inits_for(data, est_q, ons, tau_by_group, latent), show_progress=False, show_console=False, **iters)
+        inits=inits_for(data, est_q, ons, tau_by_group, latent, adapt, vacc), show_progress=False, show_console=False,
+        **iters)
     return f, data
 
 
@@ -234,6 +246,15 @@ def summarise(f, data, dat, name):
         ps.append(pd.DataFrame(dict(model=name, group=g, start=days[np.array(data["win_start"]) - 1],
                                     observed=obs, median=np.median(p[:, :, j], 0),
                                     lo=np.quantile(p[:, :, j], 0.025, 0), hi=np.quantile(p[:, :, j], 0.975, 0))))
+    A = []
+    if data.get("adapt"):   # susceptibility and infectiousness factors by group and week (group 1 = 1)
+        lA, rho = f.stan_variable("logA"), f.stan_variable("rho")[:, 0]
+        for kind, w in [("susceptibility", rho), ("infectiousness", 1 - rho)]:
+            x = np.exp(w[:, None, None] * lA)              # draws x groups x weeks
+            for j, g in enumerate(GROUPS):
+                A.append(pd.DataFrame(dict(model=name, kind=kind, group=g, week_start=week_start,
+                                           median=np.median(x[:, j], 0), lo=np.quantile(x[:, j], 0.025, 0),
+                                           hi=np.quantile(x[:, j], 0.975, 0))))
     rhat, div = _diagnostics(f, ["R"])
     summ = f.summary()
     ess_col = [c for c in summ.columns if c.lower().replace("_", "") in ("essbulk", "nessbulk")][0]
@@ -244,8 +265,11 @@ def summarise(f, data, dat, name):
         for nm in ["a_raw", "b_raw"]:
             x = f.stan_variable(nm)
             ab[nm] = "; ".join(f"{np.median(x[:, i]):.2f}" for i in range(x.shape[1]))
-    return r, pd.concat(qs), pd.concat(ps), dict(model=name, max_rhat=rhat, min_ess_R=round(ess), divergences=div,
-                                                     share_max_treedepth=round(treedepth, 3), **ab)
+    if data.get("adapt"):
+        ab["rho"] = f"{np.median(f.stan_variable('rho')):.2f}"
+        ab["sigA"] = f"{np.median(f.stan_variable('sigA')):.3f}"
+    dg = dict(model=name, max_rhat=rhat, min_ess_R=round(ess), divergences=div, share_max_treedepth=round(treedepth, 3), **ab)
+    return r, pd.concat(qs), pd.concat(ps), dg, (pd.concat(A) if A else None)
 
 
 def plot(res, qres, pres, path):
@@ -330,17 +354,20 @@ def run_fits(keys):
         name = NAME[key]
         print(PERIOD, key, "-", name, flush=True)
         f, data = fit(dat, **FITS[key]["opt"])
-        r, q, p, dg = summarise(f, data, dat, name)
+        r, q, p, dg, A = summarise(f, data, dat, name)
         print(dg, flush=True)
-        for nm, x in [("R", r), ("q", q), ("ons_fit", p), ("diagnostics", pd.DataFrame([dg]))]:
-            x.to_csv(PARTS / f"{CFG['tag']}__{key}__{nm}.csv", index=False)
+        for nm, x in [("R", r), ("q", q), ("ons_fit", p), ("diagnostics", pd.DataFrame([dg])), ("A", A)]:
+            if x is not None:
+                x.to_csv(PARTS / f"{CFG['tag']}__{key}__{nm}.csv", index=False)
 
 
 def combine():
     out = {}
-    for nm in ["R", "q", "ons_fit", "diagnostics"]:
+    for nm in ["R", "q", "ons_fit", "diagnostics", "A"]:
         xs = [pd.read_csv(PARTS / f"{CFG['tag']}__{k}__{nm}.csv") for k in FITS
               if (PARTS / f"{CFG['tag']}__{k}__{nm}.csv").exists()]
+        if not xs:
+            continue
         out[nm] = pd.concat(xs, ignore_index=True)
         out[nm].to_csv(ROOT / "results" / f"{CFG['tag']}_{nm}.csv", index=False)
     with pd.option_context("display.width", 250, "display.max_columns", 20):
