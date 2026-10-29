@@ -3,3 +3,4 @@ __pycache__/
 stan/*
 !stan/*.stan
 *_log.txt
+data/raw/

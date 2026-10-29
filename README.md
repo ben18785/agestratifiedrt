@@ -28,6 +28,31 @@ python run_waves.py          # survey waves, change date unknown (about 15 minut
 Tables and posterior summaries are written to `results/` and figures to `figures/`.
 Seeds are fixed. Results can differ slightly between machines and CmdStan versions.
 
+## Real data (England, 2020-21)
+
+```bash
+python data/download_data.py   # about 600 MB into data/raw/ (not committed)
+python data/prepare_data.py    # small CSVs into data/processed/ (committed)
+```
+
+| File in `data/processed/` | Contents | Source |
+|---|---|---|
+| `england_cases_by_age.csv` | Daily cases by specimen date, 5-year age bands | UKHSA dashboard archive (OGL v3) |
+| `england_cases_total.csv` | Daily cases, all ages (check: age bands sum to this) | UKHSA dashboard archive |
+| `comix_participants_by_week.csv`, `comix_contacts_by_week.csv` | Contacts by survey week, participant age, contact age and setting (unweighted) | CoMix UK v4, Gimma et al., [doi:10.5281/zenodo.4905745](https://doi.org/10.5281/zenodo.4905745) (CC-BY-4.0) |
+| `ons_cis_daily_by_age.csv` | Modelled daily positivity by age/school year, 28 Feb to 24 Apr 2021 | ONS Infection Survey, releases of 16 and 30 April 2021 (OGL v3) |
+| `ons_cis_14day_by_age.csv` | Fortnightly positivity by age/school year, May 2020 to Dec 2021 | ONS Infection Survey, 2021 edition (OGL v3) |
+| `key_dates_england.csv` | School and policy dates (entered by hand; check before use) | |
+
+Notes. The UKHSA age file holds many snapshots of each day's count without release dates; we
+take the largest, as the ukc19 package does, which makes the age bands sum to the final total.
+CoMix contacts are individually reported contacts only (large group contacts excluded), with
+contact age taken as the midpoint of the reported range. From 8 March 2021 schoolchildren were
+tested twice weekly with lateral flow tests, so reporting in children changed exactly when
+schools reopened: the constant-reporting assumption fails there.
+
+Contains public sector information licensed under the Open Government Licence v3.0.
+
 ## Files
 
 | File | What it does |
