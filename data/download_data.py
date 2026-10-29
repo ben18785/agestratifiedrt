@@ -30,6 +30,8 @@ FILES = {
     "comix/CoMix_uk_sday.csv": f"{COMIX}/CoMix_uk_sday.csv/content",
     # full-year edition: fortnightly positivity by age/school year, May 2020 to Dec 2021 (Table 1j)
     "ons_cis/ons_cis_2021_edition.xlsx": f"{ONS}/20220107covid19infectionsurveydatasetsengland.xlsx",
+    # release of 25 February 2022: the same table to 19 February 2022 (for the Omicron period)
+    "ons_cis/ons_cis_20220225.xlsx": f"{ONS[:-5]}/2022/previous/v7/20220225covid19infectionsurveydatasetsengland.xlsx",
     # releases of 16 and 30 April 2021: daily modelled positivity by age/school year (28 Feb to 24 Apr 2021)
     "ons_cis/ons_cis_20210416.xlsx": f"{ONS}/previous/v19/covid19infectionsurveydatasets202104161.xlsx",
     "ons_cis/ons_cis_20210430.xlsx": f"{ONS}/previous/v22/covid19infectionsurveydatasets20210430eng1.xlsx",

@@ -1,4 +1,4 @@
-"""One figure comparing R_t across the three England periods for three fits: totals, totals + ONS,
+"""One figure comparing R_t across the England periods for three fits: totals, totals + ONS,
 and the multi-group model with the survey (the best available version: hidden infections if
 run, else reporting sd by age, else the shared sd).
 Usage: python plot_england_summary.py   (after run_england.py ... --combine for each period)
@@ -13,7 +13,10 @@ from common import ROOT
 PERIODS = [("england_autumn2020", "Autumn 2020", {"2020-09-03": "Schools", "2020-09-21": "Universities",
                                                    "2020-10-26": "Half-term", "2020-11-05": "Lockdown"}),
            ("england", "Spring 2021", {"2021-03-08": "Schools + LFD", "2021-04-02": "Easter"}),
-           ("england_autumn2021", "Autumn 2021 (Delta)", {"2021-09-02": "Schools", "2021-10-25": "Half-term"})]
+           ("england_summer2021", "Summer 2021 (Delta)", {"2021-07-19": "Restrictions end", "2021-07-22": "Schools close"}),
+           ("england_autumn2021", "Autumn 2021 (Delta)", {"2021-09-02": "Schools", "2021-10-25": "Half-term"}),
+           ("england_omicron", "Winter 2021-22 (Omicron)", {"2022-01-04": "Schools", "2022-01-11": "No PCR"})]
+PERIODS = [p for p in PERIODS if (ROOT / "results" / f"{p[0]}_R.csv").exists()]   # periods fitted so far
 MAIN = ["Hidden infections, random-walk susceptibility by age + ONS", "CoMix x random-walk susceptibility by age + ONS",
         "Hidden infections, CoMix, reporting sd by age + ONS", "CoMix x multipliers, reporting sd by age + ONS",
         "CoMix x multipliers, weekly reporting + ONS"]
@@ -21,7 +24,8 @@ SHOW = {"Single group, totals": ("Totals", "#d1495b"),
         "Single group, totals + ONS, weekly reporting": ("Totals + ONS", "#e89aa5")}
 
 plt.rcParams.update({"font.size": 9})
-fig, axes = plt.subplots(3, 1, figsize=(7.5, 7))
+fig, axes = plt.subplots(len(PERIODS), 1, figsize=(7.5, 2.35 * len(PERIODS)), squeeze=False)
+axes = axes[:, 0]
 for ax, (tag, title, events) in zip(axes, PERIODS):
     res = pd.read_csv(ROOT / "results" / f"{tag}_R.csv", parse_dates=["week_start"])
     main = next(m for m in MAIN if m in set(res.model))

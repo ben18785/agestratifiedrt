@@ -1,7 +1,9 @@
-"""Model inputs for England in five age groups, for one of two periods:
+"""Model inputs for England in five age groups, for one of five periods:
   spring2021  4 January to 16 May 2021  -> data/processed/england/
   autumn2020  3 August to 29 November 2020 -> data/processed/england_autumn2020/
   autumn2021  16 August to 5 December 2021 -> data/processed/england_autumn2021/
+  summer2021  7 June to 12 September 2021 -> data/processed/england_summer2021/
+  omicron     29 November 2021 to 20 February 2022 -> data/processed/england_omicron/
 
 Groups (chosen so that cases, CoMix, the ONS Infection Survey and vaccination line up):
   0-9    primary school age
@@ -16,7 +18,7 @@ Outputs (committed):
                     group (rows) and contact group (columns), population-weighted within groups
   ons.csv           ONS Infection Survey positives and people tested, by 14-day window and group
   vaccination.csv   first- and second-dose coverage by date and group
-Usage: python -I data/prepare_england.py [spring2021|autumn2020|autumn2021]   (after python data/download_data.py)
+Usage: python -I data/prepare_england.py [spring2021|autumn2020|autumn2021|summer2021|omicron]   (after python data/download_data.py)
 """
 import glob
 import sys
@@ -28,7 +30,9 @@ import pandas as pd
 HERE = Path(__file__).resolve().parent
 PERIODS = {"spring2021": ("2021-01-04", "2021-05-16", "england"),
            "autumn2020": ("2020-08-03", "2020-11-29", "england_autumn2020"),
-           "autumn2021": ("2021-08-16", "2021-12-05", "england_autumn2021")}
+           "autumn2021": ("2021-08-16", "2021-12-05", "england_autumn2021"),
+           "summer2021": ("2021-06-07", "2021-09-12", "england_summer2021"),
+           "omicron": ("2021-11-29", "2022-02-20", "england_omicron")}
 START, END, folder = PERIODS[sys.argv[1] if len(sys.argv) > 1 else "spring2021"]
 RAW, OUT = HERE / "raw", HERE / "processed" / folder
 OUT.mkdir(parents=True, exist_ok=True)
@@ -108,11 +112,14 @@ contacts = contacts.sort_values(["week_start", "part_group"])
 contacts.to_csv(OUT / "contacts.csv", index=False)
 
 # ---- ONS Infection Survey (14-day windows, raw counts) ------------------------------------
-# 16/17-24 straddles two groups and is left out; 20-49 is 25-34 plus 35-49.
-ONSG = {"Age 2 - Age 10/11 (Age 2 - School year 6)": "0-9",
-        "Age 11/12 - Age 15/16 (School Year 7 - School Year 11)": "10-19",
+# 16/17-24 straddles two groups and is left out; 20-49 is 25-34 plus 35-49. The 2021 edition
+# ends on 31 December 2021; the Omicron period uses the release of 25 February 2022, whose
+# windows are aligned differently and whose age labels are shorter.
+ONSG = {"Age 2 - Age 10/11 (Age 2 - School year 6)": "0-9", "Age 2 - School year 6": "0-9",
+        "Age 11/12 - Age 15/16 (School Year 7 - School Year 11)": "10-19", "School Year 7 - School Year 11": "10-19",
         "Age 25 - Age 34": "20-49", "Age 35 - Age 49": "20-49", "Age 50 - Age 69": "50-69", "Age 70+": "70+"}
-o = pd.read_csv(HERE / "processed/ons_cis_14day_by_age.csv")
+o = pd.read_csv(HERE / ("processed/ons_cis_14day_by_age_20220225.csv" if END > "2021-12-31"
+                        else "processed/ons_cis_14day_by_age.csv"))
 o = o[o.age_group.isin(ONSG) & (o.start >= START) & (o.end <= END)].copy()
 o["group"] = o.age_group.map(ONSG)
 for col in ["n_positive", "n_sample"]:

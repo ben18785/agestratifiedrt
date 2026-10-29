@@ -1,4 +1,4 @@
-"""England in two periods, five age groups (0-9, 10-19, 20-49, 50-69, 70+):
+"""England in five periods, five age groups (0-9, 10-19, 20-49, 50-69, 70+):
   spring2021  4 January to 16 May 2021: schools reopened on 8 March, with lateral-flow testing of
               secondary pupils from the same day, so contacts and reporting changed together (as in R1).
   autumn2020  3 August to 29 November 2020: schools reopened in early September without routine
@@ -6,6 +6,11 @@
   autumn2021  16 August to 5 December 2021 (Delta): schools reopened in early September with
               lateral-flow testing that tailed off; 12-15s vaccinated from late September; in the
               fits that use the survey, susceptibility also falls with infections in the window.
+  summer2021  7 June to 12 September 2021 (Delta): Euro 2020, restrictions ended on 19 July,
+              schools closed around 22 July (ending pupils' routine lateral-flow testing).
+  omicron     29 November 2021 to 20 February 2022 (Omicron BA.1, then BA.2): Christmas, schools
+              reopened on 4 January, positive lateral-flow tests no longer needed a confirmatory
+              PCR from 11 January, reinfections counted (the archive data are by episode).
 Inputs from data/processed/england*/ (see data/prepare_england.py). Fits (keys in FITS):
   totals               single group, total cases (the usual approach)
   totals_ons           single group, total cases, weekly reporting + ONS Infection Survey
@@ -26,7 +31,7 @@ Usage:
   python run_england.py PERIOD --fit KEY[,KEY] # run these fits; outputs to results/parts/
   python run_england.py PERIOD --combine       # combine results/parts/ into tables and the figure
   python run_england.py PERIOD --plot-only     # redraw the figure from the combined tables
-PERIOD is spring2021, autumn2020 or autumn2021.
+PERIOD is spring2021, autumn2020, autumn2021, summer2021 or omicron.
 """
 import sys
 
@@ -66,7 +71,31 @@ PERIODS = {
         events={"2021-09-02": "Schools reopen", "2021-09-20": "12-15s vaccinated", "2021-10-25": "Half-term"},
         main="2021-09-02", plot_from="2021-08-23", ons_from="2021-08-28", ylim=(0.5, 2.0),
         # Delta: shorter generation time (Hart et al. 2022) and lower protection against infection
-        gt=(4.7, 2.6), ve=(0.45, 0.65, 0.85), deplete=True),
+        gt=(4.7, 2.6), ve=(0.45, 0.65, 0.85), deplete=True, delay=4.5),
+    "summer2021": dict(
+        folder="england_summer2021", tag="england_summer2021",
+        # Delta from early June (over 90% of sequences). CoMix waves: two weeks, aligned on the
+        # end of restrictions (19 July) and school reopening (30 August / early September)
+        waves=["2021-06-07", "2021-06-21", "2021-07-05", "2021-07-19", "2021-08-02", "2021-08-16",
+               "2021-08-30", "2021-09-06"],
+        events={"2021-06-11": "Euro 2020", "2021-07-11": "Final", "2021-07-19": "Restrictions end",
+                "2021-07-22": "Schools close", "2021-09-02": "Schools reopen"},
+        main="2021-07-19", plot_from="2021-06-21", ons_from="2021-06-19", ylim=(0.5, 2.0),
+        gt=(4.7, 2.6), ve=(0.45, 0.65, 0.85), deplete=True, delay=4.5),
+    "omicron": dict(
+        folder="england_omicron", tag="england_omicron",
+        # Omicron BA.1 from mid-December (over 90% of cases by about 20 December), BA.2 rising in
+        # February. The fit starts on 29 November so that the cases-based models have a month of
+        # cases before the first survey window; R before about 20 December mixes Delta and Omicron
+        # and is not shown. CoMix waves: one wave for the school holidays (20 December to 2 January)
+        waves=["2021-11-29", "2021-12-13", "2021-12-20", "2022-01-03", "2022-01-17", "2022-01-31", "2022-02-14"],
+        events={"2021-12-25": "Christmas", "2022-01-04": "Schools reopen", "2022-01-11": "No confirmatory PCR",
+                "2022-01-27": "Plan B ends"},
+        main="2022-01-04", plot_from="2021-12-20", ons_from="2021-12-12", ylim=(0.4, 2.0),
+        # Omicron: shorter generation time and incubation period; little protection against
+        # infection from two doses, more from a recent booster; more people susceptible because
+        # of immune escape (all assumptions; the random-walk susceptibility fits do not use them)
+        gt=(3.5, 2.4), ve=(0.1, 0.2, 0.6), deplete=True, delay=4.0, s0=0.8),
 }
 PERIOD = next((a for a in sys.argv[1:] if a in PERIODS), "spring2021")
 CFG = PERIODS[PERIOD]
@@ -79,7 +108,7 @@ L = 21                                   # hidden-infections model: seeding days
 DD = 21                                  # hidden-infections model: delays 0..20 days to specimen date
 D = 30                                   # days an infection can test PCR positive
 VE1, VE2, VE3 = CFG["ve"]                # protection against infection: one dose (from 21 days), two and three (from 14 days)
-S0 = 0.7                                 # susceptible fraction at the start (for depletion): ~30% infected before
+S0 = CFG.get("s0", 0.7)                  # susceptible fraction at the start (for depletion): ~30% infected before
 WAVE_STARTS = pd.to_datetime(CFG["waves"])
 EVENTS = CFG["events"]
 FITS = {
@@ -114,8 +143,8 @@ def gen_time():
 
 
 def delay():
-    """P(delay from infection to specimen date = d days), d = 0..DD-1: about 1.5 days less for Delta."""
-    mean = 4.5 if PERIOD == "autumn2021" else 6.0
+    """P(delay from infection to specimen date = d days), d = 0..DD-1: shorter for Delta and Omicron."""
+    mean = CFG.get("delay", 6.0)
     F = gamma.cdf(np.arange(DD + 1), a=(mean / 3) ** 2, scale=9 / mean)
     f = np.diff(F)
     return f / f.sum()

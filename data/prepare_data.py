@@ -10,6 +10,7 @@ Outputs
                                 28 Feb to 24 Apr 2021 (releases of 16 and 30 April 2021)
   ons_cis_14day_by_age.csv      ONS infection survey, non-overlapping 14-day positivity by
                                 age/school year, May 2020 to Dec 2021
+  ons_cis_14day_by_age_20220225.csv  the same from the release of 25 February 2022 (to 19 Feb 2022)
 Usage: python data/prepare_data.py   (after python data/download_data.py)
 """
 from pathlib import Path
@@ -115,15 +116,24 @@ daily = daily.rename(columns={"period": "date", "estimate": "pct_positive", "low
 daily["date"] = pd.to_datetime(daily.date).dt.date
 daily.to_csv(OUT / "ons_cis_daily_by_age.csv", index=False)
 
-f14 = read_grouped_table(RAW / "ons_cis/ons_cis_2021_edition.xlsx", "1j", 4, [5], 6)
-f14["measure"] = f14.measure.map(lambda m: "pct_lower" if "Lower" in m else "pct_upper" if "Upper" in m
-                                 else "n_positive" if "Number of people testing" in m
-                                 else "n_sample" if "sample" in m else "pct_positive")
-f14 = f14.pivot_table(index=["period", "age_group"], columns="measure", values="value", aggfunc="first").reset_index()
-dates = f14.period.str.split(" to ", expand=True)
-f14.insert(0, "start", pd.to_datetime(dates[0], dayfirst=True).dt.date)
-f14.insert(1, "end", pd.to_datetime(dates[1], dayfirst=True).dt.date)
-f14 = f14.drop(columns="period").sort_values(["start", "age_group"])
+
+
+def fortnightly(path):
+    f14 = read_grouped_table(path, "1j", 4, [5], 6)
+    f14["measure"] = f14.measure.map(lambda m: "pct_lower" if "Lower" in m else "pct_upper" if "Upper" in m
+                                     else "n_positive" if "Number of people testing" in m
+                                     else "n_sample" if "sample" in m else "pct_positive")
+    f14 = f14.pivot_table(index=["period", "age_group"], columns="measure", values="value", aggfunc="first").reset_index()
+    dates = f14.period.str.split(" to ", expand=True)
+    f14.insert(0, "start", pd.to_datetime(dates[0], dayfirst=True).dt.date)
+    f14.insert(1, "end", pd.to_datetime(dates[1], dayfirst=True).dt.date)
+    return f14.drop(columns="period").sort_values(["start", "age_group"])
+
+
+f14 = fortnightly(RAW / "ons_cis/ons_cis_2021_edition.xlsx")
 f14.to_csv(OUT / "ons_cis_14day_by_age.csv", index=False)
+# release of 25 February 2022: windows aligned differently (from 3 May 2020), up to 19 February 2022
+f22 = fortnightly(RAW / "ons_cis/ons_cis_20220225.xlsx")
+f22.to_csv(OUT / "ons_cis_14day_by_age_20220225.csv", index=False)
 print("ONS: %d daily rows (%s to %s), %d fortnightly rows" %
       (len(daily), daily.date.min(), daily.date.max(), len(f14)))
