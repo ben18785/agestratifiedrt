@@ -44,6 +44,15 @@ run_holdout.py omicron 1 --models comix_adapt_ons
 run_holdout.py omicron 0 --models latent_adapt_ons
 run_holdout.py omicron 1 --models latent_adapt_ons
 
+# Denmark, January to April 2021: reporting follows measured tests by age (run_denmark.py)
+run_denmark.py --fit totals
+run_denmark.py --fit totals_tests
+run_denmark.py --fit comix_const
+run_denmark.py --fit comix_weekly
+run_denmark.py --fit comix_tests
+run_denmark.py --fit comix_tests_rw
+run_denmark.py --fit comix_adapt_tests
+
 after: run_england.py spring2021 --combine
 after: run_england.py autumn2020 --combine
 after: run_england.py autumn2021 --combine
@@ -52,3 +61,4 @@ after: run_england.py omicron --combine
 after: run_holdout.py --summarise
 after: plot_england_summary.py
 after: run_susceptibility.py --combine
+after: run_denmark.py --combine
