@@ -103,4 +103,5 @@ Contains public sector information licensed under the Open Government Licence v3
 | `jobs.txt`, `.github/workflows/fits.yml` | Fits to run on GitHub Actions |
 | `run_england.py`, `stan/england.stan` | England, spring 2021, autumn 2020 and autumn 2021: CoMix waves × multipliers, vaccination as known loss of susceptibility, day-of-week effects, weekly reporting and the ONS Infection Survey; compared with single-group fits to totals |
 | `data/prepare_england.py` | Builds the England model inputs |
+| `run_susceptibility.py` | Simulation: susceptibility changing over time by group (vaccination with waning, depletion); compares ignoring it, coverage with true or assumed protection, and random-walk susceptibility |
 | `run_waves.py` | Two-week survey waves instead of a known change date: noisy survey matrices per wave, free matrices linked across waves, a gradual change, drifting infectiousness |

@@ -24,8 +24,26 @@ run_holdout.py autumn2020 1 --models latent_adapt_ons
 run_holdout.py autumn2021 0 --models latent_adapt_ons
 run_holdout.py autumn2021 1 --models latent_adapt_ons
 
+# Simulation test: susceptibility changing over time by group (run_susceptibility.py)
+run_susceptibility.py --fit S1 totals
+run_susceptibility.py --fit S1 ignore
+run_susceptibility.py --fit S1 truth
+run_susceptibility.py --fit S1 guessed
+run_susceptibility.py --fit S1 adapt
+run_susceptibility.py --fit S2 totals
+run_susceptibility.py --fit S2 ignore
+run_susceptibility.py --fit S2 truth
+run_susceptibility.py --fit S2 guessed
+run_susceptibility.py --fit S2 adapt
+run_susceptibility.py --fit S3 totals
+run_susceptibility.py --fit S3 ignore
+run_susceptibility.py --fit S3 truth
+run_susceptibility.py --fit S3 guessed
+run_susceptibility.py --fit S3 adapt
+
 after: run_england.py spring2021 --combine
 after: run_england.py autumn2020 --combine
 after: run_england.py autumn2021 --combine
 after: run_holdout.py --summarise
 after: plot_england_summary.py
+after: run_susceptibility.py --combine

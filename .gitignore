@@ -6,3 +6,4 @@ stan/*
 data/raw/
 .DS_Store
 results/parts_smoke/
+results/parts_sus_smoke/
