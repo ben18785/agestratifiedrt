@@ -1,45 +1,6 @@
 # Fits run by .github/workflows/fits.yml when this file is pushed to main.
 # One command per line (each runs as its own job, in parallel); "after:" lines run at the end.
-
-# Susceptibility and infectiousness by age estimated as weekly random walks (no assumed vaccine
-# effectiveness or depletion), in the cases-based and hidden-infections models
-run_england.py spring2021 --fit comix_adapt_ons
-run_england.py autumn2020 --fit comix_adapt_ons
-run_england.py autumn2021 --fit comix_adapt_ons
-run_england.py spring2021 --fit latent_adapt_ons
-run_england.py autumn2020 --fit latent_adapt_ons
-run_england.py autumn2021 --fit latent_adapt_ons
-
-# Hold-out check of both
-run_holdout.py spring2021 0 --models comix_adapt_ons
-run_holdout.py spring2021 1 --models comix_adapt_ons
-run_holdout.py autumn2020 0 --models comix_adapt_ons
-run_holdout.py autumn2020 1 --models comix_adapt_ons
-run_holdout.py autumn2021 0 --models comix_adapt_ons
-run_holdout.py autumn2021 1 --models comix_adapt_ons
-run_holdout.py spring2021 0 --models latent_adapt_ons
-run_holdout.py spring2021 1 --models latent_adapt_ons
-run_holdout.py autumn2020 0 --models latent_adapt_ons
-run_holdout.py autumn2020 1 --models latent_adapt_ons
-run_holdout.py autumn2021 0 --models latent_adapt_ons
-run_holdout.py autumn2021 1 --models latent_adapt_ons
-
-# Simulation test: susceptibility changing over time by group (run_susceptibility.py)
-run_susceptibility.py --fit S1 totals
-run_susceptibility.py --fit S1 ignore
-run_susceptibility.py --fit S1 truth
-run_susceptibility.py --fit S1 guessed
-run_susceptibility.py --fit S1 adapt
-run_susceptibility.py --fit S2 totals
-run_susceptibility.py --fit S2 ignore
-run_susceptibility.py --fit S2 truth
-run_susceptibility.py --fit S2 guessed
-run_susceptibility.py --fit S2 adapt
-run_susceptibility.py --fit S3 totals
-run_susceptibility.py --fit S3 ignore
-run_susceptibility.py --fit S3 truth
-run_susceptibility.py --fit S3 guessed
-run_susceptibility.py --fit S3 adapt
+# (the random-walk susceptibility fits and the simulation are in run 40933486251, commit ae262a0)
 
 # New periods: summer 2021 (Delta) and Omicron (December 2021 to February 2022), all models
 run_england.py summer2021 --fit totals
