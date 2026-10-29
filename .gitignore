@@ -4,3 +4,4 @@ stan/*
 !stan/*.stan
 *_log.txt
 data/raw/
+.DS_Store
