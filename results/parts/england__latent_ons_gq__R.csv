@@ -1,0 +1,20 @@
+model,week_start,median,lo,hi
+"Hidden infections, CoMix, reporting sd by age + ONS",2021-01-04,0.76955409,0.6580357542499999,0.8989111687500002
+"Hidden infections, CoMix, reporting sd by age + ONS",2021-01-11,0.7739225700000001,0.67783652125,0.88470083725
+"Hidden infections, CoMix, reporting sd by age + ONS",2021-01-18,0.74213736,0.6524332835000001,0.83417115975
+"Hidden infections, CoMix, reporting sd by age + ONS",2021-01-25,0.7750399299999999,0.67772860125,0.8834610002500001
+"Hidden infections, CoMix, reporting sd by age + ONS",2021-02-01,0.723733965,0.62914180575,0.81562593025
+"Hidden infections, CoMix, reporting sd by age + ONS",2021-02-08,0.7781145650000001,0.69120637275,0.89683185425
+"Hidden infections, CoMix, reporting sd by age + ONS",2021-02-15,0.740370395,0.64395764925,0.8273369385
+"Hidden infections, CoMix, reporting sd by age + ONS",2021-02-22,0.75355693,0.6498256415,0.855357483
+"Hidden infections, CoMix, reporting sd by age + ONS",2021-03-01,0.9594959350000001,0.83520626025,1.13691914
+"Hidden infections, CoMix, reporting sd by age + ONS",2021-03-08,0.91411073,0.8097663475,1.029759705
+"Hidden infections, CoMix, reporting sd by age + ONS",2021-03-15,0.94385801,0.83432352525,1.10194838
+"Hidden infections, CoMix, reporting sd by age + ONS",2021-03-22,0.795762005,0.67615791425,0.919489745
+"Hidden infections, CoMix, reporting sd by age + ONS",2021-03-29,0.83118655,0.7252043415,0.94838228525
+"Hidden infections, CoMix, reporting sd by age + ONS",2021-04-05,0.898697225,0.7889448862499999,1.0182070825
+"Hidden infections, CoMix, reporting sd by age + ONS",2021-04-12,0.991514285,0.88133212225,1.1477108275
+"Hidden infections, CoMix, reporting sd by age + ONS",2021-04-19,0.92869674,0.81662216675,1.0590238275000001
+"Hidden infections, CoMix, reporting sd by age + ONS",2021-04-26,0.986875265,0.88166299875,1.1266333375
+"Hidden infections, CoMix, reporting sd by age + ONS",2021-05-03,1.0406999,0.908268337,1.192649205
+"Hidden infections, CoMix, reporting sd by age + ONS",2021-05-10,0.955270145,0.781139053,1.1600174025

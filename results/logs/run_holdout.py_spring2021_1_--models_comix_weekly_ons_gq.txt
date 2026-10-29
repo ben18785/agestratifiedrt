@@ -1,0 +1,46 @@
+spring2021 1 CoMix x multipliers, reporting sd by age + ONS holding out windows [1, 3, 5]
+19:17:10 - cmdstanpy - WARNING - Non-fatal error during sampling:
+Exception: G not finite and positive (in 'england.stan', line 99, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 99, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 99, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 99, column 59 to column 95)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england.stan', line 122, column 19 to column 76)
+	Exception: G not finite and positive (in 'england.stan', line 99, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 99, column 59 to column 95)
+Exception: G not finite and positive (in 'england.stan', line 99, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 99, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 99, column 59 to column 95)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england.stan', line 122, column 19 to column 76)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england.stan', line 122, column 19 to column 76)
+	Exception: G not finite and positive (in 'england.stan', line 99, column 59 to column 95)
+	Exception: neg_binomial_2_lpmf: Precision parameter is 0, but must be positive finite! (in 'england.stan', line 122, column 19 to column 76)
+Exception: G not finite and positive (in 'england.stan', line 99, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 99, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 99, column 59 to column 95)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england.stan', line 122, column 19 to column 76)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england.stan', line 122, column 19 to column 76)
+	Exception: G not finite and positive (in 'england.stan', line 99, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 99, column 59 to column 95)
+Exception: G not finite and positive (in 'england.stan', line 99, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 99, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 99, column 59 to column 95)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england.stan', line 122, column 19 to column 76)
+	Exception: G not finite and positive (in 'england.stan', line 99, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 99, column 59 to column 95)
+Consider re-running with show_console=True if the above output is unclear!
+        period  split                  key                                           model  window       start  group  n_tested  n_pos  observed_pct  interior  baseline_pct  pred_median_pct  pred_lo_pct  pred_hi_pct  covered    pit  log_pred_density
+0   spring2021      1  comix_weekly_ons_gq  CoMix x multipliers, reporting sd by age + ONS       1  2021-02-13    0-9     11442     58         0.507      True         0.749            0.673        0.498        0.856     True  0.029            -4.986
+1   spring2021      1  comix_weekly_ons_gq  CoMix x multipliers, reporting sd by age + ONS       1  2021-02-13  10-19      9042     59         0.653      True         0.656            0.575        0.409        0.774     True  0.795            -3.449
+2   spring2021      1  comix_weekly_ons_gq  CoMix x multipliers, reporting sd by age + ONS       1  2021-02-13  20-49     48586    385         0.792      True         0.751            0.745        0.648        0.848     True  0.817            -4.579
+3   spring2021      1  comix_weekly_ons_gq  CoMix x multipliers, reporting sd by age + ONS       1  2021-02-13  50-69     54996    304         0.553      True         0.541            0.584        0.504        0.671     True  0.231            -4.301
+4   spring2021      1  comix_weekly_ons_gq  CoMix x multipliers, reporting sd by age + ONS       1  2021-02-13    70+     31077    107         0.344      True         0.340            0.380        0.296        0.473     True  0.218            -3.847
+5   spring2021      1  comix_weekly_ons_gq  CoMix x multipliers, reporting sd by age + ONS       3  2021-03-13    0-9      9884     52         0.526      True         0.448            0.476        0.324        0.648     True  0.740            -3.244
+6   spring2021      1  comix_weekly_ons_gq  CoMix x multipliers, reporting sd by age + ONS       3  2021-03-13  10-19      7636     28         0.367      True         0.447            0.458        0.301        0.642     True  0.155            -3.261
+7   spring2021      1  comix_weekly_ons_gq  CoMix x multipliers, reporting sd by age + ONS       3  2021-03-13  20-49     42956    150         0.349      True         0.330            0.345        0.282        0.414     True  0.544            -3.612
+8   spring2021      1  comix_weekly_ons_gq  CoMix x multipliers, reporting sd by age + ONS       3  2021-03-13  50-69     50155    101         0.201      True         0.230            0.229        0.183        0.281     True  0.132            -4.059
+9   spring2021      1  comix_weekly_ons_gq  CoMix x multipliers, reporting sd by age + ONS       3  2021-03-13    70+     28636     45         0.157      True         0.135            0.091        0.056        0.133    False  0.999            -7.235
+10  spring2021      1  comix_weekly_ons_gq  CoMix x multipliers, reporting sd by age + ONS       5  2021-04-10    0-9      9240     18         0.195      True         0.168            0.184        0.097        0.292     True  0.572            -2.443
+11  spring2021      1  comix_weekly_ons_gq  CoMix x multipliers, reporting sd by age + ONS       5  2021-04-10  10-19      7215     22         0.305      True         0.227            0.208        0.097        0.319     True  0.952            -3.939
+12  spring2021      1  comix_weekly_ons_gq  CoMix x multipliers, reporting sd by age + ONS       5  2021-04-10  20-49     40051     60         0.150      True         0.158            0.185        0.140        0.237     True  0.072            -4.195
+13  spring2021      1  comix_weekly_ons_gq  CoMix x multipliers, reporting sd by age + ONS       5  2021-04-10  50-69     48147     36         0.075      True         0.120            0.087        0.060        0.118     True  0.203            -3.184
+14  spring2021      1  comix_weekly_ons_gq  CoMix x multipliers, reporting sd by age + ONS       5  2021-04-10    70+     27927     10         0.036      True         0.042            0.047        0.021        0.075     True  0.246            -2.437

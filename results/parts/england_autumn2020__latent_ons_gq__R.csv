@@ -1,0 +1,18 @@
+model,week_start,median,lo,hi
+"Hidden infections, CoMix, reporting sd by age + ONS",2020-08-03,0.9917149199999999,0.7188518570000001,1.31431438
+"Hidden infections, CoMix, reporting sd by age + ONS",2020-08-10,0.769909285,0.6075286870000001,0.9311670825
+"Hidden infections, CoMix, reporting sd by age + ONS",2020-08-17,1.0238481,0.86075500575,1.24164561
+"Hidden infections, CoMix, reporting sd by age + ONS",2020-08-24,1.58891215,1.27771912,1.8711540975
+"Hidden infections, CoMix, reporting sd by age + ONS",2020-08-31,1.67622305,1.3972706000000001,1.9892639775
+"Hidden infections, CoMix, reporting sd by age + ONS",2020-09-07,0.765034655,0.6288100052500001,0.938208988
+"Hidden infections, CoMix, reporting sd by age + ONS",2020-09-14,1.8872263,1.5831256624999999,2.24639644
+"Hidden infections, CoMix, reporting sd by age + ONS",2020-09-21,1.4307195,1.22076981,1.67234849
+"Hidden infections, CoMix, reporting sd by age + ONS",2020-09-28,1.5511939,1.3199396475,1.843754845
+"Hidden infections, CoMix, reporting sd by age + ONS",2020-10-05,0.989507845,0.837575365,1.1821379700000003
+"Hidden infections, CoMix, reporting sd by age + ONS",2020-10-12,1.3092456499999998,1.111519445,1.524659775
+"Hidden infections, CoMix, reporting sd by age + ONS",2020-10-19,1.0224782,0.8804121495,1.2056512600000002
+"Hidden infections, CoMix, reporting sd by age + ONS",2020-10-26,1.1498330499999998,0.978025762,1.33930044
+"Hidden infections, CoMix, reporting sd by age + ONS",2020-11-02,1.03873405,0.8990806164999999,1.224018515
+"Hidden infections, CoMix, reporting sd by age + ONS",2020-11-09,0.751496375,0.64299310725,0.8797463587500001
+"Hidden infections, CoMix, reporting sd by age + ONS",2020-11-16,0.669521925,0.5619228152500001,0.7849041935
+"Hidden infections, CoMix, reporting sd by age + ONS",2020-11-23,0.90000031,0.7441875765,1.064764285

@@ -1,0 +1,58 @@
+autumn2021 0 CoMix x multipliers, reporting sd by age + ONS holding out windows [0, 2, 4]
+19:53:44 - cmdstanpy - WARNING - Non-fatal error during sampling:
+Exception: G not finite and positive (in 'england.stan', line 99, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 99, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 99, column 59 to column 95)
+	Exception: neg_binomial_2_lpmf: Precision parameter is 0, but must be positive finite! (in 'england.stan', line 122, column 19 to column 76)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england.stan', line 122, column 19 to column 76)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england.stan', line 122, column 19 to column 76)
+	Exception: G not finite and positive (in 'england.stan', line 99, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 99, column 59 to column 95)
+Exception: G not finite and positive (in 'england.stan', line 99, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 99, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 99, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 99, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 99, column 59 to column 95)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england.stan', line 122, column 19 to column 76)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england.stan', line 122, column 19 to column 76)
+	Exception: G not finite and positive (in 'england.stan', line 99, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 99, column 59 to column 95)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england.stan', line 122, column 19 to column 76)
+Exception: G not finite and positive (in 'england.stan', line 99, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 99, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 99, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 99, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 99, column 59 to column 95)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england.stan', line 122, column 19 to column 76)
+	Exception: G not finite and positive (in 'england.stan', line 99, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 99, column 59 to column 95)
+Exception: G not finite and positive (in 'england.stan', line 99, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 99, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 99, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 99, column 59 to column 95)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england.stan', line 122, column 19 to column 76)
+	Exception: G not finite and positive (in 'england.stan', line 99, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 99, column 59 to column 95)
+Consider re-running with show_console=True if the above output is unclear!
+19:53:44 - cmdstanpy - WARNING - Some chains may have failed to converge.
+	Chain 1 had 999 iterations at max treedepth (99.9%)
+	Chain 2 had 999 iterations at max treedepth (99.9%)
+	Chain 3 had 999 iterations at max treedepth (99.9%)
+	Chain 4 had 999 iterations at max treedepth (99.9%)
+	Use the "diagnose()" method on the CmdStanMCMC object to see further information.
+        period  split                  key                                           model  window       start  group  n_tested  n_pos  observed_pct  interior  baseline_pct  pred_median_pct  pred_lo_pct  pred_hi_pct  covered    pit  log_pred_density
+0   autumn2021      0  comix_weekly_ons_gq  CoMix x multipliers, reporting sd by age + ONS       0  2021-09-11    0-9     10322    282         2.732     False         3.641            2.722        2.296        3.236     True  0.518            -4.116
+1   autumn2021      0  comix_weekly_ons_gq  CoMix x multipliers, reporting sd by age + ONS       0  2021-09-11  10-19      8230    269         3.269     False         6.329            4.301        3.670        5.006    False  0.000            -9.335
+2   autumn2021      0  comix_weekly_ons_gq  CoMix x multipliers, reporting sd by age + ONS       0  2021-09-11  20-49     41484    327         0.788     False         1.053            0.935        0.798        1.102    False  0.016            -6.408
+3   autumn2021      0  comix_weekly_ons_gq  CoMix x multipliers, reporting sd by age + ONS       0  2021-09-11  50-69     50598    331         0.654     False         0.739            0.638        0.540        0.761     True  0.617            -4.303
+4   autumn2021      0  comix_weekly_ons_gq  CoMix x multipliers, reporting sd by age + ONS       0  2021-09-11    70+     29517    135         0.457     False         0.600            0.562        0.444        0.708     True  0.045            -5.274
+5   autumn2021      0  comix_weekly_ons_gq  CoMix x multipliers, reporting sd by age + ONS       2  2021-10-09    0-9     10360    466         4.498      True         4.023            5.019        4.431        5.589     True  0.040            -5.902
+6   autumn2021      0  comix_weekly_ons_gq  CoMix x multipliers, reporting sd by age + ONS       2  2021-10-09  10-19      8446    618         7.317      True         5.997            7.459        6.678        8.264     True  0.360            -4.492
+7   autumn2021      0  comix_weekly_ons_gq  CoMix x multipliers, reporting sd by age + ONS       2  2021-10-09  20-49     43130    594         1.377      True         1.266            1.398        1.250        1.551     True  0.383            -4.455
+8   autumn2021      0  comix_weekly_ons_gq  CoMix x multipliers, reporting sd by age + ONS       2  2021-10-09  50-69     53586    554         1.034      True         0.912            1.025        0.911        1.148     True  0.556            -4.420
+9   autumn2021      0  comix_weekly_ons_gq  CoMix x multipliers, reporting sd by age + ONS       2  2021-10-09    70+     30889    224         0.725      True         0.697            0.772        0.647        0.910     True  0.239            -4.177
+10  autumn2021      0  comix_weekly_ons_gq  CoMix x multipliers, reporting sd by age + ONS       4  2021-11-06    0-9     10090    364         3.608     False         4.444            4.688        4.053        5.401    False  0.000           -10.444
+11  autumn2021      0  comix_weekly_ons_gq  CoMix x multipliers, reporting sd by age + ONS       4  2021-11-06  10-19      8332    287         3.445     False         5.682            5.389        4.657        6.229    False  0.000           -21.594
+12  autumn2021      0  comix_weekly_ons_gq  CoMix x multipliers, reporting sd by age + ONS       4  2021-11-06  20-49     42996    592         1.377     False         1.523            1.447        1.261        1.661     True  0.238            -4.935
+13  autumn2021      0  comix_weekly_ons_gq  CoMix x multipliers, reporting sd by age + ONS       4  2021-11-06  50-69     55349    636         1.149     False         1.127            1.066        0.930        1.221     True  0.853            -5.243
+14  autumn2021      0  comix_weekly_ons_gq  CoMix x multipliers, reporting sd by age + ONS       4  2021-11-06    70+     31742    170         0.536     False         0.808            0.608        0.504        0.721     True  0.094            -4.616

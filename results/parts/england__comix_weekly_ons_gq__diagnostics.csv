@@ -1,0 +1,2 @@
+model,max_rhat,min_ess_R,divergences,share_max_treedepth,a_raw,b_raw
+"CoMix x multipliers, reporting sd by age + ONS",1.00257,2175,0,0.0,0.24; 5.17; 0.65; 1.21,1.27; 1.56; 1.55; 2.41

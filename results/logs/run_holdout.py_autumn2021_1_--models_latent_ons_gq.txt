@@ -1,0 +1,79 @@
+autumn2021 1 Hidden infections, CoMix, reporting sd by age + ONS holding out windows [1, 3, 5]
+19:58:38 - cmdstanpy - WARNING - Non-fatal error during sampling:
+Exception: G not finite and positive (in 'england_latent.stan', line 105, column 61 to column 97)
+	Exception: G not finite and positive (in 'england_latent.stan', line 105, column 61 to column 97)
+	Exception: G not finite and positive (in 'england_latent.stan', line 105, column 61 to column 97)
+	Exception: G not finite and positive (in 'england_latent.stan', line 105, column 61 to column 97)
+	Exception: G not finite and positive (in 'england_latent.stan', line 105, column 61 to column 97)
+	Exception: G not finite and positive (in 'england_latent.stan', line 105, column 61 to column 97)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england_latent.stan', line 138, column 6 to column 75)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england_latent.stan', line 138, column 6 to column 75)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england_latent.stan', line 138, column 6 to column 75)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england_latent.stan', line 138, column 6 to column 75)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england_latent.stan', line 138, column 6 to column 75)
+	Exception: G not finite and positive (in 'england_latent.stan', line 105, column 61 to column 97)
+	Exception: G not finite and positive (in 'england_latent.stan', line 105, column 61 to column 97)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england_latent.stan', line 138, column 6 to column 75)
+Exception: G not finite and positive (in 'england_latent.stan', line 105, column 61 to column 97)
+	Exception: G not finite and positive (in 'england_latent.stan', line 105, column 61 to column 97)
+	Exception: G not finite and positive (in 'england_latent.stan', line 105, column 61 to column 97)
+	Exception: G not finite and positive (in 'england_latent.stan', line 105, column 61 to column 97)
+	Exception: G not finite and positive (in 'england_latent.stan', line 105, column 61 to column 97)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england_latent.stan', line 138, column 6 to column 75)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england_latent.stan', line 138, column 6 to column 75)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england_latent.stan', line 138, column 6 to column 75)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england_latent.stan', line 138, column 6 to column 75)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england_latent.stan', line 138, column 6 to column 75)
+	Exception: G not finite and positive (in 'england_latent.stan', line 105, column 61 to column 97)
+	Exception: G not finite and positive (in 'england_latent.stan', line 105, column 61 to column 97)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england_latent.stan', line 138, column 6 to column 75)
+Exception: G not finite and positive (in 'england_latent.stan', line 105, column 61 to column 97)
+	Exception: G not finite and positive (in 'england_latent.stan', line 105, column 61 to column 97)
+	Exception: G not finite and positive (in 'england_latent.stan', line 105, column 61 to column 97)
+	Exception: G not finite and positive (in 'england_latent.stan', line 105, column 61 to column 97)
+	Exception: G not finite and positive (in 'england_latent.stan', line 105, column 61 to column 97)
+	Exception: G not finite and positive (in 'england_latent.stan', line 105, column 61 to column 97)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england_latent.stan', line 138, column 6 to column 75)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england_latent.stan', line 138, column 6 to column 75)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england_latent.stan', line 138, column 6 to column 75)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england_latent.stan', line 138, column 6 to column 75)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england_latent.stan', line 138, column 6 to column 75)
+	Exception: G not finite and positive (in 'england_latent.stan', line 105, column 61 to column 97)
+	Exception: G not finite and positive (in 'england_latent.stan', line 105, column 61 to column 97)
+Exception: G not finite and positive (in 'england_latent.stan', line 105, column 61 to column 97)
+	Exception: G not finite and positive (in 'england_latent.stan', line 105, column 61 to column 97)
+	Exception: G not finite and positive (in 'england_latent.stan', line 105, column 61 to column 97)
+	Exception: G not finite and positive (in 'england_latent.stan', line 105, column 61 to column 97)
+	Exception: G not finite and positive (in 'england_latent.stan', line 105, column 61 to column 97)
+	Exception: G not finite and positive (in 'england_latent.stan', line 105, column 61 to column 97)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england_latent.stan', line 138, column 6 to column 75)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england_latent.stan', line 138, column 6 to column 75)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england_latent.stan', line 138, column 6 to column 75)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england_latent.stan', line 138, column 6 to column 75)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england_latent.stan', line 138, column 6 to column 75)
+	Exception: G not finite and positive (in 'england_latent.stan', line 105, column 61 to column 97)
+	Exception: G not finite and positive (in 'england_latent.stan', line 105, column 61 to column 97)
+Consider re-running with show_console=True if the above output is unclear!
+19:58:38 - cmdstanpy - WARNING - Some chains may have failed to converge.
+	Chain 1 had 999 divergent transitions (99.9%)
+	Chain 2 had 999 iterations at max treedepth (99.9%)
+	Chain 3 had 999 iterations at max treedepth (99.9%)
+	Chain 4 had 25 divergent transitions (2.5%)
+	Chain 4 had 974 iterations at max treedepth (97.4%)
+	Use the "diagnose()" method on the CmdStanMCMC object to see further information.
+        period  split            key                                                model  window       start  group  n_tested  n_pos  observed_pct  interior  baseline_pct  pred_median_pct  pred_lo_pct  pred_hi_pct  covered    pit  log_pred_density
+0   autumn2021      1  latent_ons_gq  Hidden infections, CoMix, reporting sd by age + ONS       1  2021-09-11    0-9     10322    282         2.732      True         2.634            3.013        2.519        3.575     True  0.140            -4.686
+1   autumn2021      1  latent_ons_gq  Hidden infections, CoMix, reporting sd by age + ONS       1  2021-09-11  10-19      8230    269         3.269      True         4.124            3.949        3.305       13.487    False  0.018            -6.197
+2   autumn2021      1  latent_ons_gq  Hidden infections, CoMix, reporting sd by age + ONS       1  2021-09-11  20-49     41484    327         0.788      True         1.017            0.882        0.757        1.256     True  0.080            -5.099
+3   autumn2021      1  latent_ons_gq  Hidden infections, CoMix, reporting sd by age + ONS       1  2021-09-11  50-69     50598    331         0.654      True         0.772            0.642        0.310        0.743     True  0.577            -4.300
+4   autumn2021      1  latent_ons_gq  Hidden infections, CoMix, reporting sd by age + ONS       1  2021-09-11    70+     29517    135         0.457      True         0.621            0.508        0.017        0.627     True  0.299            -4.963
+5   autumn2021      1  latent_ons_gq  Hidden infections, CoMix, reporting sd by age + ONS       3  2021-10-09    0-9     10360    466         4.498      True         4.023            4.643        3.977       28.958     True  0.359            -4.619
+6   autumn2021      1  latent_ons_gq  Hidden infections, CoMix, reporting sd by age + ONS       3  2021-10-09  10-19      8446    618         7.317      True         5.997            7.589        6.619       19.713     True  0.325            -4.827
+7   autumn2021      1  latent_ons_gq  Hidden infections, CoMix, reporting sd by age + ONS       3  2021-10-09  20-49     43130    594         1.377      True         1.266            1.375        1.199       11.118     True  0.508            -4.905
+8   autumn2021      1  latent_ons_gq  Hidden infections, CoMix, reporting sd by age + ONS       3  2021-10-09  50-69     53586    554         1.034      True         0.912            1.017        0.886        4.199     True  0.572            -4.952
+9   autumn2021      1  latent_ons_gq  Hidden infections, CoMix, reporting sd by age + ONS       3  2021-10-09    70+     30889    224         0.725      True         0.697            0.754        0.418        0.894     True  0.384            -4.529
+10  autumn2021      1  latent_ons_gq  Hidden infections, CoMix, reporting sd by age + ONS       5  2021-11-06    0-9     10090    364         3.608      True         4.500            4.272        3.677       14.103    False  0.013            -6.531
+11  autumn2021      1  latent_ons_gq  Hidden infections, CoMix, reporting sd by age + ONS       5  2021-11-06  10-19      8332    287         3.445      True         4.234            3.865        3.240       71.327     True  0.099            -4.907
+12  autumn2021      1  latent_ons_gq  Hidden infections, CoMix, reporting sd by age + ONS       5  2021-11-06  20-49     42996    592         1.377      True         1.589            1.512        1.328       12.941     True  0.087            -5.424
+13  autumn2021      1  latent_ons_gq  Hidden infections, CoMix, reporting sd by age + ONS       5  2021-11-06  50-69     55349    636         1.149      True         1.101            1.097        0.968        6.105     True  0.672            -5.574
+14  autumn2021      1  latent_ons_gq  Hidden infections, CoMix, reporting sd by age + ONS       5  2021-11-06    70+     31742    170         0.536      True         0.552            0.633        0.517        5.107     True  0.060            -5.008

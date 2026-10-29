@@ -84,3 +84,37 @@ model,week_start,median,lo,hi
 "CoMix x multipliers, weekly reporting + ONS",2020-11-09,0.872998755,0.7823522235,0.9728601292500001
 "CoMix x multipliers, weekly reporting + ONS",2020-11-16,0.71568625,0.6353472127500001,0.8115821067500001
 "CoMix x multipliers, weekly reporting + ONS",2020-11-23,0.86650659,0.76044203525,0.9880156585
+"CoMix x multipliers, reporting sd by age + ONS",2020-08-03,1.2734564,0.629641253,2.409891525
+"CoMix x multipliers, reporting sd by age + ONS",2020-08-10,1.35131505,0.69705986625,2.4952209975
+"CoMix x multipliers, reporting sd by age + ONS",2020-08-17,1.43946595,0.8467335112500001,2.4026961
+"CoMix x multipliers, reporting sd by age + ONS",2020-08-24,1.5327408999999999,1.3018531275,1.8225954050000002
+"CoMix x multipliers, reporting sd by age + ONS",2020-08-31,1.7948452499999998,1.58432013,2.0182101550000002
+"CoMix x multipliers, reporting sd by age + ONS",2020-09-07,1.0747379,0.93420454275,1.2181196675000001
+"CoMix x multipliers, reporting sd by age + ONS",2020-09-14,1.8211241500000002,1.600414105,2.0854961275
+"CoMix x multipliers, reporting sd by age + ONS",2020-09-21,1.3464698,1.2060876125,1.513189345
+"CoMix x multipliers, reporting sd by age + ONS",2020-09-28,1.46174385,1.3186483599999999,1.619538125
+"CoMix x multipliers, reporting sd by age + ONS",2020-10-05,1.12874145,1.0068336825,1.2607406875
+"CoMix x multipliers, reporting sd by age + ONS",2020-10-12,1.22655385,1.1058005874999999,1.360389805
+"CoMix x multipliers, reporting sd by age + ONS",2020-10-19,1.14763915,1.0308439225000001,1.27957894
+"CoMix x multipliers, reporting sd by age + ONS",2020-10-26,1.1068444,0.9806478995,1.2441705875
+"CoMix x multipliers, reporting sd by age + ONS",2020-11-02,1.10176465,1.0012599924999999,1.21977675
+"CoMix x multipliers, reporting sd by age + ONS",2020-11-09,0.89891947,0.809178187,0.9989254185
+"CoMix x multipliers, reporting sd by age + ONS",2020-11-16,0.74071068,0.6524751157500001,0.84233805525
+"CoMix x multipliers, reporting sd by age + ONS",2020-11-23,0.8691112999999999,0.7652287835,0.991003767
+"Hidden infections, CoMix, reporting sd by age + ONS",2020-08-03,0.9917149199999999,0.7188518570000001,1.31431438
+"Hidden infections, CoMix, reporting sd by age + ONS",2020-08-10,0.769909285,0.6075286870000001,0.9311670825
+"Hidden infections, CoMix, reporting sd by age + ONS",2020-08-17,1.0238481,0.86075500575,1.24164561
+"Hidden infections, CoMix, reporting sd by age + ONS",2020-08-24,1.58891215,1.27771912,1.8711540975
+"Hidden infections, CoMix, reporting sd by age + ONS",2020-08-31,1.67622305,1.3972706000000001,1.9892639775
+"Hidden infections, CoMix, reporting sd by age + ONS",2020-09-07,0.765034655,0.6288100052500001,0.938208988
+"Hidden infections, CoMix, reporting sd by age + ONS",2020-09-14,1.8872263,1.5831256624999999,2.24639644
+"Hidden infections, CoMix, reporting sd by age + ONS",2020-09-21,1.4307195,1.22076981,1.67234849
+"Hidden infections, CoMix, reporting sd by age + ONS",2020-09-28,1.5511939,1.3199396475,1.843754845
+"Hidden infections, CoMix, reporting sd by age + ONS",2020-10-05,0.989507845,0.837575365,1.1821379700000003
+"Hidden infections, CoMix, reporting sd by age + ONS",2020-10-12,1.3092456499999998,1.111519445,1.524659775
+"Hidden infections, CoMix, reporting sd by age + ONS",2020-10-19,1.0224782,0.8804121495,1.2056512600000002
+"Hidden infections, CoMix, reporting sd by age + ONS",2020-10-26,1.1498330499999998,0.978025762,1.33930044
+"Hidden infections, CoMix, reporting sd by age + ONS",2020-11-02,1.03873405,0.8990806164999999,1.224018515
+"Hidden infections, CoMix, reporting sd by age + ONS",2020-11-09,0.751496375,0.64299310725,0.8797463587500001
+"Hidden infections, CoMix, reporting sd by age + ONS",2020-11-16,0.669521925,0.5619228152500001,0.7849041935
+"Hidden infections, CoMix, reporting sd by age + ONS",2020-11-23,0.90000031,0.7441875765,1.064764285
