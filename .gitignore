@@ -5,3 +5,4 @@ stan/*
 *_log.txt
 data/raw/
 .DS_Store
+results/parts_smoke/

@@ -1,0 +1,6 @@
+model,group,start,observed,median,lo,hi
+"Single group, totals + ONS, weekly reporting",all,2021-09-11,1.2236801735271243,1.25529715,1.202259435,1.3107886975
+"Single group, totals + ONS, weekly reporting",all,2021-09-25,1.8249257137341688,1.79090995,1.7323539475,1.85081351
+"Single group, totals + ONS, weekly reporting",all,2021-10-09,2.2566610432276266,2.28068625,2.21240727,2.349562715
+"Single group, totals + ONS, weekly reporting",all,2021-10-23,2.149059829059829,2.0904723,2.0237423900000002,2.1564739824999997
+"Single group, totals + ONS, weekly reporting",all,2021-11-06,1.7062938946461155,1.7462018000000001,1.6827382524999999,1.813711485

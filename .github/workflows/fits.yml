@@ -1,0 +1,126 @@
+# Runs the fits listed in jobs.txt on GitHub-hosted runners and commits the results back.
+#
+# jobs.txt: one command per line (a script in the repo root plus its arguments). Each line runs
+# as its own job, in parallel. Lines starting with "after:" run once all jobs have finished
+# (to combine results and draw figures). Blank lines and lines starting with "#" are ignored.
+# The workflow runs whenever jobs.txt is pushed to main, or by hand from the Actions tab.
+name: fits
+
+on:
+  push:
+    branches: [main]
+    paths: [jobs.txt]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fits
+  cancel-in-progress: false
+
+env:
+  CMDSTAN_VERSION: "2.38.0"
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      jobs: ${{ steps.read.outputs.jobs }}
+      after: ${{ steps.read.outputs.after }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: read
+        run: |
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          import json
+          lines = [l.strip() for l in open("jobs.txt") if l.strip() and not l.strip().startswith("#")]
+          jobs = [l for l in lines if not l.startswith("after:")]
+          after = [l[len("after:"):].strip() for l in lines if l.startswith("after:")]
+          print("jobs=" + json.dumps(jobs))
+          print("after=" + json.dumps(after))
+          PY
+
+  fit:
+    needs: plan
+    if: needs.plan.outputs.jobs != '[]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    strategy:
+      fail-fast: false
+      matrix:
+        cmd: ${{ fromJson(needs.plan.outputs.jobs) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - uses: actions/cache@v4
+        id: cmdstan-cache
+        with:
+          path: ~/.cmdstan
+          key: cmdstan-${{ env.CMDSTAN_VERSION }}-${{ runner.os }}
+      - if: steps.cmdstan-cache.outputs.cache-hit != 'true'
+        run: python -m cmdstanpy.install_cmdstan --version "$CMDSTAN_VERSION" --cores 4
+      - name: Run
+        run: |
+          export CMDSTAN="$HOME/.cmdstan/cmdstan-$CMDSTAN_VERSION"
+          echo "Running: python ${{ matrix.cmd }}"
+          python ${{ matrix.cmd }} 2>&1 | grep -v "cmdstanpy - INFO" | tee job_log.txt
+          exit ${PIPESTATUS[0]}
+      - name: Collect new and changed outputs
+        if: always()
+        run: |
+          mkdir -p out
+          git status --porcelain --untracked-files=all results figures | awk '{print $2}' > changed.txt
+          cat changed.txt
+          if [ -s changed.txt ]; then tar czf out/files.tgz -T changed.txt; fi
+          cp job_log.txt out/ 2>/dev/null || true
+          echo "${{ matrix.cmd }}" > out/cmd.txt
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: part-${{ strategy.job-index }}
+          path: out/
+          retention-days: 30
+
+  collect:
+    needs: [plan, fit]
+    if: always() && needs.plan.result == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - uses: actions/download-artifact@v4
+        with:
+          path: parts
+      - name: Unpack outputs
+        run: |
+          mkdir -p results/logs
+          for d in parts/part-*; do
+            [ -f "$d/files.tgz" ] && tar xzf "$d/files.tgz"
+            if [ -f "$d/job_log.txt" ]; then
+              name=$(tr -c 'A-Za-z0-9._-' '_' < "$d/cmd.txt" | sed 's/_*$//')
+              cp "$d/job_log.txt" "results/logs/${name}.txt"
+            fi
+          done
+      - name: Combine
+        env:
+          AFTER: ${{ needs.plan.outputs.after }}
+        run: |
+          python3 -c "import json, os; [print(c) for c in json.loads(os.environ['AFTER'])]" > after.txt
+          while IFS= read -r c; do echo "Running: python $c"; python $c; done < after.txt
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add results figures
+          if git diff --cached --quiet; then echo "No changes"; exit 0; fi
+          git commit -m "Results from fits run ${{ github.run_id }} [skip ci]"
+          for i in 1 2 3; do git pull --rebase && git push && break; sleep 5; done

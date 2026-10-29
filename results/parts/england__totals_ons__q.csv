@@ -1,0 +1,20 @@
+model,group,week_start,median,lo,hi
+"Single group, totals + ONS, weekly reporting",all,2021-01-04,0.287978035,0.18035357575,0.43070070850000003
+"Single group, totals + ONS, weekly reporting",all,2021-01-11,0.28733563500000003,0.206117182,0.391815319
+"Single group, totals + ONS, weekly reporting",all,2021-01-18,0.280982345,0.23163993275,0.34203006325
+"Single group, totals + ONS, weekly reporting",all,2021-01-25,0.29165514000000003,0.26474608575,0.32286506
+"Single group, totals + ONS, weekly reporting",all,2021-02-01,0.29978661500000003,0.27333373775,0.3280615435
+"Single group, totals + ONS, weekly reporting",all,2021-02-08,0.29434371000000004,0.26398400725,0.3252554315
+"Single group, totals + ONS, weekly reporting",all,2021-02-15,0.34197183,0.31100360275,0.37730856575
+"Single group, totals + ONS, weekly reporting",all,2021-02-22,0.34283758,0.30776852675,0.38514257125
+"Single group, totals + ONS, weekly reporting",all,2021-03-01,0.31619170500000005,0.282959177,0.354742315
+"Single group, totals + ONS, weekly reporting",all,2021-03-08,0.321850855,0.28841816975,0.36332531425000003
+"Single group, totals + ONS, weekly reporting",all,2021-03-15,0.29965533499999997,0.26992864450000004,0.335363675
+"Single group, totals + ONS, weekly reporting",all,2021-03-22,0.297943465,0.26403326075,0.3356418215
+"Single group, totals + ONS, weekly reporting",all,2021-03-29,0.248136435,0.21548033025,0.28367521475
+"Single group, totals + ONS, weekly reporting",all,2021-04-05,0.28537861,0.24861364575,0.32590124575
+"Single group, totals + ONS, weekly reporting",all,2021-04-12,0.312795935,0.26879369750000004,0.36064064
+"Single group, totals + ONS, weekly reporting",all,2021-04-19,0.39621199500000004,0.34086544925,0.46598505349999997
+"Single group, totals + ONS, weekly reporting",all,2021-04-26,0.445645315,0.37229955025,0.5417129432500001
+"Single group, totals + ONS, weekly reporting",all,2021-05-03,0.5025889450000001,0.39982334975,0.6430100147500001
+"Single group, totals + ONS, weekly reporting",all,2021-05-10,0.51649224,0.39152338825,0.69740970975

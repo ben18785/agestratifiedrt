@@ -1,0 +1,29 @@
+# Fits run by .github/workflows/fits.yml when this file is pushed to main.
+# One command per line (each runs as its own job, in parallel); "after:" lines run at the end.
+
+# Reporting sd by age group, and the hidden-infections model, in all three periods
+run_england.py spring2021 --fit comix_weekly_ons_gq
+run_england.py autumn2020 --fit comix_weekly_ons_gq
+run_england.py autumn2021 --fit comix_weekly_ons_gq
+run_england.py spring2021 --fit latent_ons_gq
+run_england.py autumn2020 --fit latent_ons_gq
+run_england.py autumn2021 --fit latent_ons_gq
+
+# Hold-out check of both
+run_holdout.py spring2021 0 --models comix_weekly_ons_gq
+run_holdout.py spring2021 1 --models comix_weekly_ons_gq
+run_holdout.py autumn2020 0 --models comix_weekly_ons_gq
+run_holdout.py autumn2020 1 --models comix_weekly_ons_gq
+run_holdout.py autumn2021 0 --models comix_weekly_ons_gq
+run_holdout.py autumn2021 1 --models comix_weekly_ons_gq
+run_holdout.py spring2021 0 --models latent_ons_gq
+run_holdout.py spring2021 1 --models latent_ons_gq
+run_holdout.py autumn2020 0 --models latent_ons_gq
+run_holdout.py autumn2020 1 --models latent_ons_gq
+run_holdout.py autumn2021 0 --models latent_ons_gq
+run_holdout.py autumn2021 1 --models latent_ons_gq
+
+after: run_england.py spring2021 --combine
+after: run_england.py autumn2020 --combine
+after: run_england.py autumn2021 --combine
+after: run_holdout.py --summarise

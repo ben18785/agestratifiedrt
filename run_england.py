@@ -6,15 +6,23 @@
   autumn2021  16 August to 5 December 2021 (Delta): schools reopened in early September with
               lateral-flow testing that tailed off; 12-15s vaccinated from late September; in the
               fits that use the survey, susceptibility also falls with infections in the window.
-Inputs from data/processed/england*/ (see data/prepare_england.py). Fits:
-  - single group, total cases (the usual approach);
-  - single group, total cases, weekly reporting + ONS Infection Survey;
-  - CoMix waves x multipliers, constant reporting;
-  - CoMix waves x multipliers, weekly reporting from cases only;
-  - CoMix waves x multipliers, weekly reporting + ONS Infection Survey.
+Inputs from data/processed/england*/ (see data/prepare_england.py). Fits (keys in FITS):
+  totals               single group, total cases (the usual approach)
+  totals_ons           single group, total cases, weekly reporting + ONS Infection Survey
+  comix_const          CoMix waves x multipliers, constant reporting
+  comix_weekly         CoMix waves x multipliers, weekly reporting from cases only
+  comix_weekly_ons     CoMix waves x multipliers, weekly reporting + ONS
+  comix_weekly_ons_gq  as comix_weekly_ons, with a separate sd of weekly reporting steps per group
+  latent_ons_gq        hidden-infections model (stan/england_latent.stan), CoMix, reporting sd
+                       per group, + ONS
 All with a random walk on weekly R_t, group-specific day-of-week effects and (multi-group fits)
 vaccination as a known reduction in susceptibility.
-Usage: python run_england.py [spring2021|autumn2020|autumn2021] [--plot-only]
+Usage:
+  python run_england.py PERIOD                 # the first five fits, then combine
+  python run_england.py PERIOD --fit KEY[,KEY] # run these fits; outputs to results/parts/
+  python run_england.py PERIOD --combine       # combine results/parts/ into tables and the figure
+  python run_england.py PERIOD --plot-only     # redraw the figure from the combined tables
+PERIOD is spring2021, autumn2020 or autumn2021.
 """
 import sys
 
@@ -62,28 +70,46 @@ IN = ROOT / "data" / "processed" / CFG["folder"]
 GROUPS = ["0-9", "10-19", "20-49", "50-69", "70+"]
 S = 21                                   # generation time support (days)
 GT_MEAN, GT_SD = CFG["gt"]               # generation time (days)
-DELTA = 6                                # infection to specimen date (days)
+DELTA = 6                                # infection to specimen date (days), cases-based models
+L = 21                                   # hidden-infections model: seeding days before day 1
+DD = 21                                  # hidden-infections model: delays 0..20 days to specimen date
 D = 30                                   # days an infection can test PCR positive
 VE1, VE2, VE3 = CFG["ve"]                # protection against infection: one dose (from 21 days), two and three (from 14 days)
 S0 = 0.7                                 # susceptible fraction at the start (for depletion): ~30% infected before
 WAVE_STARTS = pd.to_datetime(CFG["waves"])
 EVENTS = CFG["events"]
 FITS = {
-    "Single group, totals": dict(N=1, est_q=0, ons=0),
-    "Single group, totals + ONS, weekly reporting": dict(N=1, est_q=1, ons=1),
-    "CoMix x multipliers, constant reporting": dict(N=5, est_q=0, ons=0),
-    "CoMix x multipliers, weekly reporting": dict(N=5, est_q=1, ons=0),
-    "CoMix x multipliers, weekly reporting + ONS": dict(N=5, est_q=1, ons=1),
+    "totals": dict(name="Single group, totals", col="#d1495b", opt=dict(N=1, est_q=0, ons=0)),
+    "totals_ons": dict(name="Single group, totals + ONS, weekly reporting", col="#e89aa5",
+                       opt=dict(N=1, est_q=1, ons=1)),
+    "comix_const": dict(name="CoMix x multipliers, constant reporting", col="#3b75af", opt=dict(N=5, est_q=0, ons=0)),
+    "comix_weekly": dict(name="CoMix x multipliers, weekly reporting", col="#a0711c", opt=dict(N=5, est_q=1, ons=0)),
+    "comix_weekly_ons": dict(name="CoMix x multipliers, weekly reporting + ONS", col="#1b3f6b",
+                             opt=dict(N=5, est_q=1, ons=1)),
+    "comix_weekly_ons_gq": dict(name="CoMix x multipliers, reporting sd by age + ONS", col="#2a9d8f",
+                                opt=dict(N=5, est_q=1, ons=1, tau_by_group=1)),
+    "latent_ons_gq": dict(name="Hidden infections, CoMix, reporting sd by age + ONS", col="#7b2d8b",
+                          opt=dict(N=5, est_q=1, ons=1, tau_by_group=1, latent=1)),
 }
-COL = {"Single group, totals": "#d1495b", "Single group, totals + ONS, weekly reporting": "#e89aa5",
-       "CoMix x multipliers, constant reporting": "#3b75af", "CoMix x multipliers, weekly reporting": "#a0711c",
-       "CoMix x multipliers, weekly reporting + ONS": "#1b3f6b"}
+DEFAULT_FITS = ["totals", "totals_ons", "comix_const", "comix_weekly", "comix_weekly_ons"]
+MAIN_PREFERENCE = ["latent_ons_gq", "comix_weekly_ons_gq", "comix_weekly_ons"]   # shown in panels B and C
+NAME = {k: v["name"] for k, v in FITS.items()}
+COL = {v["name"]: v["col"] for v in FITS.values()}
+PARTS = ROOT / "results" / ("parts_smoke" if "--smoke" in sys.argv else "parts")   # --smoke: quick test run
 
 
 def gen_time():
     F = gamma.cdf(np.arange(S + 1), a=(GT_MEAN / GT_SD) ** 2, scale=GT_SD ** 2 / GT_MEAN)
     w = np.diff(F)
     return w / w.sum()
+
+
+def delay():
+    """P(delay from infection to specimen date = d days), d = 0..DD-1: about 1.5 days less for Delta."""
+    mean = 4.5 if PERIOD == "autumn2021" else 6.0
+    F = gamma.cdf(np.arange(DD + 1), a=(mean / 3) ** 2, scale=9 / mean)
+    f = np.diff(F)
+    return f / f.sum()
 
 
 def detection():
@@ -122,7 +148,7 @@ def load():
     return dict(cases=cases, days=days, pop=pop, Cw=np.array(Cw), wave=wave, sv=sv, ons=ons)
 
 
-def stan_data(dat, N, est_q, ons):
+def stan_data(dat, N, est_q, ons, tau_by_group=0, latent=0):
     days, T = dat["days"], len(dat["days"])
     week = (np.arange(T) // 7) + 1                          # Monday-based weeks (both periods start on a Monday)
     nP = week.max()
@@ -138,8 +164,12 @@ def stan_data(dat, N, est_q, ons):
         Npop = dat["pop"]
     o = dat["ons"]
     starts = sorted(o.start.unique())
-    k_ok = [s for s in starts
-            if (days.get_loc(s) + 1) + DELTA - (D - 1) >= 1 and (days.get_loc(o[o.start == s].end.iloc[0]) + 1) + DELTA <= T]
+    first = lambda s: days.get_loc(s) + 1                  # day number of a window's start
+    last = lambda s: days.get_loc(o[o.start == s].end.iloc[0]) + 1
+    if latent:   # needs infections back to D - 1 days before the window; no shift to specimen date
+        k_ok = [s for s in starts if first(s) + L - (D - 1) >= 1 and last(s) <= T]
+    else:
+        k_ok = [s for s in starts if first(s) + DELTA - (D - 1) >= 1 and last(s) + DELTA <= T]
     n_pos = np.array([[o[(o.start == s) & (o.group == g)].n_positive.iloc[0] for g in GROUPS] for s in k_ok])
     n_tst = np.array([[o[(o.start == s) & (o.group == g)].n_sample.iloc[0] for g in GROUPS] for s in k_ok])
     if N == 1:   # population-weighted positivity over groups with data, with the pooled number tested
@@ -150,7 +180,10 @@ def stan_data(dat, N, est_q, ons):
         n_pos = np.round(prev[:, None] * n_tst).astype(int)
     win_start = [days.get_loc(s) + 1 for s in k_ok]
     win_end = [days.get_loc(o[o.start == s].end.iloc[0]) + 1 for s in k_ok]
-    return dict(T=T, N=N, S=S, t0=S + 1, Y=Y.astype(int).tolist(), w=np.tile(gen_time(), (N, 1)),
+    first_week = Y[:7].mean(0)
+    return dict(T=T, N=N, S=S, t0=1 if latent else S + 1, Y=Y.astype(int).tolist(), w=np.tile(gen_time(), (N, 1)),
+                L=L, Dd=DD, f=np.tile(delay(), (N, 1)), lx0_mean=np.log(np.maximum(first_week, 1) / 0.3),
+                tau_by_group=tau_by_group,
                 B=int(week.max()), block=week.tolist(), nP=int(nP), period=week.tolist(), C=C, v=v,
                 pstart=[int(np.argmax(week == k)) + 1 for k in range(1, nP + 1)],
                 deplete=int(CFG["deplete"] and ons and N > 1), s0=np.full(N, S0),
@@ -159,15 +192,25 @@ def stan_data(dat, N, est_q, ons):
                 win_end=win_end, n_tested=n_tst.astype(int).tolist(), n_pos=n_pos.astype(int).tolist())
 
 
-def fit(dat, N, est_q, ons):
-    data = stan_data(dat, N, est_q, ons)
+def inits_for(data, est_q, ons, tau_by_group=0, latent=0):
+    N = data["N"]
     inits = {"inv_phi": 0.05, "tau": 0.05, "logR1": -0.2}
     if est_q:
-        inits["tau_q"] = [0.1]
+        inits["tau_q"] = [[0.1] * (N if tau_by_group else 1)]
     if ons:
         inits["lq0"] = [-1.0] * N
-    f = model("england").sample(data=data, chains=4, parallel_chains=4, seed=1, adapt_delta=0.95,
-                                inits=inits, show_progress=False, show_console=False)
+    if latent:
+        inits.update(sigma_eta=0.05, r0=0.0, lx0=list(data["lx0_mean"]), eta=np.zeros((N, data["B"])))
+    return inits
+
+
+def fit(dat, N, est_q, ons, tau_by_group=0, latent=0, data=None):
+    if data is None:
+        data = stan_data(dat, N, est_q, ons, tau_by_group, latent)
+    iters = dict(iter_warmup=30, iter_sampling=30) if "--smoke" in sys.argv else {}
+    f = model("england_latent" if latent else "england").sample(
+        data=data, chains=4, parallel_chains=4, seed=1, adapt_delta=0.95,
+        inits=inits_for(data, est_q, ons, tau_by_group, latent), show_progress=False, show_console=False, **iters)
     return f, data
 
 
@@ -211,7 +254,8 @@ def plot(res, qres, pres, path):
     fig = plt.figure(figsize=(10, 6.6))
     gs = fig.add_gridspec(2, 5, height_ratios=[1.25, 1], hspace=0.75, wspace=0.45)
     ax = fig.add_subplot(gs[0, :3])
-    for m, off in zip(COL, np.linspace(-1.6, 1.6, len(COL))):
+    shown = [m for m in COL if m in set(res.model)]
+    for m, off in zip(shown, np.linspace(-1.6, 1.6, len(shown))):
         x = res[(res.model == m) & (res.week_start >= CFG["plot_from"])]
         t = x.week_start + pd.Timedelta(days=3 + off)
         ax.errorbar(t, x["median"], yerr=[x["median"] - x.lo, x.hi - x["median"]], fmt="o", ms=2.5, lw=1,
@@ -223,7 +267,8 @@ def plot(res, qres, pres, path):
     ax.legend(fontsize=6.5, frameon=False, loc="upper center", bbox_to_anchor=(0.5, -0.1), ncol=2)
     top = [ax]
     ax = fig.add_subplot(gs[0, 3:])
-    x = qres[qres.model == "CoMix x multipliers, weekly reporting + ONS"]
+    main = next(NAME[k] for k in MAIN_PREFERENCE if NAME[k] in set(qres.model))
+    x = qres[qres.model == main]
     cols = plt.cm.viridis(np.linspace(0, 0.9, 5))
     for g, c in zip(GROUPS, cols):
         y = x[x.group == g]
@@ -233,7 +278,7 @@ def plot(res, qres, pres, path):
     ax.set_ylabel("P(infection reported)")
     ax.set_ylim(0, 1)
     ax.legend(title="Age", fontsize=7, title_fontsize=7.5, frameon=False, loc="upper left", ncol=2)
-    ax.set_title("B. Reporting by age (CoMix + ONS fit)", fontsize=9, loc="left")
+    ax.set_title("B. Reporting by age (" + main.split(",")[0] + ")", fontsize=9, loc="left")
     top.append(ax)
     for a in top:
         for d in EVENTS:
@@ -244,14 +289,13 @@ def plot(res, qres, pres, path):
     for d, lab in EVENTS.items():
         top[0].text(pd.Timestamp(d) + pd.Timedelta(days=1), CFG["ylim"][0] + 0.02, lab, fontsize=7, color="grey",
                     rotation=90, va="bottom")
-    p = pres[pres.model == "CoMix x multipliers, weekly reporting + ONS"]
+    p = pres[pres.model == main]
     for j, g in enumerate(GROUPS):
         ax = fig.add_subplot(gs[1, j])
         y = p[p.group == g]
         t = y.start + pd.Timedelta(days=7)
-        ax.plot(t, y["median"], color=COL["CoMix x multipliers, weekly reporting + ONS"], lw=1.2,
-                label="Model (reconstructed\ninfections)")
-        ax.fill_between(t, y.lo, y.hi, color=COL["CoMix x multipliers, weekly reporting + ONS"], alpha=0.2, lw=0)
+        ax.plot(t, y["median"], color=COL[main], lw=1.2, label="Model")
+        ax.fill_between(t, y.lo, y.hi, color=COL[main], alpha=0.2, lw=0)
         ons = dat_ons(g)
         lo = 100 * beta.ppf(0.025, ons.n_positive, ons.n_sample - ons.n_positive + 1)
         hi = 100 * beta.ppf(0.975, ons.n_positive + 1, ons.n_sample - ons.n_positive)
@@ -269,7 +313,7 @@ def plot(res, qres, pres, path):
         if j == 0:
             ax.set_ylabel("Positivity (%)")
             ax.legend(fontsize=6.5, frameon=False, loc="lower left")
-    fig.text(0.01, 0.40, "C. ONS positivity: survey (fitted) and model, by age", fontsize=9)
+    fig.text(0.01, 0.40, "C. ONS positivity: survey (fitted) and model (" + main.split(",")[0] + "), by age", fontsize=9)
     fig.subplots_adjust(left=0.07, right=0.99, top=0.95, bottom=0.07)
     fig.savefig(path, dpi=200)
 
@@ -279,30 +323,47 @@ def dat_ons(g):
     return o[(o.group == g) & (o.start >= CFG["ons_from"]) & (o.n_sample > 0)]
 
 
-def run():
+def run_fits(keys):
     dat = load()
-    res, qres, pres, diag = [], [], [], []
-    for name, opt in FITS.items():
-        print(name, flush=True)
-        f, data = fit(dat, **opt)
+    PARTS.mkdir(parents=True, exist_ok=True)
+    for key in keys:
+        name = NAME[key]
+        print(PERIOD, key, "-", name, flush=True)
+        f, data = fit(dat, **FITS[key]["opt"])
         r, q, p, dg = summarise(f, data, dat, name)
-        res.append(r), qres.append(q), pres.append(p), diag.append(dg)
         print(dg, flush=True)
-    res, qres, pres, diag = pd.concat(res), pd.concat(qres), pd.concat(pres), pd.DataFrame(diag)
-    res.to_csv(ROOT / "results" / f"{CFG['tag']}_R.csv", index=False)
-    qres.to_csv(ROOT / "results" / f"{CFG['tag']}_q.csv", index=False)
-    pres.to_csv(ROOT / "results" / f"{CFG['tag']}_ons_fit.csv", index=False)
-    diag.to_csv(ROOT / "results" / f"{CFG['tag']}_diagnostics.csv", index=False)
-    with pd.option_context("display.width", 220, "display.max_columns", 20):
-        print(res.pivot(index="week_start", columns="model", values="median").round(2))
-        print(diag)
-    plot(res, qres, pres, ROOT / "figures" / f"{CFG['tag']}.png")
+        for nm, x in [("R", r), ("q", q), ("ons_fit", p), ("diagnostics", pd.DataFrame([dg]))]:
+            x.to_csv(PARTS / f"{CFG['tag']}__{key}__{nm}.csv", index=False)
+
+
+def combine():
+    out = {}
+    for nm in ["R", "q", "ons_fit", "diagnostics"]:
+        xs = [pd.read_csv(PARTS / f"{CFG['tag']}__{k}__{nm}.csv") for k in FITS
+              if (PARTS / f"{CFG['tag']}__{k}__{nm}.csv").exists()]
+        out[nm] = pd.concat(xs, ignore_index=True)
+        out[nm].to_csv(ROOT / "results" / f"{CFG['tag']}_{nm}.csv", index=False)
+    with pd.option_context("display.width", 250, "display.max_columns", 20):
+        print(out["R"].pivot(index="week_start", columns="model", values="median").round(2))
+        print(out["diagnostics"])
+    replot()
+
+
+def replot():
+    plot(pd.read_csv(ROOT / "results" / f"{CFG['tag']}_R.csv", parse_dates=["week_start"]),
+         pd.read_csv(ROOT / "results" / f"{CFG['tag']}_q.csv", parse_dates=["week_start"]),
+         pd.read_csv(ROOT / "results" / f"{CFG['tag']}_ons_fit.csv", parse_dates=["start"]),
+         ROOT / "figures" / f"{CFG['tag']}.png")
 
 
 if __name__ == "__main__":
-    if "--plot-only" in sys.argv:
-        plot(pd.read_csv(ROOT / "results" / f"{CFG['tag']}_R.csv", parse_dates=["week_start"]),
-             pd.read_csv(ROOT / "results" / f"{CFG['tag']}_q.csv", parse_dates=["week_start"]),
-             pd.read_csv(ROOT / "results" / f"{CFG['tag']}_ons_fit.csv", parse_dates=["start"]), ROOT / "figures" / f"{CFG['tag']}.png")
+    args = sys.argv[1:]
+    if "--plot-only" in args:
+        replot()
+    elif "--combine" in args:
+        combine()
+    elif "--fit" in args:
+        run_fits(args[args.index("--fit") + 1].split(","))
     else:
-        run()
+        run_fits(DEFAULT_FITS)
+        combine()

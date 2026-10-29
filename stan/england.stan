@@ -33,6 +33,7 @@ data {
   vector<lower=0, upper=1>[N] s0;          // susceptible fraction on day 1 (for deplete)
   array[T] int<lower=1, upper=7> dow;      // day of the week of each day
   int<lower=0, upper=1> est_q;             // 1: reporting varies by week; 0: constant
+  int<lower=0, upper=1> tau_by_group;      // 1: each group has its own sd of weekly reporting steps
   int<lower=1> W;                          // number of weeks for reporting
   array[T] int<lower=1, upper=W> qweek;    // reporting week of each day
   int<lower=0, upper=1> ons;               // 1: use the infection survey
@@ -55,7 +56,7 @@ parameters {
   real<lower=0> inv_phi;                   // negative-binomial overdispersion
   array[N] simplex[7] dw;                  // day-of-week shares of each group's cases
   array[est_q] matrix[N, W - 1] uz;        // standardised weekly steps in log (or logit) reporting
-  array[est_q] real<lower=0> tau_q;        // sd of those steps
+  array[est_q] vector<lower=0>[tau_by_group ? N : 1] tau_q;  // sd of those steps (one, or one per group)
   vector[ons ? N : 0] lq0;                 // logit reporting in week 1, if the survey is used
 }
 transformed parameters {
@@ -72,7 +73,10 @@ transformed parameters {
   }
   {
     matrix[N, W] u = rep_matrix(0, N, W);  // weekly log (or logit) reporting relative to week 1
-    if (est_q) for (k in 2:W) u[, k] = u[, k - 1] + tau_q[1] * uz[1][, k - 1];
+    if (est_q) {
+      vector[N] sd_q = tau_by_group ? tau_q[1] : rep_vector(tau_q[1][1], N);
+      for (k in 2:W) u[, k] = u[, k - 1] + sd_q .* uz[1][, k - 1];
+    }
     for (t in 1:T) for (i in 1:N) {
       q[t, i] = ons ? inv_logit(lq0[i] + u[i, qweek[t]]) : exp(u[i, qweek[t]]);
       rep[t, i] = q[t, i] * 7 * dw[i][dow[t]];
@@ -105,8 +109,10 @@ model {
   tau ~ normal(0, 0.2);
   inv_phi ~ normal(0, 1);
   for (i in 1:N) dw[i] ~ dirichlet(rep_vector(10, 7));
-  for (k in 1:est_q) to_vector(uz[k]) ~ std_normal();
-  tau_q ~ normal(0, 0.3);
+  for (k in 1:est_q) {
+    to_vector(uz[k]) ~ std_normal();
+    tau_q[k] ~ normal(0, 0.3);
+  }
   lq0 ~ normal(-1, 1.5);
   // cases
   for (t in t0:T) {
