@@ -58,8 +58,8 @@ def simulate(C1, C2, p, q, R_of_day, w, n0, rng):
 
 def simulate_general(C_of_day, p_of_day, q, R_of_day, w, n0, rng):
     """As simulate(), but contacts C_of_day(day) and relative infectiousness p_of_day(day)
-    can be any functions of the day."""
-    N = len(q)
+    can be any functions of the day, and q can be a function of the day too."""
+    N = len(p_of_day(1))
     X = np.zeros((T, N), dtype=np.int64)
     X[0] = rng.multinomial(n0, settled_mix(p_of_day(1)[:, None] * C_of_day(1)))
     for t in range(1, T):
@@ -68,7 +68,10 @@ def simulate_general(C_of_day, p_of_day, q, R_of_day, w, n0, rng):
         s = min(S, t)
         Lam = np.array([w[i, :s] @ X[t - 1::-1, i][:s] for i in range(N)])
         X[t] = rng.poisson(R_of_day(day) / spectral_radius(M) * (M.T @ Lam))
-    Y = rng.binomial(X, q[None, :])
+    if callable(q):
+        Y = rng.binomial(X, np.array([q(d) for d in range(1, T + 1)]))
+    else:
+        Y = rng.binomial(X, q[None, :])
     return X, Y
 
 

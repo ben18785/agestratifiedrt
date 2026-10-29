@@ -1,0 +1,13 @@
+dataset,model,5 weeks after contact change,5 weeks after reporting change
+R1,Constant reporting (note's model),0.32 (20%),0.32 (20%)
+R1,"Single group, reported totals",0.19 (0%),0.19 (0%)
+R1,"Weekly reporting, cases + infection survey",0.12 (60%),0.12 (60%)
+R1,"Weekly reporting, cases only",0.19 (40%),0.19 (40%)
+R2,Constant reporting (note's model),0.26 (0%),0.26 (0%)
+R2,"Single group, reported totals",0.21 (20%),0.21 (20%)
+R2,"Weekly reporting, cases + infection survey",0.00 (100%),0.00 (100%)
+R2,"Weekly reporting, cases only",0.06 (40%),0.06 (40%)
+R3,Constant reporting (note's model),0.21 (40%),0.15 (40%)
+R3,"Single group, reported totals",0.31 (0%),0.08 (60%)
+R3,"Weekly reporting, cases + infection survey",0.02 (100%),0.02 (100%)
+R3,"Weekly reporting, cases only",0.10 (80%),0.11 (40%)

@@ -23,6 +23,7 @@ python worked_example.py     # Section 3 numbers (seconds)
 python run_two_groups.py     # Table 1 and Figure 1 (about 5 minutes)
 python run_more_groups.py    # 4 and 8 groups (about 25 minutes)
 python run_waves.py          # survey waves, change date unknown (about 15 minutes)
+python run_reporting.py      # reporting that changes over time, with an infection survey (about 1 hour)
 ```
 
 Tables and posterior summaries are written to `results/` and figures to `figures/`.
@@ -63,4 +64,6 @@ Contains public sector information licensed under the Open Government Licence v3
 | `worked_example.py` | Reporting changes the matrix but not its spectral radius |
 | `run_two_groups.py` | Two groups, scenarios S1 and S2 |
 | `run_more_groups.py` | 4 and 8 age-like groups |
+| `run_reporting.py` | Children's reporting steps or ramps up (as with school testing); fits with constant reporting, weekly reporting from cases only, and weekly reporting plus a random-sample infection survey |
+| `stan/route_b_reporting.stan` | Multi-group model with weekly reporting rates and an optional infection-survey likelihood |
 | `run_waves.py` | Two-week survey waves instead of a known change date: noisy survey matrices per wave, free matrices linked across waves, a gradual change, drifting infectiousness |
