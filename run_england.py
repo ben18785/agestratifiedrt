@@ -1,8 +1,9 @@
-"""England, 4 January to 16 May 2021: schools reopened on 8 March, with lateral-flow testing of
-secondary pupils from the same day, so contacts and reporting changed together (as in R1).
-
-Five age groups (0-9, 10-19, 20-49, 50-69, 70+). Inputs from data/processed/england/
-(see data/prepare_england.py). Fits:
+"""England in two periods, five age groups (0-9, 10-19, 20-49, 50-69, 70+):
+  spring2021  4 January to 16 May 2021: schools reopened on 8 March, with lateral-flow testing of
+              secondary pupils from the same day, so contacts and reporting changed together (as in R1).
+  autumn2020  3 August to 29 November 2020: schools reopened in early September without routine
+              testing of pupils; universities returned in late September; November lockdown.
+Inputs from data/processed/england*/ (see data/prepare_england.py). Fits:
   - single group, total cases (the usual approach);
   - single group, total cases, weekly reporting + ONS Infection Survey;
   - CoMix waves x multipliers, constant reporting;
@@ -10,7 +11,7 @@ Five age groups (0-9, 10-19, 20-49, 50-69, 70+). Inputs from data/processed/engl
   - CoMix waves x multipliers, weekly reporting + ONS Infection Survey.
 All with a random walk on weekly R_t, group-specific day-of-week effects and (multi-group fits)
 vaccination as a known reduction in susceptibility.
-Usage: python run_england.py [--plot-only]
+Usage: python run_england.py [spring2021|autumn2020] [--plot-only]
 """
 import sys
 
@@ -22,17 +23,35 @@ from scipy.stats import gamma
 
 from common import ROOT, model, _diagnostics
 
-IN = ROOT / "data" / "processed" / "england"
+PERIODS = {
+    "spring2021": dict(
+        folder="england", tag="england",
+        # CoMix waves: two weeks, aligned on 8 March
+        waves=["2021-01-04", "2021-01-25", "2021-02-08", "2021-02-22", "2021-03-08", "2021-03-22",
+               "2021-04-05", "2021-04-19", "2021-05-03"],
+        events={"2021-03-08": "Schools reopen", "2021-04-02": "Easter", "2021-04-09": "", "2021-04-12": ""},
+        main="2021-03-08", plot_from="2021-01-25", ons_from="2021-01-30", ylim=(0.5, 1.3)),
+    "autumn2020": dict(
+        folder="england_autumn2020", tag="england_autumn2020",
+        # CoMix waves: two weeks where possible; one-week waves for the week schools reopened
+        # (31 Aug) and half-term (26 Oct)
+        waves=["2020-08-03", "2020-08-17", "2020-08-31", "2020-09-07", "2020-09-21", "2020-10-05",
+               "2020-10-19", "2020-10-26", "2020-11-02", "2020-11-16"],
+        events={"2020-09-03": "Schools reopen", "2020-09-21": "Universities", "2020-10-26": "Half-term",
+                "2020-11-05": "Lockdown"},
+        main="2020-09-03", plot_from="2020-08-10", ons_from="2020-08-29", ylim=(0.5, 3.0)),
+}
+PERIOD = next((a for a in sys.argv[1:] if a in PERIODS), "spring2021")
+CFG = PERIODS[PERIOD]
+IN = ROOT / "data" / "processed" / CFG["folder"]
 GROUPS = ["0-9", "10-19", "20-49", "50-69", "70+"]
 S = 21                                   # generation time support (days)
 GT_MEAN, GT_SD = 5.5, 2.1                # generation time (days)
 DELTA = 6                                # infection to specimen date (days)
 D = 30                                   # days an infection can test PCR positive
 VE1, VE2 = 0.6, 0.85                     # protection against infection: one dose (from 21 days), two (from 14 days)
-WAVE_STARTS = pd.to_datetime(["2021-01-04", "2021-01-25", "2021-02-08", "2021-02-22", "2021-03-08",
-                              "2021-03-22", "2021-04-05", "2021-04-19", "2021-05-03"])   # CoMix waves (two weeks, aligned on 8 March)
-EVENTS = {"2021-03-08": "Schools reopen,\nLFD tests in schools", "2021-04-09": "LFD tests\nfor all",
-          "2021-04-02": "Easter\nholidays", "2021-04-12": "Step 2"}
+WAVE_STARTS = pd.to_datetime(CFG["waves"])
+EVENTS = CFG["events"]
 FITS = {
     "Single group, totals": dict(N=1, est_q=0, ons=0),
     "Single group, totals + ONS, weekly reporting": dict(N=1, est_q=1, ons=1),
@@ -65,6 +84,7 @@ def load():
     pop = pd.read_csv(IN / "population.csv").set_index("group").population.reindex(GROUPS).values.astype(float)
     con = pd.read_csv(IN / "contacts.csv", parse_dates=["week_start"])
     vac = pd.read_csv(IN / "vaccination.csv", index_col=0, parse_dates=True).clip(upper=1)
+    vac = vac.reindex(pd.date_range(days[0] - pd.Timedelta(days=30), days[-1])).fillna(0.0)
     ons = pd.read_csv(IN / "ons.csv", parse_dates=["start", "end"])
     # contact matrix per wave: participant-weighted mean over the wave's weeks, then made reciprocal
     Cw = []
@@ -87,7 +107,7 @@ def load():
 
 def stan_data(dat, N, est_q, ons):
     days, T = dat["days"], len(dat["days"])
-    week = (np.arange(T) // 7) + 1                          # Monday-based weeks (4 Jan is a Monday)
+    week = (np.arange(T) // 7) + 1                          # Monday-based weeks (both periods start on a Monday)
     nP = week.max()
     if N == 1:
         Y = dat["cases"].sum(axis=1).values[:, None]
@@ -105,8 +125,10 @@ def stan_data(dat, N, est_q, ons):
             if (days.get_loc(s) + 1) + DELTA - (D - 1) >= 1 and (days.get_loc(o[o.start == s].end.iloc[0]) + 1) + DELTA <= T]
     n_pos = np.array([[o[(o.start == s) & (o.group == g)].n_positive.iloc[0] for g in GROUPS] for s in k_ok])
     n_tst = np.array([[o[(o.start == s) & (o.group == g)].n_sample.iloc[0] for g in GROUPS] for s in k_ok])
-    if N == 1:   # population-weighted positivity, with the pooled number tested
-        prev = (n_pos / n_tst * dat["pop"]).sum(1) / dat["pop"].sum()
+    if N == 1:   # population-weighted positivity over groups with data, with the pooled number tested
+        has = n_tst > 0
+        wts = np.where(has, dat["pop"], 0)
+        prev = (np.where(has, n_pos / np.maximum(n_tst, 1), 0) * wts).sum(1) / wts.sum(1)
         n_tst = n_tst.sum(1, keepdims=True)
         n_pos = np.round(prev[:, None] * n_tst).astype(int)
     win_start = [days.get_loc(s) + 1 for s in k_ok]
@@ -146,7 +168,7 @@ def summarise(f, data, dat, name):
     ps = []
     for j in range(data["N"]):
         g = "all" if data["N"] == 1 else GROUPS[j]
-        obs = np.array(data["n_pos"])[:, j] / np.array(data["n_tested"])[:, j] * 100
+        obs = np.array(data["n_pos"])[:, j] / np.maximum(np.array(data["n_tested"])[:, j], 1) * 100
         ps.append(pd.DataFrame(dict(model=name, group=g, start=days[np.array(data["win_start"]) - 1],
                                     observed=obs, median=np.median(p[:, :, j], 0),
                                     lo=np.quantile(p[:, :, j], 0.025, 0), hi=np.quantile(p[:, :, j], 0.975, 0))))
@@ -166,13 +188,13 @@ def plot(res, qres, pres, path):
     gs = fig.add_gridspec(2, 5, height_ratios=[1.25, 1], hspace=0.75, wspace=0.45)
     ax = fig.add_subplot(gs[0, :3])
     for m, off in zip(COL, np.linspace(-1.6, 1.6, len(COL))):
-        x = res[(res.model == m) & (res.week_start >= "2021-01-25")]
+        x = res[(res.model == m) & (res.week_start >= CFG["plot_from"])]
         t = x.week_start + pd.Timedelta(days=3 + off)
         ax.errorbar(t, x["median"], yerr=[x["median"] - x.lo, x.hi - x["median"]], fmt="o", ms=2.5, lw=1,
                     color=COL[m], label=m)
     ax.axhline(1, color="black", lw=0.6)
     ax.set_ylabel("$R_t$ (long-run)")
-    ax.set_ylim(0.5, 1.3)
+    ax.set_ylim(*CFG["ylim"])
     ax.set_title("A. Reproduction number, by fit", fontsize=9, loc="left")
     ax.legend(fontsize=6.5, frameon=False, loc="upper center", bbox_to_anchor=(0.5, -0.1), ncol=2)
     top = [ax]
@@ -194,9 +216,10 @@ def plot(res, qres, pres, path):
             a.axvline(pd.Timestamp(d), ls="--", color="grey", lw=0.7)
         a.xaxis.set_major_locator(mdates.MonthLocator())
         a.xaxis.set_major_formatter(mdates.DateFormatter("%b"))
-        a.set_xlim(pd.Timestamp("2021-01-22"), pd.Timestamp("2021-05-19"))
-    top[0].text(pd.Timestamp("2021-03-09"), 0.52, "Schools reopen", fontsize=7, color="grey")
-    top[0].text(pd.Timestamp("2021-04-02") + pd.Timedelta(days=1), 0.52, "Easter", fontsize=7, color="grey")
+        a.set_xlim(pd.Timestamp(CFG["plot_from"]) - pd.Timedelta(days=3), res.week_start.max() + pd.Timedelta(days=10))
+    for d, lab in EVENTS.items():
+        top[0].text(pd.Timestamp(d) + pd.Timedelta(days=1), CFG["ylim"][0] + 0.02, lab, fontsize=7, color="grey",
+                    rotation=90, va="bottom")
     p = pres[pres.model == "CoMix x multipliers, weekly reporting + ONS"]
     for j, g in enumerate(GROUPS):
         ax = fig.add_subplot(gs[1, j])
@@ -216,9 +239,9 @@ def plot(res, qres, pres, path):
         ax.set_title(g, fontsize=9)
         ax.xaxis.set_major_locator(mdates.MonthLocator())
         ax.xaxis.set_major_formatter(mdates.DateFormatter("%b"))
-        ax.set_xlim(pd.Timestamp("2021-01-28"), pd.Timestamp("2021-05-10"))
+        ax.set_xlim(pd.Timestamp(CFG["ons_from"]) - pd.Timedelta(days=3), y.start.max() + pd.Timedelta(days=14))
         ax.tick_params(axis="x", labelsize=7)
-        ax.axvline(pd.Timestamp("2021-03-08"), ls="--", color="grey", lw=0.7)
+        ax.axvline(pd.Timestamp(CFG["main"]), ls="--", color="grey", lw=0.7)
         if j == 0:
             ax.set_ylabel("Positivity (%)")
             ax.legend(fontsize=6.5, frameon=False, loc="lower left")
@@ -229,7 +252,7 @@ def plot(res, qres, pres, path):
 
 def dat_ons(g):
     o = pd.read_csv(IN / "ons.csv", parse_dates=["start", "end"])
-    return o[(o.group == g) & (o.start >= "2021-01-30")]
+    return o[(o.group == g) & (o.start >= CFG["ons_from"]) & (o.n_sample > 0)]
 
 
 def run():
@@ -242,20 +265,20 @@ def run():
         res.append(r), qres.append(q), pres.append(p), diag.append(dg)
         print(dg, flush=True)
     res, qres, pres, diag = pd.concat(res), pd.concat(qres), pd.concat(pres), pd.DataFrame(diag)
-    res.to_csv(ROOT / "results" / "england_R.csv", index=False)
-    qres.to_csv(ROOT / "results" / "england_q.csv", index=False)
-    pres.to_csv(ROOT / "results" / "england_ons_fit.csv", index=False)
-    diag.to_csv(ROOT / "results" / "england_diagnostics.csv", index=False)
+    res.to_csv(ROOT / "results" / f"{CFG['tag']}_R.csv", index=False)
+    qres.to_csv(ROOT / "results" / f"{CFG['tag']}_q.csv", index=False)
+    pres.to_csv(ROOT / "results" / f"{CFG['tag']}_ons_fit.csv", index=False)
+    diag.to_csv(ROOT / "results" / f"{CFG['tag']}_diagnostics.csv", index=False)
     with pd.option_context("display.width", 220, "display.max_columns", 20):
         print(res.pivot(index="week_start", columns="model", values="median").round(2))
         print(diag)
-    plot(res, qres, pres, ROOT / "figures" / "england.png")
+    plot(res, qres, pres, ROOT / "figures" / f"{CFG['tag']}.png")
 
 
 if __name__ == "__main__":
     if "--plot-only" in sys.argv:
-        plot(pd.read_csv(ROOT / "results" / "england_R.csv", parse_dates=["week_start"]),
-             pd.read_csv(ROOT / "results" / "england_q.csv", parse_dates=["week_start"]),
-             pd.read_csv(ROOT / "results" / "england_ons_fit.csv", parse_dates=["start"]), ROOT / "figures" / "england.png")
+        plot(pd.read_csv(ROOT / "results" / f"{CFG['tag']}_R.csv", parse_dates=["week_start"]),
+             pd.read_csv(ROOT / "results" / f"{CFG['tag']}_q.csv", parse_dates=["week_start"]),
+             pd.read_csv(ROOT / "results" / f"{CFG['tag']}_ons_fit.csv", parse_dates=["start"]), ROOT / "figures" / f"{CFG['tag']}.png")
     else:
         run()

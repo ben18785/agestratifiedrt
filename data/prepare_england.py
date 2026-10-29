@@ -1,4 +1,6 @@
-"""Model inputs for England, 4 January to 16 May 2021, in five age groups.
+"""Model inputs for England in five age groups, for one of two periods:
+  spring2021  4 January to 16 May 2021  -> data/processed/england/
+  autumn2020  3 August to 29 November 2020 -> data/processed/england_autumn2020/
 
 Groups (chosen so that cases, CoMix, the ONS Infection Survey and vaccination line up):
   0-9    primary school age
@@ -6,25 +8,28 @@ Groups (chosen so that cases, CoMix, the ONS Infection Survey and vaccination li
   20-49
   50-69
   70+
-Outputs in data/processed/england/ (committed):
+Outputs (committed):
   population.csv    ONS mid-2020 population by group
   cases.csv         cases by specimen date and group
   contacts.csv      CoMix mean contacts per participant per day, by survey week, participant
                     group (rows) and contact group (columns), population-weighted within groups
   ons.csv           ONS Infection Survey positives and people tested, by 14-day window and group
   vaccination.csv   first- and second-dose coverage by date and group
-Usage: python -I data/prepare_england.py   (after python data/download_data.py)
+Usage: python -I data/prepare_england.py [spring2021|autumn2020]   (after python data/download_data.py)
 """
 import glob
+import sys
 from pathlib import Path
 
 import numpy as np
 import pandas as pd
 
 HERE = Path(__file__).resolve().parent
-RAW, OUT = HERE / "raw", HERE / "processed" / "england"
+PERIODS = {"spring2021": ("2021-01-04", "2021-05-16", "england"),
+           "autumn2020": ("2020-08-03", "2020-11-29", "england_autumn2020")}
+START, END, folder = PERIODS[sys.argv[1] if len(sys.argv) > 1 else "spring2021"]
+RAW, OUT = HERE / "raw", HERE / "processed" / folder
 OUT.mkdir(parents=True, exist_ok=True)
-START, END = "2021-01-04", "2021-05-16"
 GROUPS = ["0-9", "10-19", "20-49", "50-69", "70+"]
 LO = np.array([0, 10, 20, 50, 70])          # lower age of each group
 HI = np.array([9, 19, 49, 69, 120])         # upper age of each group
@@ -110,7 +115,12 @@ o = o[o.age_group.isin(ONSG) & (o.start >= START) & (o.end <= END)].copy()
 o["group"] = o.age_group.map(ONSG)
 for col in ["n_positive", "n_sample"]:
     o[col] = pd.to_numeric(o[col], errors="coerce")
-ons = o.groupby(["start", "end", "group"], as_index=False)[["n_positive", "n_sample"]].sum()
+ons = o.groupby(["start", "end", "group"], as_index=False).agg(
+    n_positive=("n_positive", lambda x: x.sum(min_count=len(x))), n_sample=("n_sample", "sum"))
+# a suppressed count ("*", small numbers) in any part of a group: leave that window out (0 tested)
+sup = ons.n_positive.isna()
+ons.loc[sup, ["n_positive", "n_sample"]] = 0
+ons[["n_positive", "n_sample"]] = ons[["n_positive", "n_sample"]].astype(int)
 ons["group"] = pd.Categorical(ons.group, GROUPS)
 ons.sort_values(["start", "group"]).to_csv(OUT / "ons.csv", index=False)
 
@@ -123,9 +133,9 @@ VBAND = {"18_24": "20-49", "25_29": "20-49", "30_34": "20-49", "35_39": "20-49",
 cols = ["date", "area_code", "ageCategory", "cumPeopleVaccinatedFirstDoseByVaccinationDate",
         "cumPeopleVaccinatedSecondDoseByVaccinationDate"]
 v = pd.concat([pd.read_csv(f, usecols=cols) for f in sorted(glob.glob(str(RAW / "ukhsa_vaccinations/utla_*.csv")))])
-v = v[v.area_code.str.startswith("E") & v.ageCategory.isin(VBAND) & (v.date >= "2020-12-01") & (v.date <= END)]
+v = v[v.area_code.str.startswith("E") & v.ageCategory.isin(VBAND) & (v.date >= "2020-12-01") & (v.date <= max(END, "2020-12-31"))]
 v = v.drop_duplicates(["date", "area_code", "ageCategory"])
-days = pd.date_range("2020-12-08", END)
+days = pd.date_range("2020-12-08", max(END, "2020-12-31"))
 out = []
 for (a, b), x in v.groupby(["area_code", "ageCategory"]):
     x = x.assign(date=pd.to_datetime(x.date)).set_index("date").sort_index()
@@ -141,10 +151,11 @@ v.columns = [f"{m}_{g}" for m, g in v.columns]
 for g in ["0-9", "10-19"]:
     v[f"cov1_{g}"] = v[f"cov2_{g}"] = 0.0
 v = v[[f"{m}_{g}" for m in ["cov1", "cov2"] for g in GROUPS]]
-v.loc[:END].round(5).to_csv(OUT / "vaccination.csv")
+v = v.reindex(pd.date_range(min(START, "2020-12-08"), END)).fillna(0.0).rename_axis("date")   # zero before roll-out
+v.round(5).to_csv(OUT / "vaccination.csv")
 
 print("population:", pop_g.to_dict())
 print("cases:", cases.sum().to_dict())
 print("CoMix weeks:", contacts.week_start.nunique(), "participants:", contacts.n_participants.sum())
 print("ONS windows:", ons.start.nunique())
-print("first-dose coverage on", END, v.loc[END, [f"cov1_{g}" for g in GROUPS]].round(2).to_dict())
+print("first-dose coverage on", END, v.loc[pd.Timestamp(END), [f"cov1_{g}" for g in GROUPS]].round(2).to_dict())
