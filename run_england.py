@@ -41,7 +41,7 @@ import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 from scipy.stats import gamma
 
-from common import ROOT, model, _diagnostics
+from common import ROOT, model, _diagnostics, log_r_axis
 
 PERIODS = {
     "spring2021": dict(
@@ -315,7 +315,7 @@ def plot(res, qres, pres, path):
                     color=COL[m], label=m)
     ax.axhline(1, color="black", lw=0.6)
     ax.set_ylabel("$R_t$ (long-run)")
-    ax.set_ylim(*CFG["ylim"])
+    log_r_axis(ax, *CFG["ylim"])
     ax.set_title("A. Reproduction number, by fit", fontsize=9, loc="left")
     ax.legend(fontsize=6.5, frameon=False, loc="upper center", bbox_to_anchor=(0.5, -0.1), ncol=2)
     top = [ax]
@@ -340,7 +340,7 @@ def plot(res, qres, pres, path):
         a.xaxis.set_major_formatter(mdates.DateFormatter("%b"))
         a.set_xlim(pd.Timestamp(CFG["plot_from"]) - pd.Timedelta(days=3), res.week_start.max() + pd.Timedelta(days=10))
     for d, lab in EVENTS.items():
-        top[0].text(pd.Timestamp(d) + pd.Timedelta(days=1), CFG["ylim"][0] + 0.02, lab, fontsize=7, color="grey",
+        top[0].text(pd.Timestamp(d) + pd.Timedelta(days=1), CFG["ylim"][0] * 1.02, lab, fontsize=7, color="grey",
                     rotation=90, va="bottom")
     p = pres[pres.model == main]
     for j, g in enumerate(GROUPS):

@@ -8,7 +8,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 
-from common import ROOT
+from common import ROOT, log_r_axis
 
 PERIODS = [("england_autumn2020", "Autumn 2020", {"2020-09-03": "Schools", "2020-09-21": "Universities",
                                                    "2020-10-26": "Half-term", "2020-11-05": "Lockdown"}),
@@ -37,10 +37,10 @@ for ax, (tag, title, events) in zip(axes, PERIODS):
                     yerr=[x["median"] - x.lo, x.hi - x["median"]], fmt="o", ms=2.5, lw=1, color=col, label=lab)
     ax.axhline(1, color="black", lw=0.6)
     lo, hi = 0.5, min(2.2, res[res.week_start >= start].hi.max() + 0.05)
-    ax.set_ylim(lo, hi)
+    log_r_axis(ax, lo, hi)
     for d, lab in events.items():
         ax.axvline(pd.Timestamp(d), ls="--", color="grey", lw=0.7)
-        ax.text(pd.Timestamp(d) + pd.Timedelta(days=1), hi - 0.02, lab, fontsize=7, color="grey", va="top")
+        ax.text(pd.Timestamp(d) + pd.Timedelta(days=1), hi * 0.97, lab, fontsize=7, color="grey", va="top")
     ax.set_title(title, fontsize=9, loc="left")
     ax.set_ylabel("$R_t$")
     ax.xaxis.set_major_locator(mdates.MonthLocator())

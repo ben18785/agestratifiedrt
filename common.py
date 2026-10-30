@@ -191,3 +191,14 @@ def plot_two_groups(res, path):
     fig.legend(h, l, loc="lower center", ncol=3, fontsize=7.5, frameon=False)
     fig.tight_layout(rect=(0, 0.15, 1, 1), pad=0.3)
     fig.savefig(path, dpi=200)
+
+
+def log_r_axis(ax, lo, hi):
+    """Log-scale R_t axis with plain-number ticks."""
+    from matplotlib.ticker import FixedLocator, NullLocator, FuncFormatter
+    ax.set_yscale("log")
+    ax.set_ylim(lo, hi)
+    ticks = [t for t in (0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 1, 1.2, 1.5, 2, 2.5, 3, 4) if lo <= t <= hi]
+    ax.yaxis.set_major_locator(FixedLocator(ticks))
+    ax.yaxis.set_minor_locator(NullLocator())
+    ax.yaxis.set_major_formatter(FuncFormatter(lambda v, _: f"{v:g}"))
