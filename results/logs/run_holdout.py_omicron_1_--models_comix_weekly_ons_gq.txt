@@ -1,0 +1,50 @@
+omicron 1 CoMix x multipliers, reporting sd by age + ONS holding out windows [1]
+06:39:11 - cmdstanpy - WARNING - Non-fatal error during sampling:
+Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england.stan', line 136, column 19 to column 76)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england.stan', line 136, column 19 to column 76)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england.stan', line 136, column 19 to column 76)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england.stan', line 136, column 19 to column 76)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england.stan', line 136, column 19 to column 76)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england.stan', line 136, column 19 to column 76)
+Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england.stan', line 136, column 19 to column 76)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england.stan', line 136, column 19 to column 76)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england.stan', line 136, column 19 to column 76)
+Consider re-running with show_console=True if the above output is unclear!
+06:39:11 - cmdstanpy - WARNING - Some chains may have failed to converge.
+	Chain 1 had 67 divergent transitions (6.7%)
+	Chain 1 had 909 iterations at max treedepth (90.9%)
+	Chain 2 had 211 divergent transitions (21.1%)
+	Chain 2 had 64 iterations at max treedepth (6.4%)
+	Chain 3 had 198 divergent transitions (19.8%)
+	Chain 3 had 370 iterations at max treedepth (37.0%)
+	Chain 4 had 70 divergent transitions (7.0%)
+	Chain 4 had 647 iterations at max treedepth (64.7%)
+	Use the "diagnose()" method on the CmdStanMCMC object to see further information.
+    period  split                  key                                           model  window       start  group  n_tested  n_pos  observed_pct  interior  baseline_pct  pred_median_pct  pred_lo_pct  pred_hi_pct  covered    pit  log_pred_density
+0  omicron      1  comix_weekly_ons_gq  CoMix x multipliers, reporting sd by age + ONS       1  2022-01-09    0-9     10892   1123        10.310      True         9.454           11.788       10.347       13.322    False  0.022            -7.292
+1  omicron      1  comix_weekly_ons_gq  CoMix x multipliers, reporting sd by age + ONS       1  2022-01-09  10-19      9389    543         5.783      True         6.884            7.243        6.263        8.191    False  0.002            -9.008
+2  omicron      1  comix_weekly_ons_gq  CoMix x multipliers, reporting sd by age + ONS       1  2022-01-09  20-49     43956   2296         5.223      True         6.210            5.699        5.126        6.293     True  0.053            -7.062
+3  omicron      1  comix_weekly_ons_gq  CoMix x multipliers, reporting sd by age + ONS       1  2022-01-09  50-69     56178   2026         3.606      True         3.715            3.163        2.820        3.493    False  0.996            -8.750
+4  omicron      1  comix_weekly_ons_gq  CoMix x multipliers, reporting sd by age + ONS       1  2022-01-09    70+     31461    859         2.730      True         2.654            2.368        2.063        2.683    False  0.985            -7.329

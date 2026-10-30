@@ -1,0 +1,127 @@
+model,week_start,median,lo,hi
+"Single group, totals",2021-06-07,1.2131805500000001,0.644783035,2.1929873075
+"Single group, totals",2021-06-14,1.26531875,0.7050605645000001,2.1874569525000003
+"Single group, totals",2021-06-21,1.31542235,0.83056667825,2.0858798025000005
+"Single group, totals",2021-06-28,1.36643805,1.27723656,1.463829855
+"Single group, totals",2021-07-05,1.2141391,1.1376535825,1.2950757925
+"Single group, totals",2021-07-12,1.30836695,1.2170466224999998,1.4005068025
+"Single group, totals",2021-07-19,0.7169686150000001,0.669097944,0.77258139375
+"Single group, totals",2021-07-26,0.8738372050000001,0.8138378344999999,0.93851697
+"Single group, totals",2021-08-02,1.0448773,0.9735724235000001,1.1183682275
+"Single group, totals",2021-08-09,1.0266633,0.9574003412500001,1.09685438
+"Single group, totals",2021-08-16,1.0403478499999999,0.9701762015000001,1.1125939125
+"Single group, totals",2021-08-23,0.9412801749999999,0.8789327925,1.0115681
+"Single group, totals",2021-08-30,1.0872253,1.0126149500000001,1.1642128825000002
+"Single group, totals",2021-09-06,0.86494559,0.808315661,0.9321627339999999
+"Single group, totals + ONS, weekly reporting",2021-06-07,1.22820075,0.7410505629999999,2.015604945
+"Single group, totals + ONS, weekly reporting",2021-06-14,1.26266905,0.7853905732500001,2.022022375
+"Single group, totals + ONS, weekly reporting",2021-06-21,1.29598405,0.909158993,1.85807127
+"Single group, totals + ONS, weekly reporting",2021-06-28,1.32910975,1.1698215625000001,1.48920967
+"Single group, totals + ONS, weekly reporting",2021-07-05,1.2687137000000002,1.1407102825,1.40927453
+"Single group, totals + ONS, weekly reporting",2021-07-12,1.31246735,1.1635732775,1.4674685975000001
+"Single group, totals + ONS, weekly reporting",2021-07-19,0.895799805,0.78689163075,1.02530013
+"Single group, totals + ONS, weekly reporting",2021-07-26,0.987655955,0.883926657,1.1016928475
+"Single group, totals + ONS, weekly reporting",2021-08-02,1.0023491999999998,0.9000902255,1.1177570275
+"Single group, totals + ONS, weekly reporting",2021-08-09,1.0135889,0.91427813,1.1265691075
+"Single group, totals + ONS, weekly reporting",2021-08-16,1.0022697,0.9042669625,1.1126956650000002
+"Single group, totals + ONS, weekly reporting",2021-08-23,0.98187047,0.862129183,1.1216282700000002
+"Single group, totals + ONS, weekly reporting",2021-08-30,1.0692863,0.92659036225,1.24299874
+"Single group, totals + ONS, weekly reporting",2021-09-06,0.8719588300000001,0.75074043525,1.02001457
+"CoMix x multipliers, constant reporting",2021-06-07,1.1841105500000002,0.7013337295000001,2.0020668625000004
+"CoMix x multipliers, constant reporting",2021-06-14,1.22116205,0.7625327412499999,1.9519517625000005
+"CoMix x multipliers, constant reporting",2021-06-21,1.2460553,0.8720727,1.7932255525
+"CoMix x multipliers, constant reporting",2021-06-28,1.27531975,1.2049181525000001,1.35614952
+"CoMix x multipliers, constant reporting",2021-07-05,1.1410878,1.07977902,1.20842199
+"CoMix x multipliers, constant reporting",2021-07-12,1.2091018,1.14533316,1.28150151
+"CoMix x multipliers, constant reporting",2021-07-19,0.78320134,0.73627312475,0.8334011929999999
+"CoMix x multipliers, constant reporting",2021-07-26,0.862161435,0.8172197299999999,0.91273488525
+"CoMix x multipliers, constant reporting",2021-08-02,1.0285286,0.97805843825,1.0858971825
+"CoMix x multipliers, constant reporting",2021-08-09,1.05283055,0.9975140459999999,1.11084415
+"CoMix x multipliers, constant reporting",2021-08-16,1.1183701,1.0605498075,1.180737365
+"CoMix x multipliers, constant reporting",2021-08-23,1.05263755,0.9973826852500001,1.11261734
+"CoMix x multipliers, constant reporting",2021-08-30,1.1237431999999998,1.0612245100000002,1.187856835
+"CoMix x multipliers, constant reporting",2021-09-06,0.94913786,0.89592283225,1.0077275799999998
+"CoMix x multipliers, weekly reporting",2021-06-07,1.1852112,0.634727721,2.1237958425
+"CoMix x multipliers, weekly reporting",2021-06-14,1.2122817000000001,0.689936843,2.06527195
+"CoMix x multipliers, weekly reporting",2021-06-21,1.2482045,0.8338276447499999,1.8504299125
+"CoMix x multipliers, weekly reporting",2021-06-28,1.2861302000000001,1.1822957525000002,1.392502755
+"CoMix x multipliers, weekly reporting",2021-07-05,1.2107789,1.12241191,1.3122491324999999
+"CoMix x multipliers, weekly reporting",2021-07-12,1.1858594,1.0992878575,1.2746493675
+"CoMix x multipliers, weekly reporting",2021-07-19,0.76668826,0.698715622,0.83518696775
+"CoMix x multipliers, weekly reporting",2021-07-26,0.96043392,0.8868810665000001,1.0543686250000002
+"CoMix x multipliers, weekly reporting",2021-08-02,1.1123207000000002,1.034109235,1.19413831
+"CoMix x multipliers, weekly reporting",2021-08-09,1.1205584000000002,1.040375075,1.20132348
+"CoMix x multipliers, weekly reporting",2021-08-16,1.07068005,0.9991126925,1.1508568750000001
+"CoMix x multipliers, weekly reporting",2021-08-23,0.99444114,0.92254593725,1.0690379175
+"CoMix x multipliers, weekly reporting",2021-08-30,1.11477885,1.040131345,1.19640453
+"CoMix x multipliers, weekly reporting",2021-09-06,0.8114502299999999,0.7503140490000001,0.8774879415000001
+"CoMix x multipliers, weekly reporting + ONS",2021-06-07,1.18728715,0.636569453,2.07067771
+"CoMix x multipliers, weekly reporting + ONS",2021-06-14,1.2058176500000002,0.68803948125,2.066980135
+"CoMix x multipliers, weekly reporting + ONS",2021-06-21,1.2441852500000001,0.8194293197500001,1.86797762
+"CoMix x multipliers, weekly reporting + ONS",2021-06-28,1.2760744499999999,1.1807243699999999,1.3687447975
+"CoMix x multipliers, weekly reporting + ONS",2021-07-05,1.19910705,1.128274145,1.276217245
+"CoMix x multipliers, weekly reporting + ONS",2021-07-12,1.2689260500000001,1.1941306325,1.3472129025000001
+"CoMix x multipliers, weekly reporting + ONS",2021-07-19,0.7842588699999999,0.73225606625,0.8392408775000001
+"CoMix x multipliers, weekly reporting + ONS",2021-07-26,0.98052039,0.9163068875,1.0500673025
+"CoMix x multipliers, weekly reporting + ONS",2021-08-02,1.09933825,1.028373465,1.1760492375
+"CoMix x multipliers, weekly reporting + ONS",2021-08-09,1.078119,1.0101466374999999,1.154071175
+"CoMix x multipliers, weekly reporting + ONS",2021-08-16,1.0602999,0.99284881075,1.1315903825
+"CoMix x multipliers, weekly reporting + ONS",2021-08-23,0.9861988850000001,0.9156196569999999,1.0586638575
+"CoMix x multipliers, weekly reporting + ONS",2021-08-30,1.08806535,1.0092589950000002,1.1729979824999999
+"CoMix x multipliers, weekly reporting + ONS",2021-09-06,0.79228964,0.732386455,0.8612720575
+"CoMix x multipliers, reporting sd by age + ONS",2021-06-07,1.15893155,0.6409557215,2.0547991750000003
+"CoMix x multipliers, reporting sd by age + ONS",2021-06-14,1.1953419,0.70777821875,2.0007203425
+"CoMix x multipliers, reporting sd by age + ONS",2021-06-21,1.22294305,0.8089202400000001,1.8701969900000002
+"CoMix x multipliers, reporting sd by age + ONS",2021-06-28,1.2573664500000001,1.14608262,1.3594960075000002
+"CoMix x multipliers, reporting sd by age + ONS",2021-07-05,1.2063697,1.1346387275,1.2776096225
+"CoMix x multipliers, reporting sd by age + ONS",2021-07-12,1.2678919,1.190731295,1.3470398325
+"CoMix x multipliers, reporting sd by age + ONS",2021-07-19,0.80646588,0.75516222125,0.8609632102500001
+"CoMix x multipliers, reporting sd by age + ONS",2021-07-26,0.9600288800000001,0.89628992975,1.026934815
+"CoMix x multipliers, reporting sd by age + ONS",2021-08-02,1.0932817,1.0251266975000002,1.1675606724999998
+"CoMix x multipliers, reporting sd by age + ONS",2021-08-09,1.0863839,1.0185216449999999,1.1549216525000001
+"CoMix x multipliers, reporting sd by age + ONS",2021-08-16,1.066672,1.0010166,1.1400118625
+"CoMix x multipliers, reporting sd by age + ONS",2021-08-23,1.00425885,0.93504314475,1.0743004
+"CoMix x multipliers, reporting sd by age + ONS",2021-08-30,1.0871099499999999,1.0156703875000002,1.1673812025
+"CoMix x multipliers, reporting sd by age + ONS",2021-09-06,0.787506305,0.72832811375,0.84989952825
+"Hidden infections, CoMix, reporting sd by age + ONS",2021-06-07,1.1089491,0.9634828275,1.2856364225
+"Hidden infections, CoMix, reporting sd by age + ONS",2021-06-14,1.1199279,0.97967907025,1.2750860075000001
+"Hidden infections, CoMix, reporting sd by age + ONS",2021-06-21,1.4499388500000001,1.2756515300000002,1.6391737100000001
+"Hidden infections, CoMix, reporting sd by age + ONS",2021-06-28,1.1884844499999998,1.0434074275,1.3322899125
+"Hidden infections, CoMix, reporting sd by age + ONS",2021-07-05,1.15665585,1.0049452049999998,1.3165462325
+"Hidden infections, CoMix, reporting sd by age + ONS",2021-07-12,1.01876915,0.891496051,1.160759485
+"Hidden infections, CoMix, reporting sd by age + ONS",2021-07-19,0.727824935,0.62839368325,0.8412969899999999
+"Hidden infections, CoMix, reporting sd by age + ONS",2021-07-26,0.975494615,0.8569547142499999,1.1055154950000001
+"Hidden infections, CoMix, reporting sd by age + ONS",2021-08-02,1.05732405,0.921520586,1.1950156525
+"Hidden infections, CoMix, reporting sd by age + ONS",2021-08-09,1.0986818,0.974313664,1.2668014775000003
+"Hidden infections, CoMix, reporting sd by age + ONS",2021-08-16,1.09872405,0.9701962612499999,1.26354104
+"Hidden infections, CoMix, reporting sd by age + ONS",2021-08-23,1.0600129,0.91859668425,1.2065735375
+"Hidden infections, CoMix, reporting sd by age + ONS",2021-08-30,1.1622704000000001,1.018609925,1.3485819600000002
+"Hidden infections, CoMix, reporting sd by age + ONS",2021-09-06,0.8253488250000001,0.715620273,0.95643499475
+CoMix x random-walk susceptibility by age + ONS,2021-06-07,1.1621345,0.6142444097499999,2.1332841074999997
+CoMix x random-walk susceptibility by age + ONS,2021-06-14,1.2014345999999998,0.6700119330000001,2.107961825000001
+CoMix x random-walk susceptibility by age + ONS,2021-06-21,1.237729,0.7827065295,1.8785728175
+CoMix x random-walk susceptibility by age + ONS,2021-06-28,1.2827327,1.1726106325,1.390075995
+CoMix x random-walk susceptibility by age + ONS,2021-07-05,1.228539,1.1447245475,1.3214281650000002
+CoMix x random-walk susceptibility by age + ONS,2021-07-12,1.2675994,1.1795238749999999,1.3557966474999998
+CoMix x random-walk susceptibility by age + ONS,2021-07-19,0.75193354,0.70014363375,0.80917277575
+CoMix x random-walk susceptibility by age + ONS,2021-07-26,0.9681407799999999,0.903316371,1.0422357174999999
+CoMix x random-walk susceptibility by age + ONS,2021-08-02,1.07926475,1.0108602150000001,1.1559009425
+CoMix x random-walk susceptibility by age + ONS,2021-08-09,1.0714627,0.999547139,1.1492036425
+CoMix x random-walk susceptibility by age + ONS,2021-08-16,1.0297972,0.95710245275,1.105237865
+CoMix x random-walk susceptibility by age + ONS,2021-08-23,0.97620536,0.9037901650000001,1.0544942575
+CoMix x random-walk susceptibility by age + ONS,2021-08-30,1.12882255,1.03813427,1.2305537125000001
+CoMix x random-walk susceptibility by age + ONS,2021-09-06,0.8171325300000001,0.73743396,0.9007211465
+"Hidden infections, random-walk susceptibility by age + ONS",2021-06-07,1.20958155,1.072778205,1.3518965025
+"Hidden infections, random-walk susceptibility by age + ONS",2021-06-14,1.2227964,1.107733275,1.3416856625000002
+"Hidden infections, random-walk susceptibility by age + ONS",2021-06-21,1.57203125,1.4243435224999998,1.724372845
+"Hidden infections, random-walk susceptibility by age + ONS",2021-06-28,1.27309895,1.1591369025,1.3890498549999999
+"Hidden infections, random-walk susceptibility by age + ONS",2021-07-05,1.2857900500000001,1.1607974375,1.4075148625
+"Hidden infections, random-walk susceptibility by age + ONS",2021-07-12,1.07007335,0.96540752575,1.181904405
+"Hidden infections, random-walk susceptibility by age + ONS",2021-07-19,0.7078088250000001,0.632366482,0.8047628025
+"Hidden infections, random-walk susceptibility by age + ONS",2021-07-26,1.02089365,0.9153823515,1.117756065
+"Hidden infections, random-walk susceptibility by age + ONS",2021-08-02,1.0591906500000001,0.95183870325,1.1660285775
+"Hidden infections, random-walk susceptibility by age + ONS",2021-08-09,1.0187715499999999,0.9291738940000001,1.11887128
+"Hidden infections, random-walk susceptibility by age + ONS",2021-08-16,0.9869743049999999,0.901147798,1.0844821125
+"Hidden infections, random-walk susceptibility by age + ONS",2021-08-23,0.92841517,0.8384917894999999,1.019468495
+"Hidden infections, random-walk susceptibility by age + ONS",2021-08-30,1.0916348999999999,0.97069838175,1.210360695
+"Hidden infections, random-walk susceptibility by age + ONS",2021-09-06,0.766564215,0.68214115475,0.8605242985

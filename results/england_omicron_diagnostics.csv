@@ -1,0 +1,10 @@
+model,max_rhat,min_ess_R,divergences,share_max_treedepth,a_raw,b_raw,rho,sigA
+"Single group, totals",1.00108,2494,0,0.0,,,,
+"Single group, totals + ONS, weekly reporting",1.00308,937,0,0.0,,,,
+"CoMix x multipliers, constant reporting",1.00173,2469,0,0.0,0.10; 0.58; 0.61; 9.43,1.81; 3.30; 2.77; 1.23,,
+"CoMix x multipliers, weekly reporting",1.00547,958,0,0.0,0.22; 0.31; 1.63; 1.29,0.88; 1.56; 1.55; 1.25,,
+"CoMix x multipliers, weekly reporting + ONS",1.00166,985,4,0.14,0.17; 0.89; 4.66; 5.47,0.56; 1.22; 0.99; 0.79,,
+"CoMix x multipliers, reporting sd by age + ONS",1.01326,533,12,0.524,0.21; 0.95; 4.44; 5.65,0.59; 1.26; 1.04; 0.82,,
+"Hidden infections, CoMix, reporting sd by age + ONS",1.1684,17,1,1.0,0.30; 1.34; 0.67; 7.33,0.64; 1.58; 1.43; 0.88,,
+CoMix x random-walk susceptibility by age + ONS,1.00102,2070,0,0.0,0.21; 1.19; 0.68; 2.31,0.96; 1.28; 0.96; 0.65,0.54,0.185
+"Hidden infections, random-walk susceptibility by age + ONS",1.06481,58,0,1.0,0.39; 1.05; 0.59; 0.63,0.72; 1.44; 0.99; 0.60,0.6,0.224

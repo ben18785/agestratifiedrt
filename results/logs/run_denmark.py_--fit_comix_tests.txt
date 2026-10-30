@@ -1,0 +1,19 @@
+denmark2021 comix_tests - CoMix x multipliers, reporting follows tests
+06:56:00 - cmdstanpy - WARNING - Non-fatal error during sampling:
+Exception: G not finite and positive (in 'denmark.stan', line 80, column 59 to column 95)
+	Exception: G not finite and positive (in 'denmark.stan', line 80, column 59 to column 95)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'denmark.stan', line 108, column 36 to column 98)
+	Exception: G not finite and positive (in 'denmark.stan', line 80, column 59 to column 95)
+Exception: G not finite and positive (in 'denmark.stan', line 80, column 59 to column 95)
+	Exception: G not finite and positive (in 'denmark.stan', line 80, column 59 to column 95)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'denmark.stan', line 108, column 36 to column 98)
+	Exception: G not finite and positive (in 'denmark.stan', line 80, column 59 to column 95)
+Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'denmark.stan', line 108, column 36 to column 98)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'denmark.stan', line 108, column 36 to column 98)
+	Exception: G not finite and positive (in 'denmark.stan', line 80, column 59 to column 95)
+Exception: G not finite and positive (in 'denmark.stan', line 80, column 59 to column 95)
+	Exception: G not finite and positive (in 'denmark.stan', line 80, column 59 to column 95)
+	Exception: G not finite and positive (in 'denmark.stan', line 80, column 59 to column 95)
+	Exception: G not finite and positive (in 'denmark.stan', line 80, column 59 to column 95)
+Consider re-running with show_console=True if the above output is unclear!
+{'model': 'CoMix x multipliers, reporting follows tests', 'max_rhat': 1.00202, 'divergences': 0, 'share_max_treedepth': 0.0, 'beta': '0.53 (0.27 to 0.81)', 'a_raw': '0.36; 2.96; 0.52; 5.06', 'b_raw': '1.60; 1.32; 0.91; 0.73'}

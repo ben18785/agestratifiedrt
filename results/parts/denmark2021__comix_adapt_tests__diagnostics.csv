@@ -1,0 +1,2 @@
+model,max_rhat,divergences,share_max_treedepth,beta,a_raw,b_raw,rho,sigA
+"CoMix x random-walk susceptibility, reporting follows tests",1.00222,10,0.0,0.31 (0.05 to 0.56),0.30; 2.26; 1.14; 2.41,1.67; 1.61; 1.26; 1.54,0.47,0.166

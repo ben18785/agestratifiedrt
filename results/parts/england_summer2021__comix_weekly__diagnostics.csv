@@ -1,0 +1,2 @@
+model,max_rhat,min_ess_R,divergences,share_max_treedepth,a_raw,b_raw
+"CoMix x multipliers, weekly reporting",1.00145,1037,0,0.026,1.14; 1.24; 1.22; 0.86,2.08; 5.17; 3.22; 2.23

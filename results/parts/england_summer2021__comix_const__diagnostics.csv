@@ -1,0 +1,2 @@
+model,max_rhat,min_ess_R,divergences,share_max_treedepth,a_raw,b_raw
+"CoMix x multipliers, constant reporting",1.00205,3301,0,0.0,0.13; 0.69; 0.20; 6.48,3.66; 4.58; 3.70; 1.59

@@ -1,0 +1,18 @@
+denmark2021 totals - Single group, totals
+/home/runner/work/agestratifiedrt/agestratifiedrt/run_denmark.py:103: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  Xd = dat["Xd"].sum(1).values[:, None]
+/home/runner/work/agestratifiedrt/agestratifiedrt/run_denmark.py:104: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  Yw = dat["Yw"].sum(1).values[:, None]
+/home/runner/work/agestratifiedrt/agestratifiedrt/run_denmark.py:105: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  lt = np.log(dat["tests"].sum(1).values / dat["pop"].sum())[None, :]
+06:46:58 - cmdstanpy - WARNING - Non-fatal error during sampling:
+Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'denmark.stan', line 108, column 36 to column 98)
+Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'denmark.stan', line 108, column 36 to column 98)
+Consider re-running with show_console=True if the above output is unclear!
+06:46:58 - cmdstanpy - WARNING - Some chains may have failed to converge.
+	Chain 1 had 61 divergent transitions (6.1%)
+	Chain 2 had 6 divergent transitions (0.6%)
+	Chain 3 had 7 divergent transitions (0.7%)
+	Chain 4 had 5 divergent transitions (0.5%)
+	Use the "diagnose()" method on the CmdStanMCMC object to see further information.
+{'model': 'Single group, totals', 'max_rhat': 1.00491, 'divergences': 79, 'share_max_treedepth': 0.0}

@@ -1,0 +1,2 @@
+model,max_rhat,divergences,share_max_treedepth,beta,a_raw,b_raw
+"CoMix x multipliers, reporting follows tests + random walk",1.00374,2,0.001,0.29 (0.05 to 0.52),0.42; 4.85; 0.89; 0.74,1.58; 1.47; 1.33; 2.01

@@ -1,0 +1,2 @@
+period,split,key,model,window,start,group,n_tested,n_pos,observed_pct,interior,baseline_pct,pred_median_pct,pred_lo_pct,pred_hi_pct,covered,pit,log_pred_density
+omicron,1,totals_ons,"Single group, totals + ONS, weekly reporting",1,2022-01-09,all,151876,7823,5.150912586583792,True,5.684207600003045,5.2937923042482025,4.654438489293898,5.934462982959783,True,0.33475,-7.271412766965644

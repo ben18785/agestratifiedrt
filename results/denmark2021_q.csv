@@ -1,0 +1,487 @@
+model,group,week_start,median,lo,hi
+"Single group, totals",all,2020-12-14,1.0,1.0,1.0
+"Single group, totals",all,2020-12-21,1.0,1.0,1.0
+"Single group, totals",all,2020-12-28,1.0,1.0,1.0
+"Single group, totals",all,2021-01-04,1.0,1.0,1.0
+"Single group, totals",all,2021-01-11,1.0,1.0,1.0
+"Single group, totals",all,2021-01-18,1.0,1.0,1.0
+"Single group, totals",all,2021-01-25,1.0,1.0,1.0
+"Single group, totals",all,2021-02-01,1.0,1.0,1.0
+"Single group, totals",all,2021-02-08,1.0,1.0,1.0
+"Single group, totals",all,2021-02-15,1.0,1.0,1.0
+"Single group, totals",all,2021-02-22,1.0,1.0,1.0
+"Single group, totals",all,2021-03-01,1.0,1.0,1.0
+"Single group, totals",all,2021-03-08,1.0,1.0,1.0
+"Single group, totals",all,2021-03-15,1.0,1.0,1.0
+"Single group, totals",all,2021-03-22,1.0,1.0,1.0
+"Single group, totals",all,2021-03-29,1.0,1.0,1.0
+"Single group, totals",all,2021-04-05,1.0,1.0,1.0
+"Single group, totals",all,2021-04-12,1.0,1.0,1.0
+"Single group, reporting follows tests",all,2020-12-14,1.0,1.0,1.0
+"Single group, reporting follows tests",all,2020-12-21,0.8889907349120949,0.6955066362758963,1.1426874459118121
+"Single group, reporting follows tests",all,2020-12-28,0.8245515775753137,0.5513856244407399,1.2444319489894302
+"Single group, reporting follows tests",all,2021-01-04,0.8405610318121798,0.5850961166102484,1.217599345069215
+"Single group, reporting follows tests",all,2021-01-11,0.8583570341573247,0.6241731430033438,1.1890238544626266
+"Single group, reporting follows tests",all,2021-01-18,0.9332012704665135,0.8078792085063454,1.0815196763777635
+"Single group, reporting follows tests",all,2021-01-25,0.947950498787087,0.8479349726800399,1.0624648649506223
+"Single group, reporting follows tests",all,2021-02-01,0.9599105427965723,0.8813850213329291,1.047471681061332
+"Single group, reporting follows tests",all,2021-02-08,0.9667814202435586,0.9009991573010676,1.0390371757914838
+"Single group, reporting follows tests",all,2021-02-15,0.978483576310544,0.9350805871817278,1.0249625993187432
+"Single group, reporting follows tests",all,2021-02-22,1.0331710228771094,0.9636850182727086,1.1059468012347955
+"Single group, reporting follows tests",all,2021-03-01,1.0654712897081806,0.9306365285606958,1.2161621057447882
+"Single group, reporting follows tests",all,2021-03-08,1.0762474869774712,0.9200809476398135,1.2545215875386386
+"Single group, reporting follows tests",all,2021-03-15,1.1018932509785375,0.8958448816383204,1.3490838032703787
+"Single group, reporting follows tests",all,2021-03-22,1.0981030085351335,0.8993507607531815,1.3348148855438944
+"Single group, reporting follows tests",all,2021-03-29,1.0885480122645954,0.9083045297162928,1.2992971243542526
+"Single group, reporting follows tests",all,2021-04-05,1.1288245835850428,0.8716564985081366,1.453452045806289
+"Single group, reporting follows tests",all,2021-04-12,1.1296669840293783,0.8709197251866292,1.4568018205096316
+"CoMix x multipliers, constant reporting",0-11,2020-12-14,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",0-11,2020-12-21,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",0-11,2020-12-28,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",0-11,2021-01-04,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",0-11,2021-01-11,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",0-11,2021-01-18,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",0-11,2021-01-25,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",0-11,2021-02-01,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",0-11,2021-02-08,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",0-11,2021-02-15,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",0-11,2021-02-22,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",0-11,2021-03-01,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",0-11,2021-03-08,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",0-11,2021-03-15,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",0-11,2021-03-22,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",0-11,2021-03-29,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",0-11,2021-04-05,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",0-11,2021-04-12,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",12-19,2020-12-14,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",12-19,2020-12-21,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",12-19,2020-12-28,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",12-19,2021-01-04,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",12-19,2021-01-11,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",12-19,2021-01-18,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",12-19,2021-01-25,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",12-19,2021-02-01,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",12-19,2021-02-08,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",12-19,2021-02-15,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",12-19,2021-02-22,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",12-19,2021-03-01,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",12-19,2021-03-08,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",12-19,2021-03-15,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",12-19,2021-03-22,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",12-19,2021-03-29,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",12-19,2021-04-05,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",12-19,2021-04-12,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",20-39,2020-12-14,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",20-39,2020-12-21,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",20-39,2020-12-28,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",20-39,2021-01-04,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",20-39,2021-01-11,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",20-39,2021-01-18,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",20-39,2021-01-25,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",20-39,2021-02-01,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",20-39,2021-02-08,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",20-39,2021-02-15,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",20-39,2021-02-22,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",20-39,2021-03-01,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",20-39,2021-03-08,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",20-39,2021-03-15,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",20-39,2021-03-22,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",20-39,2021-03-29,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",20-39,2021-04-05,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",20-39,2021-04-12,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",40-64,2020-12-14,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",40-64,2020-12-21,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",40-64,2020-12-28,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",40-64,2021-01-04,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",40-64,2021-01-11,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",40-64,2021-01-18,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",40-64,2021-01-25,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",40-64,2021-02-01,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",40-64,2021-02-08,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",40-64,2021-02-15,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",40-64,2021-02-22,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",40-64,2021-03-01,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",40-64,2021-03-08,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",40-64,2021-03-15,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",40-64,2021-03-22,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",40-64,2021-03-29,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",40-64,2021-04-05,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",40-64,2021-04-12,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",65+,2020-12-14,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",65+,2020-12-21,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",65+,2020-12-28,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",65+,2021-01-04,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",65+,2021-01-11,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",65+,2021-01-18,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",65+,2021-01-25,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",65+,2021-02-01,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",65+,2021-02-08,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",65+,2021-02-15,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",65+,2021-02-22,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",65+,2021-03-01,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",65+,2021-03-08,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",65+,2021-03-15,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",65+,2021-03-22,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",65+,2021-03-29,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",65+,2021-04-05,1.0,1.0,1.0
+"CoMix x multipliers, constant reporting",65+,2021-04-12,1.0,1.0,1.0
+"CoMix x multipliers, weekly reporting (cases only)",0-11,2020-12-14,1.0,1.0,1.0
+"CoMix x multipliers, weekly reporting (cases only)",0-11,2020-12-21,0.9548340349989707,0.7108755008529093,1.268997296711025
+"CoMix x multipliers, weekly reporting (cases only)",0-11,2020-12-28,0.9088871453686916,0.5930252163702876,1.3263221295612233
+"CoMix x multipliers, weekly reporting (cases only)",0-11,2021-01-04,0.8504175711134312,0.5218627674680542,1.292739265063374
+"CoMix x multipliers, weekly reporting (cases only)",0-11,2021-01-11,0.9602285634090151,0.5381475868868008,1.5785824880109571
+"CoMix x multipliers, weekly reporting (cases only)",0-11,2021-01-18,1.036150797000049,0.557044770922419,1.723867494086976
+"CoMix x multipliers, weekly reporting (cases only)",0-11,2021-01-25,1.1598263785156058,0.6182387925396188,1.9662944773455948
+"CoMix x multipliers, weekly reporting (cases only)",0-11,2021-02-01,1.1444193105457734,0.5900116811109138,1.92778240472456
+"CoMix x multipliers, weekly reporting (cases only)",0-11,2021-02-08,1.2074702290639747,0.6382335022681962,2.0290944030375826
+"CoMix x multipliers, weekly reporting (cases only)",0-11,2021-02-15,1.4629874665330533,0.8085773575450331,2.451824766587634
+"CoMix x multipliers, weekly reporting (cases only)",0-11,2021-02-22,1.4042433126533156,0.760558372768554,2.353575681945725
+"CoMix x multipliers, weekly reporting (cases only)",0-11,2021-03-01,1.4956271546556312,0.8421769393234805,2.479540831951918
+"CoMix x multipliers, weekly reporting (cases only)",0-11,2021-03-08,1.489366386945204,0.8355464557557536,2.462674723986139
+"CoMix x multipliers, weekly reporting (cases only)",0-11,2021-03-15,1.4771988569092267,0.8266905831951907,2.491503480794301
+"CoMix x multipliers, weekly reporting (cases only)",0-11,2021-03-22,1.3119512537288371,0.7215284365667076,2.1972247416323936
+"CoMix x multipliers, weekly reporting (cases only)",0-11,2021-03-29,1.1624472259841605,0.6193371031517108,1.9702662573564138
+"CoMix x multipliers, weekly reporting (cases only)",0-11,2021-04-05,1.1385896955815027,0.5826593880843319,2.001399279734365
+"CoMix x multipliers, weekly reporting (cases only)",0-11,2021-04-12,1.4557720158027005,0.7395289475160297,2.659088888123423
+"CoMix x multipliers, weekly reporting (cases only)",12-19,2020-12-14,1.0,1.0,1.0
+"CoMix x multipliers, weekly reporting (cases only)",12-19,2020-12-21,1.0084811852343005,0.8459624133019674,1.2281264187565193
+"CoMix x multipliers, weekly reporting (cases only)",12-19,2020-12-28,1.0150529298129731,0.7984259937994765,1.3688445673400063
+"CoMix x multipliers, weekly reporting (cases only)",12-19,2021-01-04,1.0206403102880344,0.7617833314448563,1.471307229657881
+"CoMix x multipliers, weekly reporting (cases only)",12-19,2021-01-11,1.025006441236656,0.7354765898429116,1.5616975299080895
+"CoMix x multipliers, weekly reporting (cases only)",12-19,2021-01-18,1.0110186821609066,0.7065811700225627,1.5312964425909217
+"CoMix x multipliers, weekly reporting (cases only)",12-19,2021-01-25,1.0439154201939878,0.7450893043064307,1.6359629138854688
+"CoMix x multipliers, weekly reporting (cases only)",12-19,2021-02-01,1.0375885019747861,0.7320937841284353,1.6259679860403036
+"CoMix x multipliers, weekly reporting (cases only)",12-19,2021-02-08,0.991638468523693,0.6847878762143118,1.486445830048234
+"CoMix x multipliers, weekly reporting (cases only)",12-19,2021-02-15,1.0197763178771702,0.7102997794198661,1.5539658453234297
+"CoMix x multipliers, weekly reporting (cases only)",12-19,2021-02-22,1.0539624694443739,0.7339574068596427,1.63092963999147
+"CoMix x multipliers, weekly reporting (cases only)",12-19,2021-03-01,1.108834030304216,0.7869082514162938,1.7650408729922475
+"CoMix x multipliers, weekly reporting (cases only)",12-19,2021-03-08,1.1777340436451662,0.8219693290912508,1.8871406768754966
+"CoMix x multipliers, weekly reporting (cases only)",12-19,2021-03-15,1.2468354644411344,0.8734634477894699,2.0635892705701826
+"CoMix x multipliers, weekly reporting (cases only)",12-19,2021-03-22,1.2443456141615679,0.8596553053241123,2.0121501569752787
+"CoMix x multipliers, weekly reporting (cases only)",12-19,2021-03-29,1.3153948965895892,0.8983423772853365,2.1638748795422638
+"CoMix x multipliers, weekly reporting (cases only)",12-19,2021-04-05,1.486352159569381,0.9876987939722085,2.6911570126941675
+"CoMix x multipliers, weekly reporting (cases only)",12-19,2021-04-12,1.4812199296043227,0.9828327543656324,2.7161982938275755
+"CoMix x multipliers, weekly reporting (cases only)",20-39,2020-12-14,1.0,1.0,1.0
+"CoMix x multipliers, weekly reporting (cases only)",20-39,2020-12-21,0.9989283738162134,0.8604370961457246,1.150245698509281
+"CoMix x multipliers, weekly reporting (cases only)",20-39,2020-12-28,0.9973281320649012,0.7984069735102943,1.227009876778249
+"CoMix x multipliers, weekly reporting (cases only)",20-39,2021-01-04,1.0027876021327726,0.7784320257137674,1.3119399438480623
+"CoMix x multipliers, weekly reporting (cases only)",20-39,2021-01-11,0.9489077095063025,0.665976216536718,1.1713633380620454
+"CoMix x multipliers, weekly reporting (cases only)",20-39,2021-01-18,0.9704884597552355,0.6960619522407152,1.25324725846409
+"CoMix x multipliers, weekly reporting (cases only)",20-39,2021-01-25,0.9496534741803457,0.6546649828939046,1.1968791906395744
+"CoMix x multipliers, weekly reporting (cases only)",20-39,2021-02-01,0.9778430647593264,0.7020709997458882,1.280128656110002
+"CoMix x multipliers, weekly reporting (cases only)",20-39,2021-02-08,0.9505040040414301,0.6502748943795184,1.2256742865175467
+"CoMix x multipliers, weekly reporting (cases only)",20-39,2021-02-15,0.9728301489288247,0.6812678081114222,1.2912807368123285
+"CoMix x multipliers, weekly reporting (cases only)",20-39,2021-02-22,0.9784354523598455,0.691029176987633,1.3033233083542044
+"CoMix x multipliers, weekly reporting (cases only)",20-39,2021-03-01,0.9591816149902916,0.6650585085933307,1.2741385232934617
+"CoMix x multipliers, weekly reporting (cases only)",20-39,2021-03-08,0.9716989511906589,0.6666288782734798,1.30871736079374
+"CoMix x multipliers, weekly reporting (cases only)",20-39,2021-03-15,0.9889057106319041,0.6814934638013268,1.365717755732233
+"CoMix x multipliers, weekly reporting (cases only)",20-39,2021-03-22,1.0105360701088415,0.714590652635795,1.4430671180026804
+"CoMix x multipliers, weekly reporting (cases only)",20-39,2021-03-29,1.002876782601645,0.6835448848289173,1.4346786350485141
+"CoMix x multipliers, weekly reporting (cases only)",20-39,2021-04-05,1.039513199152886,0.7162369567794972,1.5651859944286781
+"CoMix x multipliers, weekly reporting (cases only)",20-39,2021-04-12,1.0533678817633132,0.7128657134264461,1.6218668144379158
+"CoMix x multipliers, weekly reporting (cases only)",40-64,2020-12-14,1.0,1.0,1.0
+"CoMix x multipliers, weekly reporting (cases only)",40-64,2020-12-21,1.0004971082030254,0.8904490367673368,1.1298023907711938
+"CoMix x multipliers, weekly reporting (cases only)",40-64,2020-12-28,1.001199649655919,0.8576309153393035,1.1781488767533472
+"CoMix x multipliers, weekly reporting (cases only)",40-64,2021-01-04,1.0029023941199071,0.8358545888450337,1.2293087816077501
+"CoMix x multipliers, weekly reporting (cases only)",40-64,2021-01-11,1.010676038529336,0.8336425898892114,1.2840435384738382
+"CoMix x multipliers, weekly reporting (cases only)",40-64,2021-01-18,1.0125949157365528,0.8305232445782581,1.3100045167552363
+"CoMix x multipliers, weekly reporting (cases only)",40-64,2021-01-25,0.9991765893003681,0.7838890876431462,1.2454441474136018
+"CoMix x multipliers, weekly reporting (cases only)",40-64,2021-02-01,0.9979823498684695,0.7698301480837377,1.2605461479583688
+"CoMix x multipliers, weekly reporting (cases only)",40-64,2021-02-08,1.0123011042962362,0.8048989904513443,1.331429460924735
+"CoMix x multipliers, weekly reporting (cases only)",40-64,2021-02-15,1.0078443285005745,0.7974352451277245,1.3242703351312057
+"CoMix x multipliers, weekly reporting (cases only)",40-64,2021-02-22,0.998966376420232,0.7707731703014687,1.3013301795607923
+"CoMix x multipliers, weekly reporting (cases only)",40-64,2021-03-01,0.9867154017090386,0.7453910404515293,1.2750909705098235
+"CoMix x multipliers, weekly reporting (cases only)",40-64,2021-03-08,0.9748178348893957,0.7199268155192233,1.2473092482058121
+"CoMix x multipliers, weekly reporting (cases only)",40-64,2021-03-15,0.9483721854421014,0.6769158079106712,1.2024390746354483
+"CoMix x multipliers, weekly reporting (cases only)",40-64,2021-03-22,0.9458545394966955,0.6667245330583366,1.2100672360080154
+"CoMix x multipliers, weekly reporting (cases only)",40-64,2021-03-29,0.9208121860304432,0.63184098560541,1.1852724068740077
+"CoMix x multipliers, weekly reporting (cases only)",40-64,2021-04-05,0.8784267308818641,0.5811113800712653,1.1491733744422388
+"CoMix x multipliers, weekly reporting (cases only)",40-64,2021-04-12,0.8663649579077765,0.5616794466953832,1.137844656282662
+"CoMix x multipliers, weekly reporting (cases only)",65+,2020-12-14,1.0,1.0,1.0
+"CoMix x multipliers, weekly reporting (cases only)",65+,2020-12-21,1.0430878928231166,0.7192051331791454,1.559814235589962
+"CoMix x multipliers, weekly reporting (cases only)",65+,2020-12-28,1.0819822156943102,0.6376389235617046,1.9732662703764452
+"CoMix x multipliers, weekly reporting (cases only)",65+,2021-01-04,1.1506245138706195,0.6347038079363804,2.3326779365849606
+"CoMix x multipliers, weekly reporting (cases only)",65+,2021-01-11,1.1593985133201319,0.6195283551935145,2.484782769905013
+"CoMix x multipliers, weekly reporting (cases only)",65+,2021-01-18,1.1161314405022877,0.5779517099016246,2.366139877430729
+"CoMix x multipliers, weekly reporting (cases only)",65+,2021-01-25,1.0363067003728421,0.5227817697295977,2.2451270003920367
+"CoMix x multipliers, weekly reporting (cases only)",65+,2021-02-01,0.9809532345774401,0.4997229367092719,2.092371425939294
+"CoMix x multipliers, weekly reporting (cases only)",65+,2021-02-08,0.7609286065079258,0.3895901788821072,1.6559214186637496
+"CoMix x multipliers, weekly reporting (cases only)",65+,2021-02-15,0.6397666330859264,0.3248325439487325,1.3406773119175797
+"CoMix x multipliers, weekly reporting (cases only)",65+,2021-02-22,0.6551605087076378,0.3326989432355321,1.3825654342095857
+"CoMix x multipliers, weekly reporting (cases only)",65+,2021-03-01,0.5718060255484886,0.2879728016678569,1.2085824623450823
+"CoMix x multipliers, weekly reporting (cases only)",65+,2021-03-08,0.47432367347823146,0.23602777971460157,0.9831827039128466
+"CoMix x multipliers, weekly reporting (cases only)",65+,2021-03-15,0.5110412385541476,0.253148685107159,1.0874169998742458
+"CoMix x multipliers, weekly reporting (cases only)",65+,2021-03-22,0.530178259668187,0.2665366431014018,1.1287550707997176
+"CoMix x multipliers, weekly reporting (cases only)",65+,2021-03-29,0.5372272027371818,0.26308023297087246,1.1705506667775865
+"CoMix x multipliers, weekly reporting (cases only)",65+,2021-04-05,0.40761370075266196,0.19629824726318787,0.880538236005715
+"CoMix x multipliers, weekly reporting (cases only)",65+,2021-04-12,0.30017869168160394,0.13701315249048487,0.6467028538092741
+"CoMix x multipliers, reporting follows tests",0-11,2020-12-14,1.0,1.0,1.0
+"CoMix x multipliers, reporting follows tests",0-11,2020-12-21,0.8295695103325924,0.7530036018142654,0.9098624039539459
+"CoMix x multipliers, reporting follows tests",0-11,2020-12-28,0.5624651907467737,0.41742560792754163,0.7475838676394512
+"CoMix x multipliers, reporting follows tests",0-11,2021-01-04,0.5052169742963217,0.35465088429638963,0.7080960297471253
+"CoMix x multipliers, reporting follows tests",0-11,2021-01-11,0.5221837142979416,0.37289036359804467,0.720019941916033
+"CoMix x multipliers, reporting follows tests",0-11,2021-01-18,0.5480348523217088,0.4012746486958351,0.7378252199619604
+"CoMix x multipliers, reporting follows tests",0-11,2021-01-25,0.5341421857990009,0.3859322746977876,0.7283094000527134
+"CoMix x multipliers, reporting follows tests",0-11,2021-02-01,0.5702755950363061,0.42625764488280593,0.752814113409117
+"CoMix x multipliers, reporting follows tests",0-11,2021-02-08,0.6116104033888954,0.47403712737638065,0.7799227167867366
+"CoMix x multipliers, reporting follows tests",0-11,2021-02-15,0.6660300162801187,0.5395316136278613,0.8142666168345825
+"CoMix x multipliers, reporting follows tests",0-11,2021-02-22,0.7343162352170534,0.6257129057012205,0.8554541078478118
+"CoMix x multipliers, reporting follows tests",0-11,2021-03-01,0.8156053016537204,0.7338432089904617,0.9020869526337414
+"CoMix x multipliers, reporting follows tests",0-11,2021-03-08,0.8759487012331724,0.8178382321065945,0.9352331205301408
+"CoMix x multipliers, reporting follows tests",0-11,2021-03-15,0.9550829467862123,0.9326036163871028,0.977034049350436
+"CoMix x multipliers, reporting follows tests",0-11,2021-03-22,0.9723333695845255,0.9582972356111888,0.9859160212527747
+"CoMix x multipliers, reporting follows tests",0-11,2021-03-29,0.9328126953888497,0.8997875476948117,0.9654492963741074
+"CoMix x multipliers, reporting follows tests",0-11,2021-04-05,0.8080641783283624,0.7235662792768456,0.8978605845863971
+"CoMix x multipliers, reporting follows tests",0-11,2021-04-12,0.8582228553969495,0.7928432743471711,0.925616888399602
+"CoMix x multipliers, reporting follows tests",12-19,2020-12-14,1.0,1.0,1.0
+"CoMix x multipliers, reporting follows tests",12-19,2020-12-21,0.8228517608582404,0.7437650928450286,0.9061300238075122
+"CoMix x multipliers, reporting follows tests",12-19,2020-12-28,0.7543181314311759,0.6517715625734469,0.8671560226252736
+"CoMix x multipliers, reporting follows tests",12-19,2021-01-04,0.7334728767115151,0.6246221632412146,0.8549572675654561
+"CoMix x multipliers, reporting follows tests",12-19,2021-01-11,0.6300412346215278,0.4958941994071495,0.7917174815661255
+"CoMix x multipliers, reporting follows tests",12-19,2021-01-18,0.6667044198291521,0.5403612802935412,0.814683342745282
+"CoMix x multipliers, reporting follows tests",12-19,2021-01-25,0.6855608853914594,0.5637343516421638,0.8262518748181108
+"CoMix x multipliers, reporting follows tests",12-19,2021-02-01,0.7043141088583851,0.5873123123306804,0.8376020436843534
+"CoMix x multipliers, reporting follows tests",12-19,2021-02-08,0.7714533659256875,0.6743824758042744,0.8770593611925701
+"CoMix x multipliers, reporting follows tests",12-19,2021-02-15,0.7950435348657395,0.7059387936143746,0.8905170739449626
+"CoMix x multipliers, reporting follows tests",12-19,2021-02-22,0.9248145412674339,0.888100219068845,0.9612554190979888
+"CoMix x multipliers, reporting follows tests",12-19,2021-03-01,0.9371273767017056,0.9061140227918048,0.967704341179909
+"CoMix x multipliers, reporting follows tests",12-19,2021-03-08,1.1561774708969546,1.07612389224182,1.2464873394667833
+"CoMix x multipliers, reporting follows tests",12-19,2021-03-15,1.3133649527035578,1.147757641289058,1.5126567580964905
+"CoMix x multipliers, reporting follows tests",12-19,2021-03-22,1.1301715778496768,1.0638180166416205,1.2041684221522737
+"CoMix x multipliers, reporting follows tests",12-19,2021-03-29,1.1768887807878259,1.0858268028540545,1.2805457227497652
+"CoMix x multipliers, reporting follows tests",12-19,2021-04-05,1.153578874842027,1.0749004446627026,1.2422362937296485
+"CoMix x multipliers, reporting follows tests",12-19,2021-04-12,1.0564963027071892,1.0281738343762075,1.0870209418656958
+"CoMix x multipliers, reporting follows tests",20-39,2020-12-14,1.0,1.0,1.0
+"CoMix x multipliers, reporting follows tests",20-39,2020-12-21,0.8197399935901402,0.7394988787448417,0.9043960157454114
+"CoMix x multipliers, reporting follows tests",20-39,2020-12-28,0.7777783442282946,0.6827949500306233,0.880687362636376
+"CoMix x multipliers, reporting follows tests",20-39,2021-01-04,0.7668903633677788,0.6683356421880338,0.874432878162869
+"CoMix x multipliers, reporting follows tests",20-39,2021-01-11,0.7396669771310481,0.6326483045622862,0.8585997872318014
+"CoMix x multipliers, reporting follows tests",20-39,2021-01-18,0.8384431455274626,0.7652665064000861,0.9147697646750756
+"CoMix x multipliers, reporting follows tests",20-39,2021-01-25,0.8603037495046422,0.7957637737567799,0.9267508234189418
+"CoMix x multipliers, reporting follows tests",20-39,2021-02-01,0.8761167111652044,0.8180764065499422,0.9353238032591782
+"CoMix x multipliers, reporting follows tests",20-39,2021-02-08,0.8793098548982734,0.8226075491699015,0.9370456514182125
+"CoMix x multipliers, reporting follows tests",20-39,2021-02-15,0.8861497983865816,0.8323422805113719,0.9407236011930955
+"CoMix x multipliers, reporting follows tests",20-39,2021-02-22,0.9426997912680616,0.9143070270582228,0.9706091516471218
+"CoMix x multipliers, reporting follows tests",20-39,2021-03-01,0.9862666079212443,0.9792234461116142,0.9930332968978027
+"CoMix x multipliers, reporting follows tests",20-39,2021-03-08,0.9813267601899347,0.9717866813892961,0.9905156826250033
+"CoMix x multipliers, reporting follows tests",20-39,2021-03-15,0.9886318177224673,0.9827910298236855,0.9942365282417306
+"CoMix x multipliers, reporting follows tests",20-39,2021-03-22,1.0175362009185598,1.0088273890940043,1.0267452419929082
+"CoMix x multipliers, reporting follows tests",20-39,2021-03-29,1.007299464452489,1.0036836361522448,1.0111034566673427
+"CoMix x multipliers, reporting follows tests",20-39,2021-04-05,1.0376704974370128,1.018870351334848,1.057748756518825
+"CoMix x multipliers, reporting follows tests",20-39,2021-04-12,1.093008101135232,1.0459867772652298,1.1445651332617066
+"CoMix x multipliers, reporting follows tests",40-64,2020-12-14,1.0,1.0,1.0
+"CoMix x multipliers, reporting follows tests",40-64,2020-12-21,0.8859648029137481,0.8320784758603101,0.9406243111992801
+"CoMix x multipliers, reporting follows tests",40-64,2020-12-28,0.7862570573949985,0.6941276822524951,0.8855279459436616
+"CoMix x multipliers, reporting follows tests",40-64,2021-01-04,0.8523520527938555,0.7846234823322524,0.9224103796893511
+"CoMix x multipliers, reporting follows tests",40-64,2021-01-11,0.9494189515095031,0.9242194903552752,0.9741004751468352
+"CoMix x multipliers, reporting follows tests",40-64,2021-01-18,1.096931164541575,1.0478830930047223,1.1508081329514546
+"CoMix x multipliers, reporting follows tests",40-64,2021-01-25,1.1299556170465301,1.06371523976515,1.2038190809554714
+"CoMix x multipliers, reporting follows tests",40-64,2021-02-01,1.1544576885715827,1.0753143502276552,1.243673381814724
+"CoMix x multipliers, reporting follows tests",40-64,2021-02-08,1.1560393621856788,1.0760589006258607,1.2462612752082098
+"CoMix x multipliers, reporting follows tests",40-64,2021-02-15,1.1609000506645772,1.078343857071792,1.2542256982272848
+"CoMix x multipliers, reporting follows tests",40-64,2021-02-22,1.2339652011050628,1.11213761592548,1.3760112382114296
+"CoMix x multipliers, reporting follows tests",40-64,2021-03-01,1.2866987439287279,1.1359166001579475,1.4662730932295822
+"CoMix x multipliers, reporting follows tests",40-64,2021-03-08,1.2726766296187337,1.1296414288319705,1.4420812805562766
+"CoMix x multipliers, reporting follows tests",40-64,2021-03-15,1.2928530591886287,1.138660090876303,1.4769342182492022
+"CoMix x multipliers, reporting follows tests",40-64,2021-03-22,1.2982030383057488,1.1410397775165868,1.4862233685500221
+"CoMix x multipliers, reporting follows tests",40-64,2021-03-29,1.2509273797127007,1.119840196297788,1.4048309004249735
+"CoMix x multipliers, reporting follows tests",40-64,2021-04-05,1.3721569050134939,1.1734510827227949,1.6166473236141916
+"CoMix x multipliers, reporting follows tests",40-64,2021-04-12,1.376326061886386,1.1752522439397555,1.6241109345009852
+"CoMix x multipliers, reporting follows tests",65+,2020-12-14,1.0,1.0,1.0
+"CoMix x multipliers, reporting follows tests",65+,2020-12-21,0.8716432593793184,0.8117428581741135,0.9329063392544964
+"CoMix x multipliers, reporting follows tests",65+,2020-12-28,0.8508783330703381,0.7825647099512426,0.9216037527080151
+"CoMix x multipliers, reporting follows tests",65+,2021-01-04,0.91034767272405,0.8670933777694223,0.9536238207687896
+"CoMix x multipliers, reporting follows tests",65+,2021-01-11,0.9355694262825582,0.9038279118847632,0.9668906805721419
+"CoMix x multipliers, reporting follows tests",65+,2021-01-18,0.9697633803752705,0.9544542740416588,0.9845977419042474
+"CoMix x multipliers, reporting follows tests",65+,2021-01-25,0.9591384522873003,0.9386226357627282,0.979129249969565
+"CoMix x multipliers, reporting follows tests",65+,2021-02-01,0.9318154587837985,0.8983274912009293,0.9649273621593395
+"CoMix x multipliers, reporting follows tests",65+,2021-02-08,0.9217187669098406,0.8835905258084521,0.9596273206726518
+"CoMix x multipliers, reporting follows tests",65+,2021-02-15,0.9782903212552674,0.9672250442682171,0.9889650385130111
+"CoMix x multipliers, reporting follows tests",65+,2021-02-22,1.0868987602981681,1.0430269540302661,1.1348660913296362
+"CoMix x multipliers, reporting follows tests",65+,2021-03-01,1.1180362129077972,1.0580277201629835,1.1845921003006474
+"CoMix x multipliers, reporting follows tests",65+,2021-03-08,1.0643690534236767,1.0320401249819546,1.09934292664673
+"CoMix x multipliers, reporting follows tests",65+,2021-03-15,1.0757586471977585,1.0376085911092534,1.1172529920716978
+"CoMix x multipliers, reporting follows tests",65+,2021-03-22,1.1092579075666351,1.0538198296011827,1.1704996861301238
+"CoMix x multipliers, reporting follows tests",65+,2021-03-29,1.1685833929874454,1.081946082957881,1.266850419795667
+"CoMix x multipliers, reporting follows tests",65+,2021-04-05,1.3024797728117266,1.1429386079039012,1.4936633597688285
+"CoMix x multipliers, reporting follows tests",65+,2021-04-12,1.196184819574245,1.0947909902880868,1.312557635305703
+"CoMix x multipliers, reporting follows tests + random walk",0-11,2020-12-14,1.0,1.0,1.0
+"CoMix x multipliers, reporting follows tests + random walk",0-11,2020-12-21,0.8777689243268043,0.6631171523193283,1.1660109370731457
+"CoMix x multipliers, reporting follows tests + random walk",0-11,2020-12-28,0.6879470508605436,0.44455840367459043,1.0795126760913452
+"CoMix x multipliers, reporting follows tests + random walk",0-11,2021-01-04,0.6183107489864539,0.3741682298592958,1.0468379869307636
+"CoMix x multipliers, reporting follows tests + random walk",0-11,2021-01-11,0.7017637887920565,0.40573988664961014,1.2637969060868386
+"CoMix x multipliers, reporting follows tests + random walk",0-11,2021-01-18,0.7914544185768804,0.4503897704488081,1.4556035756960237
+"CoMix x multipliers, reporting follows tests + random walk",0-11,2021-01-25,0.8942342673322045,0.49744721720653506,1.6265611911384301
+"CoMix x multipliers, reporting follows tests + random walk",0-11,2021-02-01,0.8960101004844016,0.5079771479267167,1.630985160943841
+"CoMix x multipliers, reporting follows tests + random walk",0-11,2021-02-08,0.9653724919735498,0.5429394380947857,1.6945166247466448
+"CoMix x multipliers, reporting follows tests + random walk",0-11,2021-02-15,1.171808083710425,0.6735752279252227,2.0733210261203023
+"CoMix x multipliers, reporting follows tests + random walk",0-11,2021-02-22,1.1741930788241137,0.6764995609172078,2.0742833807500927
+"CoMix x multipliers, reporting follows tests + random walk",0-11,2021-03-01,1.3276780873260394,0.7816826461533835,2.274917497934376
+"CoMix x multipliers, reporting follows tests + random walk",0-11,2021-03-08,1.357103465638101,0.7985853789538352,2.336418139160641
+"CoMix x multipliers, reporting follows tests + random walk",0-11,2021-03-15,1.3753465753684813,0.8004874463455306,2.406686151392868
+"CoMix x multipliers, reporting follows tests + random walk",0-11,2021-03-22,1.2184201400373469,0.700726499676248,2.0735006180201276
+"CoMix x multipliers, reporting follows tests + random walk",0-11,2021-03-29,1.0781373428940055,0.6120520250368477,1.8458350390935552
+"CoMix x multipliers, reporting follows tests + random walk",0-11,2021-04-05,1.0230849719429909,0.5499680798950951,1.819825823304256
+"CoMix x multipliers, reporting follows tests + random walk",0-11,2021-04-12,1.3086107131448124,0.7107282070766686,2.411998362463489
+"CoMix x multipliers, reporting follows tests + random walk",12-19,2020-12-14,1.0,1.0,1.0
+"CoMix x multipliers, reporting follows tests + random walk",12-19,2020-12-21,0.9080419794879591,0.7565570765491505,1.1029422594327907
+"CoMix x multipliers, reporting follows tests + random walk",12-19,2020-12-28,0.8702889988685139,0.6780052283009153,1.156933827720134
+"CoMix x multipliers, reporting follows tests + random walk",12-19,2021-01-04,0.8600995893063486,0.6412612191892275,1.2114590476867075
+"CoMix x multipliers, reporting follows tests + random walk",12-19,2021-01-11,0.8078893039858812,0.5820030678171609,1.2283264927649749
+"CoMix x multipliers, reporting follows tests + random walk",12-19,2021-01-18,0.8343030986951538,0.611042261904767,1.2502265012821536
+"CoMix x multipliers, reporting follows tests + random walk",12-19,2021-01-25,0.8707177003436006,0.6390079798467948,1.3658961415974045
+"CoMix x multipliers, reporting follows tests + random walk",12-19,2021-02-01,0.8692234692390095,0.6365908228185219,1.3441364882050748
+"CoMix x multipliers, reporting follows tests + random walk",12-19,2021-02-08,0.8670252537500927,0.621575974367864,1.2645766788759685
+"CoMix x multipliers, reporting follows tests + random walk",12-19,2021-02-15,0.888857080950913,0.639995104282637,1.318744886642285
+"CoMix x multipliers, reporting follows tests + random walk",12-19,2021-02-22,0.9674707470137903,0.6991118691498766,1.430680197129246
+"CoMix x multipliers, reporting follows tests + random walk",12-19,2021-03-01,1.007951816683854,0.7371317731724778,1.5529764860678867
+"CoMix x multipliers, reporting follows tests + random walk",12-19,2021-03-08,1.1354229343062734,0.8272019927048713,1.7246494791522542
+"CoMix x multipliers, reporting follows tests + random walk",12-19,2021-03-15,1.2579376842178787,0.9258963298783611,1.9580756031076672
+"CoMix x multipliers, reporting follows tests + random walk",12-19,2021-03-22,1.1893926401508965,0.869402172662498,1.860008835687432
+"CoMix x multipliers, reporting follows tests + random walk",12-19,2021-03-29,1.2735781120364744,0.923514789308204,2.0015629454667256
+"CoMix x multipliers, reporting follows tests + random walk",12-19,2021-04-05,1.3890076552699626,0.995509101137982,2.3892774182782306
+"CoMix x multipliers, reporting follows tests + random walk",12-19,2021-04-12,1.3546955654467374,0.9599570412259517,2.4010015949303476
+"CoMix x multipliers, reporting follows tests + random walk",20-39,2020-12-14,1.0,1.0,1.0
+"CoMix x multipliers, reporting follows tests + random walk",20-39,2020-12-21,0.895796932442247,0.7705473315644816,1.0477599550649943
+"CoMix x multipliers, reporting follows tests + random walk",20-39,2020-12-28,0.8708883687095973,0.7134068435428642,1.0679577732790702
+"CoMix x multipliers, reporting follows tests + random walk",20-39,2021-01-04,0.8711733350565565,0.6919575565446437,1.1286417999672589
+"CoMix x multipliers, reporting follows tests + random walk",20-39,2021-01-11,0.8177160256075087,0.6085114075728947,1.0278393108712094
+"CoMix x multipliers, reporting follows tests + random walk",20-39,2021-01-18,0.8919183918348166,0.6755657425469639,1.1274558263936258
+"CoMix x multipliers, reporting follows tests + random walk",20-39,2021-01-25,0.8904559725847594,0.6483739761318138,1.094948705340729
+"CoMix x multipliers, reporting follows tests + random walk",20-39,2021-02-01,0.9244437820752585,0.7019479807666918,1.1981731635180235
+"CoMix x multipliers, reporting follows tests + random walk",20-39,2021-02-08,0.9193363170511568,0.6781164465682429,1.1635730812877076
+"CoMix x multipliers, reporting follows tests + random walk",20-39,2021-02-15,0.9439689786398268,0.7214713082240957,1.2384436418130174
+"CoMix x multipliers, reporting follows tests + random walk",20-39,2021-02-22,0.98304886551977,0.744856611710251,1.3041482984747306
+"CoMix x multipliers, reporting follows tests + random walk",20-39,2021-03-01,0.9943707150196041,0.7354661137932171,1.2950815851894184
+"CoMix x multipliers, reporting follows tests + random walk",20-39,2021-03-08,1.0055202836315207,0.7584679552370583,1.3431771749695995
+"CoMix x multipliers, reporting follows tests + random walk",20-39,2021-03-15,1.0264949296736927,0.7853839956658666,1.4115780546317735
+"CoMix x multipliers, reporting follows tests + random walk",20-39,2021-03-22,1.0635556177281766,0.8178034137895289,1.5032565253507564
+"CoMix x multipliers, reporting follows tests + random walk",20-39,2021-03-29,1.048039021658652,0.7793537734398316,1.4469101633844017
+"CoMix x multipliers, reporting follows tests + random walk",20-39,2021-04-05,1.089411255282227,0.8097680245166042,1.595228326787573
+"CoMix x multipliers, reporting follows tests + random walk",20-39,2021-04-12,1.1187605893782426,0.8062591506013358,1.671571760770199
+"CoMix x multipliers, reporting follows tests + random walk",40-64,2020-12-14,1.0,1.0,1.0
+"CoMix x multipliers, reporting follows tests + random walk",40-64,2020-12-21,0.9391301941230041,0.8289869726475126,1.057587267097144
+"CoMix x multipliers, reporting follows tests + random walk",40-64,2020-12-28,0.8825984970651135,0.7388795189707972,1.0696775263522529
+"CoMix x multipliers, reporting follows tests + random walk",40-64,2021-01-04,0.923611651770957,0.7537781462119658,1.1438586395892845
+"CoMix x multipliers, reporting follows tests + random walk",40-64,2021-01-11,0.9780308069499075,0.795513790094309,1.2349108011845127
+"CoMix x multipliers, reporting follows tests + random walk",40-64,2021-01-18,1.0499591140428737,0.8311625049767208,1.322285023664032
+"CoMix x multipliers, reporting follows tests + random walk",40-64,2021-01-25,1.0421108628942943,0.7932081718306025,1.2975552189992035
+"CoMix x multipliers, reporting follows tests + random walk",40-64,2021-02-01,1.0513980014194453,0.8026818523419905,1.3079234067745227
+"CoMix x multipliers, reporting follows tests + random walk",40-64,2021-02-08,1.0736816300940215,0.8392764898241771,1.3844631960026559
+"CoMix x multipliers, reporting follows tests + random walk",40-64,2021-02-15,1.0709531722521324,0.830260062243557,1.381681521685745
+"CoMix x multipliers, reporting follows tests + random walk",40-64,2021-02-22,1.088528171405983,0.8253305339252536,1.3985377247845614
+"CoMix x multipliers, reporting follows tests + random walk",40-64,2021-03-01,1.0953207601876094,0.8257916732246373,1.4168631949288046
+"CoMix x multipliers, reporting follows tests + random walk",40-64,2021-03-08,1.0812093322831062,0.8037149358547255,1.4118462536481262
+"CoMix x multipliers, reporting follows tests + random walk",40-64,2021-03-15,1.0562504283208836,0.7600552163609661,1.3735451236093688
+"CoMix x multipliers, reporting follows tests + random walk",40-64,2021-03-22,1.0492703907558691,0.755284036747569,1.380020007281586
+"CoMix x multipliers, reporting follows tests + random walk",40-64,2021-03-29,1.0093366001431514,0.7162115292479121,1.3074972429208274
+"CoMix x multipliers, reporting follows tests + random walk",40-64,2021-04-05,1.0095569446558827,0.6766044357291872,1.3539020350378375
+"CoMix x multipliers, reporting follows tests + random walk",40-64,2021-04-12,0.9944972953867617,0.6530044049064176,1.3476136282618627
+"CoMix x multipliers, reporting follows tests + random walk",65+,2020-12-14,1.0,1.0,1.0
+"CoMix x multipliers, reporting follows tests + random walk",65+,2020-12-21,0.9616434472609865,0.6589785264316075,1.4235256593842125
+"CoMix x multipliers, reporting follows tests + random walk",65+,2020-12-28,0.990951883533812,0.5966702263723153,1.7337248532915561
+"CoMix x multipliers, reporting follows tests + random walk",65+,2021-01-04,1.081370994333623,0.5784513724189028,2.174672674471007
+"CoMix x multipliers, reporting follows tests + random walk",65+,2021-01-11,1.1497491075292987,0.5929016223709921,2.4127816108732714
+"CoMix x multipliers, reporting follows tests + random walk",65+,2021-01-18,1.1726646935519243,0.5928476431621313,2.501138823638665
+"CoMix x multipliers, reporting follows tests + random walk",65+,2021-01-25,1.1070589289864818,0.5615134976028952,2.366728158423822
+"CoMix x multipliers, reporting follows tests + random walk",65+,2021-02-01,1.0614459422996234,0.5325294152941498,2.264039348066786
+"CoMix x multipliers, reporting follows tests + random walk",65+,2021-02-08,0.8024547984837512,0.4047372400086095,1.717260165904819
+"CoMix x multipliers, reporting follows tests + random walk",65+,2021-02-15,0.6766443916876123,0.3393221832064713,1.4521432695290097
+"CoMix x multipliers, reporting follows tests + random walk",65+,2021-02-22,0.7182418607050083,0.35882509445905025,1.5089893834168633
+"CoMix x multipliers, reporting follows tests + random walk",65+,2021-03-01,0.6393047307846671,0.3179849376489138,1.3536284751417538
+"CoMix x multipliers, reporting follows tests + random walk",65+,2021-03-08,0.5345771593546502,0.26335419600907994,1.1087237397092193
+"CoMix x multipliers, reporting follows tests + random walk",65+,2021-03-15,0.5927426409451069,0.28777585069694406,1.2784938755127542
+"CoMix x multipliers, reporting follows tests + random walk",65+,2021-03-22,0.616460931888602,0.2946639384219409,1.3314333605626454
+"CoMix x multipliers, reporting follows tests + random walk",65+,2021-03-29,0.6184409675022446,0.29584162652192164,1.3481240343075094
+"CoMix x multipliers, reporting follows tests + random walk",65+,2021-04-05,0.47295848448981415,0.22094908196521898,1.0003142380911103
+"CoMix x multipliers, reporting follows tests + random walk",65+,2021-04-12,0.3459874424550402,0.15654278014179462,0.7467066077394008
+"CoMix x random-walk susceptibility, reporting follows tests",0-11,2020-12-14,1.0,1.0,1.0
+"CoMix x random-walk susceptibility, reporting follows tests",0-11,2020-12-21,0.8983663246107938,0.8207781484921564,0.9830878887657966
+"CoMix x random-walk susceptibility, reporting follows tests",0-11,2020-12-28,0.7188749597241265,0.5443098210048046,0.9488271009087494
+"CoMix x random-walk susceptibility, reporting follows tests",0-11,2021-01-04,0.6759477931672037,0.48592620891711,0.9395751189959736
+"CoMix x random-walk susceptibility, reporting follows tests",0-11,2021-01-11,0.6888771126528739,0.503191947142477,0.9424125252857398
+"CoMix x random-walk susceptibility, reporting follows tests",0-11,2021-01-18,0.7082373014033996,0.5295598977592191,0.9465786086142813
+"CoMix x random-walk susceptibility, reporting follows tests",0-11,2021-01-25,0.6978825548043233,0.5153804550597157,0.9443624746186303
+"CoMix x random-walk susceptibility, reporting follows tests",0-11,2021-02-01,0.7245840376330552,0.5523022405102709,0.9500223192570968
+"CoMix x random-walk susceptibility, reporting follows tests",0-11,2021-02-08,0.7542593346268007,0.5947024356691877,0.9561103408166393
+"CoMix x random-walk susceptibility, reporting follows tests",0-11,2021-02-15,0.7920543427111708,0.6507729082266354,0.9635790489321423
+"CoMix x random-walk susceptibility, reporting follows tests",0-11,2021-02-22,0.8376638145120232,0.7214991467207098,0.972202931803653
+"CoMix x random-walk susceptibility, reporting follows tests",0-11,2021-03-01,0.8896607221553184,0.806181178227016,0.9815655634000313
+"CoMix x random-walk susceptibility, reporting follows tests",0-11,2021-03-08,0.9268413908161663,0.8693583334724976,0.9879820933790369
+"CoMix x random-walk susceptibility, reporting follows tests",0-11,2021-03-15,0.9739831624514679,0.95258346581556,0.9958135215008637
+"CoMix x random-walk susceptibility, reporting follows tests",0-11,2021-03-22,0.9840353945556224,0.9707790956561279,0.9974420889197252
+"CoMix x random-walk susceptibility, reporting follows tests",0-11,2021-03-29,0.9608905296077648,0.9291206987917694,0.9936710514333572
+"CoMix x random-walk susceptibility, reporting follows tests",0-11,2021-04-05,0.8849329850077026,0.7983042491545328,0.9807335819012849
+"CoMix x random-walk susceptibility, reporting follows tests",0-11,2021-04-12,0.916036128952266,0.8507735271216578,0.986140002761973
+"CoMix x random-walk susceptibility, reporting follows tests",12-19,2020-12-14,1.0,1.0,1.0
+"CoMix x random-walk susceptibility, reporting follows tests",12-19,2020-12-21,0.894186198295106,0.8137542391137667,0.9823584762288806
+"CoMix x random-walk susceptibility, reporting follows tests",12-19,2020-12-28,0.8506767243211887,0.7422885106861753,0.9745909419841066
+"CoMix x random-walk susceptibility, reporting follows tests",12-19,2021-01-04,0.8371118377856341,0.7206232914333953,0.9721009510242108
+"CoMix x random-walk susceptibility, reporting follows tests",12-19,2021-01-11,0.7672145542514499,0.6136617378179375,0.9587051829583487
+"CoMix x random-walk susceptibility, reporting follows tests",12-19,2021-01-18,0.7925142835490739,0.6514694538318835,0.9636680762091362
+"CoMix x random-walk susceptibility, reporting follows tests",12-19,2021-01-25,0.8052950193892076,0.6709612151474719,0.9661247301001874
+"CoMix x random-walk susceptibility, reporting follows tests",12-19,2021-02-01,0.8178579522289859,0.6903766069823429,0.9685077727265449
+"CoMix x random-walk susceptibility, reporting follows tests",12-19,2021-02-08,0.8617080541248767,0.760123406611133,0.9765913728188991
+"CoMix x random-walk susceptibility, reporting follows tests",12-19,2021-02-15,0.8767254732319201,0.7847136870791639,0.9792803149741625
+"CoMix x random-walk susceptibility, reporting follows tests",12-19,2021-02-22,0.956155973062488,0.9207020171498332,0.9928902459330782
+"CoMix x random-walk susceptibility, reporting follows tests",12-19,2021-03-01,0.9634374440262023,0.9336639497285777,0.994089741873325
+"CoMix x random-walk susceptibility, reporting follows tests",12-19,2021-03-08,1.0868040189194579,1.0133355825501817,1.1657841460376006
+"CoMix x random-walk susceptibility, reporting follows tests",12-19,2021-03-15,1.169247880598173,1.0251962361500022,1.333938251259479
+"CoMix x random-walk susceptibility, reporting follows tests",12-19,2021-03-22,1.072713974025096,1.011233318050217,1.1380848940954058
+"CoMix x random-walk susceptibility, reporting follows tests",12-19,2021-03-29,1.0979290225395266,1.0149793263665023,1.1878695227730318
+"CoMix x random-walk susceptibility, reporting follows tests",12-19,2021-04-05,1.0854022146029316,1.0131274602109432,1.1630147394147619
+"CoMix x random-walk susceptibility, reporting follows tests",12-19,2021-04-12,1.032026426701321,1.0050295403883343,1.059812231655929
+"CoMix x random-walk susceptibility, reporting follows tests",20-39,2020-12-14,1.0,1.0,1.0
+"CoMix x random-walk susceptibility, reporting follows tests",20-39,2020-12-21,0.8922449602426326,0.8105017514478984,0.9820187647401842
+"CoMix x random-walk susceptibility, reporting follows tests",20-39,2020-12-28,0.8657534939181977,0.7667123795364147,0.9773195825230886
+"CoMix x random-walk susceptibility, reporting follows tests",20-39,2021-01-04,0.8587807785388568,0.7553718599487182,0.9760626457252909
+"CoMix x random-walk susceptibility, reporting follows tests",20-39,2021-01-11,0.8411595730345653,0.7270574172870045,0.9728474884681272
+"CoMix x random-walk susceptibility, reporting follows tests",20-39,2021-01-18,0.9038659093133387,0.8300611847094759,0.9840432040426635
+"CoMix x random-walk susceptibility, reporting follows tests",20-39,2021-01-25,0.9173094899471347,0.8529541374019036,0.9863580331760061
+"CoMix x random-walk susceptibility, reporting follows tests",20-39,2021-02-01,0.9269433587096535,0.8695345900494343,0.9879993907998055
+"CoMix x random-walk susceptibility, reporting follows tests",20-39,2021-02-08,0.9288797191667932,0.87288479556646,0.988327563789978
+"CoMix x random-walk susceptibility, reporting follows tests",20-39,2021-02-15,0.9330174805120661,0.8800635115056149,0.989026903290201
+"CoMix x random-walk susceptibility, reporting follows tests",20-39,2021-02-22,0.9667193999417096,0.9395333259157753,0.9946278963100982
+"CoMix x random-walk susceptibility, reporting follows tests",20-39,2021-03-01,0.9920992269820684,0.9854892421830702,0.9987384335100967
+"CoMix x random-walk susceptibility, reporting follows tests",20-39,2021-03-08,0.989245892362205,0.9802725870444128,0.9982807466325276
+"CoMix x random-walk susceptibility, reporting follows tests",20-39,2021-03-15,0.9934632515520725,0.9879875155228899,0.9989568378524353
+"CoMix x random-walk susceptibility, reporting follows tests",20-39,2021-03-22,1.010021574180739,1.001588205933048,1.0185453268978522
+"CoMix x random-walk susceptibility, reporting follows tests",20-39,2021-03-29,1.0041805234100765,1.0006641435557806,1.0077172799771128
+"CoMix x random-walk susceptibility, reporting follows tests",20-39,2021-04-05,1.0214375246462306,1.00338132676003,1.0398607263399675
+"CoMix x random-walk susceptibility, reporting follows tests",20-39,2021-04-12,1.0523364278217748,1.0081514921567174,1.0985647909575798
+"CoMix x random-walk susceptibility, reporting follows tests",40-64,2020-12-14,1.0,1.0,1.0
+"CoMix x random-walk susceptibility, reporting follows tests",40-64,2020-12-21,0.9329057494956712,0.879869309299537,0.989008053062172
+"CoMix x random-walk susceptibility, reporting follows tests",40-64,2020-12-28,0.8711545266096754,0.7755497730464946,0.9782873618369292
+"CoMix x random-walk susceptibility, reporting follows tests",40-64,2021-01-04,0.9124364913227135,0.8446230433857255,0.985522276284769
+"CoMix x random-walk susceptibility, reporting follows tests",40-64,2021-01-11,0.9706657676685004,0.9466131900583701,0.9952729664541359
+"CoMix x random-walk susceptibility, reporting follows tests",40-64,2021-01-18,1.0545013303200426,1.0084812746769085,1.1027330546971137
+"CoMix x random-walk susceptibility, reporting follows tests",40-64,2021-01-25,1.072596387955287,1.0112156765562414,1.1378550210351415
+"CoMix x random-walk susceptibility, reporting follows tests",40-64,2021-02-01,1.085876435423067,1.013197891987583,1.1639512736672444
+"CoMix x random-walk susceptibility, reporting follows tests",40-64,2021-02-08,1.0867295471389111,1.0133245319832098,1.1656369383618286
+"CoMix x random-walk susceptibility, reporting follows tests",40-64,2021-02-15,1.0893481632610509,1.013712729023983,1.170818061184102
+"CoMix x random-walk susceptibility, reporting follows tests",40-64,2021-02-22,1.1281631284087286,1.0193767705516033,1.2488462700661735
+"CoMix x random-walk susceptibility, reporting follows tests",40-64,2021-03-01,1.1555709028147398,1.0232783187520142,1.3053266979792362
+"CoMix x random-walk susceptibility, reporting follows tests",40-64,2021-03-08,1.1483305419760663,1.0222552671220142,1.2902951565176985
+"CoMix x random-walk susceptibility, reporting follows tests",40-64,2021-03-15,1.1587380673781125,1.0237241407095246,1.3119270104975402
+"CoMix x random-walk susceptibility, reporting follows tests",40-64,2021-03-22,1.1614860815697887,1.024110132458292,1.317666135110448
+"CoMix x random-walk susceptibility, reporting follows tests",40-64,2021-03-29,1.1370326042101884,1.0206479985928762,1.2669989269616864
+"CoMix x random-walk susceptibility, reporting follows tests",40-64,2021-04-05,1.1989902029658546,1.0293027279492313,1.3971354115929218
+"CoMix x random-walk susceptibility, reporting follows tests",40-64,2021-04-12,1.2010785022194264,1.0295878278004043,1.401622909911484
+"CoMix x random-walk susceptibility, reporting follows tests",65+,2020-12-14,1.0,1.0,1.0
+"CoMix x random-walk susceptibility, reporting follows tests",65+,2020-12-21,0.9242255304972569,0.8648422717855005,0.9875378028153496
+"CoMix x random-walk susceptibility, reporting follows tests",65+,2020-12-28,0.9115312347829949,0.8430794936503998,0.9853666035826257
+"CoMix x random-walk susceptibility, reporting follows tests",65+,2021-01-04,0.9475476377323659,0.9054850750287771,0.9914622240916762
+"CoMix x random-walk susceptibility, reporting follows tests",65+,2021-01-11,0.9625183789402403,0.932023328845762,0.9939387630867362
+"CoMix x random-walk susceptibility, reporting follows tests",65+,2021-01-18,0.9825426505028207,0.9680671134846385,0.9972011356355452
+"CoMix x random-walk susceptibility, reporting follows tests",65+,2021-01-25,0.9763533169553547,0.9568595138223418,0.9961987803003493
+"CoMix x random-walk susceptibility, reporting follows tests",65+,2021-02-01,0.9603011565270487,0.9280708040790286,0.9935740308099574
+"CoMix x random-walk susceptibility, reporting follows tests",65+,2021-02-08,0.9543187259921999,0.9174445849274544,0.9925863783433392
+"CoMix x random-walk susceptibility, reporting follows tests",65+,2021-02-15,0.9874889575473011,0.9770667425330893,0.9979983744750096
+"CoMix x random-walk susceptibility, reporting follows tests",65+,2021-02-22,1.0489584416318407,1.0076357777605285,1.0920753034783361
+"CoMix x random-walk susceptibility, reporting follows tests",65+,2021-03-01,1.0660917425828589,1.01023723578409,1.1251717236968994
+"CoMix x random-walk susceptibility, reporting follows tests",65+,2021-03-08,1.036430706701085,1.0057109031950382,1.0681617721188432
+"CoMix x random-walk susceptibility, reporting follows tests",65+,2021-03-15,1.0427779204278669,1.0066885767471472,1.0802473707706461
+"CoMix x random-walk susceptibility, reporting follows tests",65+,2021-03-22,1.061282330261125,1.0095105621197848,1.1158357676632926
+"CoMix x random-walk susceptibility, reporting follows tests",65+,2021-03-29,1.0934779179387313,1.0143233540421301,1.179010433052516
+"CoMix x random-walk susceptibility, reporting follows tests",65+,2021-04-05,1.163679357161587,1.0244176527115045,1.3222549393154719
+"CoMix x random-walk susceptibility, reporting follows tests",65+,2021-04-12,1.1082189365862098,1.0164872635059414,1.2084656944364132

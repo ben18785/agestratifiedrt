@@ -1,0 +1,38 @@
+omicron 0 CoMix x random-walk susceptibility by age + ONS holding out windows [0, 2]
+06:04:20 - cmdstanpy - WARNING - Non-fatal error during sampling:
+Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england.stan', line 136, column 19 to column 76)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england.stan', line 136, column 19 to column 76)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england.stan', line 136, column 19 to column 76)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england.stan', line 136, column 19 to column 76)
+Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england.stan', line 136, column 19 to column 76)
+Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+Consider re-running with show_console=True if the above output is unclear!
+    period  split              key                                            model  window       start  group  n_tested  n_pos  observed_pct  interior  baseline_pct  pred_median_pct  pred_lo_pct  pred_hi_pct  covered    pit  log_pred_density
+0  omicron      0  comix_adapt_ons  CoMix x random-walk susceptibility by age + ONS       0  2021-12-26    0-9      8451    605         7.159     False        10.315            6.177        5.171        7.928     True  0.907            -6.349
+1  omicron      0  comix_adapt_ons  CoMix x random-walk susceptibility by age + ONS       0  2021-12-26  10-19      6938    418         6.025     False         5.789            5.852        4.555        7.394     True  0.626            -4.698
+2  omicron      0  comix_adapt_ons  CoMix x random-walk susceptibility by age + ONS       0  2021-12-26  20-49     35784   2564         7.165     False         5.225            8.317        6.670       10.388     True  0.082            -7.803
+3  omicron      0  comix_adapt_ons  CoMix x random-walk susceptibility by age + ONS       0  2021-12-26  50-69     47413   2284         4.817     False         3.607           11.600        6.802       16.418    False  0.000           -12.469
+4  omicron      0  comix_adapt_ons  CoMix x random-walk susceptibility by age + ONS       0  2021-12-26    70+     28846    873         3.026     False         2.732            5.765        3.720        9.974    False  0.000           -11.492
+5  omicron      0  comix_adapt_ons  CoMix x random-walk susceptibility by age + ONS       2  2022-01-23    0-9     10322   1287        12.469     False        10.315            9.233        8.080       11.403    False  0.997            -9.646
+6  omicron      0  comix_adapt_ons  CoMix x random-walk susceptibility by age + ONS       2  2022-01-23  10-19      8623    677         7.851     False         5.789            5.253        4.059        6.343    False  1.000           -11.262
+7  omicron      0  comix_adapt_ons  CoMix x random-walk susceptibility by age + ONS       2  2022-01-23  20-49     44401   2389         5.381     False         5.225            3.781        2.995        4.912    False  0.992           -10.120
+8  omicron      0  comix_adapt_ons  CoMix x random-walk susceptibility by age + ONS       2  2022-01-23  50-69     59272   1697         2.863     False         3.607            1.794        1.233        3.185     True  0.940            -8.254
+9  omicron      0  comix_adapt_ons  CoMix x random-walk susceptibility by age + ONS       2  2022-01-23    70+     36618    851         2.324     False         2.732            1.404        0.844        2.390     True  0.970            -8.177

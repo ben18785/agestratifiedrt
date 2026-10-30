@@ -1,0 +1,3 @@
+period,split,key,model,window,start,group,n_tested,n_pos,observed_pct,interior,baseline_pct,pred_median_pct,pred_lo_pct,pred_hi_pct,covered,pit,log_pred_density
+summer2021,1,totals_ons,"Single group, totals + ONS, weekly reporting",1,2021-07-17,all,126996,1738,1.3685470408516804,True,1.1029528506152102,1.1527922139279978,1.0331034048316483,1.2779930076537844,False,0.99975,-10.68680410763194
+summer2021,1,totals_ons,"Single group, totals + ONS, weekly reporting",3,2021-08-14,all,127820,1606,1.2564543889845095,False,1.2385824730477741,1.4770771397277422,1.191499765294946,1.837779690189329,True,0.067,-7.2324946254591636

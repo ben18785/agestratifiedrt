@@ -1,0 +1,4 @@
+model,group,start,observed,median,lo,hi
+"Single group, totals + ONS, weekly reporting",all,2021-12-26,5.908249105405236,5.9094482,5.7863111575,6.04031594
+"Single group, totals + ONS, weekly reporting",all,2022-01-09,5.150912586583792,5.1571007,5.052065025,5.2624463475
+"Single group, totals + ONS, weekly reporting",all,2022-01-23,5.467984626591977,5.46270265,5.349225875,5.574878465

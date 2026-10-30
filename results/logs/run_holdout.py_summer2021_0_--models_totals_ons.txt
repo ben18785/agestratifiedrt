@@ -1,0 +1,26 @@
+summer2021 0 Single group, totals + ONS, weekly reporting holding out windows [0, 2]
+05:39:34 - cmdstanpy - WARNING - Non-fatal error during sampling:
+Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england.stan', line 136, column 19 to column 76)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england.stan', line 136, column 19 to column 76)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england.stan', line 136, column 19 to column 76)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england.stan', line 136, column 19 to column 76)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england.stan', line 136, column 19 to column 76)
+Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england.stan', line 136, column 19 to column 76)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england.stan', line 136, column 19 to column 76)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england.stan', line 136, column 19 to column 76)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england.stan', line 136, column 19 to column 76)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england.stan', line 136, column 19 to column 76)
+Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england.stan', line 136, column 19 to column 76)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england.stan', line 136, column 19 to column 76)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england.stan', line 136, column 19 to column 76)
+	Exception: neg_binomial_2_lpmf: Precision parameter is 0, but must be positive finite! (in 'england.stan', line 136, column 19 to column 76)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england.stan', line 136, column 19 to column 76)
+Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england.stan', line 136, column 19 to column 76)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england.stan', line 136, column 19 to column 76)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england.stan', line 136, column 19 to column 76)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england.stan', line 136, column 19 to column 76)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england.stan', line 136, column 19 to column 76)
+Consider re-running with show_console=True if the above output is unclear!
+       period  split         key                                         model  window       start group  n_tested  n_pos  observed_pct  interior  baseline_pct  pred_median_pct  pred_lo_pct  pred_hi_pct  covered    pit  log_pred_density
+0  summer2021      0  totals_ons  Single group, totals + ONS, weekly reporting       0  2021-07-03   all    135261   1328         0.982     False         1.369            1.348        1.176        1.618    False  0.000           -18.231
+1  summer2021      0  totals_ons  Single group, totals + ONS, weekly reporting       2  2021-07-31   all    131158   1624         1.238      True         1.312            1.168        1.064        1.305     True  0.863            -6.028

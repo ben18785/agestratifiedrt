@@ -1,0 +1,54 @@
+omicron 0 CoMix x multipliers, reporting sd by age + ONS holding out windows [0, 2]
+07:29:48 - cmdstanpy - WARNING - Non-fatal error during sampling:
+Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england.stan', line 136, column 19 to column 76)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england.stan', line 136, column 19 to column 76)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england.stan', line 136, column 19 to column 76)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england.stan', line 136, column 19 to column 76)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england.stan', line 136, column 19 to column 76)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england.stan', line 136, column 19 to column 76)
+Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england.stan', line 136, column 19 to column 76)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england.stan', line 136, column 19 to column 76)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+Consider re-running with show_console=True if the above output is unclear!
+07:29:48 - cmdstanpy - WARNING - Some chains may have failed to converge.
+	Chain 1 had 218 divergent transitions (21.8%)
+	Chain 1 had 773 iterations at max treedepth (77.3%)
+	Chain 2 had 999 iterations at max treedepth (99.9%)
+	Chain 3 had 53 divergent transitions (5.3%)
+	Chain 3 had 940 iterations at max treedepth (94.0%)
+	Chain 4 had 3 divergent transitions (0.3%)
+	Chain 4 had 995 iterations at max treedepth (99.5%)
+	Use the "diagnose()" method on the CmdStanMCMC object to see further information.
+    period  split                  key                                           model  window       start  group  n_tested  n_pos  observed_pct  interior  baseline_pct  pred_median_pct  pred_lo_pct  pred_hi_pct  covered    pit  log_pred_density
+0  omicron      0  comix_weekly_ons_gq  CoMix x multipliers, reporting sd by age + ONS       0  2021-12-26    0-9      8451    605         7.159     False        10.315            9.289        6.460       12.212     True  0.073            -6.821
+1  omicron      0  comix_weekly_ons_gq  CoMix x multipliers, reporting sd by age + ONS       0  2021-12-26  10-19      6938    418         6.025     False         5.789            4.843        3.934        5.910    False  0.985            -6.925
+2  omicron      0  comix_weekly_ons_gq  CoMix x multipliers, reporting sd by age + ONS       0  2021-12-26  20-49     35784   2564         7.165     False         5.225            9.390        7.590       11.542    False  0.008            -9.491
+3  omicron      0  comix_weekly_ons_gq  CoMix x multipliers, reporting sd by age + ONS       0  2021-12-26  50-69     47413   2284         4.817     False         3.607            9.252        6.606       11.731    False  0.000           -34.425
+4  omicron      0  comix_weekly_ons_gq  CoMix x multipliers, reporting sd by age + ONS       0  2021-12-26    70+     28846    873         3.026     False         2.732            4.888        3.862        6.233    False  0.000           -15.944
+5  omicron      0  comix_weekly_ons_gq  CoMix x multipliers, reporting sd by age + ONS       2  2022-01-23    0-9     10322   1287        12.469     False        10.315            8.477        6.510       11.229    False  0.997            -9.962
+6  omicron      0  comix_weekly_ons_gq  CoMix x multipliers, reporting sd by age + ONS       2  2022-01-23  10-19      8623    677         7.851     False         5.789            6.401        5.346        7.701    False  0.985            -7.410
+7  omicron      0  comix_weekly_ons_gq  CoMix x multipliers, reporting sd by age + ONS       2  2022-01-23  20-49     44401   2389         5.381     False         5.225            3.545        2.867        4.365    False  1.000           -18.945
+8  omicron      0  comix_weekly_ons_gq  CoMix x multipliers, reporting sd by age + ONS       2  2022-01-23  50-69     59272   1697         2.863     False         3.607            1.879        1.360        2.772    False  0.984            -8.851
+9  omicron      0  comix_weekly_ons_gq  CoMix x multipliers, reporting sd by age + ONS       2  2022-01-23    70+     36618    851         2.324     False         2.732            1.827        1.363        2.379     True  0.964            -7.198

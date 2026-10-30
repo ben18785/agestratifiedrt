@@ -1,0 +1,79 @@
+summer2021 1 Hidden infections, random-walk susceptibility by age + ONS holding out windows [1, 3, 5]
+07:48:57 - cmdstanpy - WARNING - Non-fatal error during sampling:
+Exception: G not finite and positive (in 'england_latent.stan', line 116, column 61 to column 97)
+	Exception: G not finite and positive (in 'england_latent.stan', line 116, column 61 to column 97)
+	Exception: G not finite and positive (in 'england_latent.stan', line 116, column 61 to column 97)
+	Exception: G not finite and positive (in 'england_latent.stan', line 116, column 61 to column 97)
+	Exception: G not finite and positive (in 'england_latent.stan', line 116, column 61 to column 97)
+	Exception: neg_binomial_2_lpmf: Precision parameter is 0, but must be positive finite! (in 'england_latent.stan', line 152, column 6 to column 75)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england_latent.stan', line 152, column 6 to column 75)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england_latent.stan', line 152, column 6 to column 75)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england_latent.stan', line 152, column 6 to column 75)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england_latent.stan', line 152, column 6 to column 75)
+	Exception: G not finite and positive (in 'england_latent.stan', line 116, column 61 to column 97)
+	Exception: G not finite and positive (in 'england_latent.stan', line 116, column 61 to column 97)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england_latent.stan', line 152, column 6 to column 75)
+Exception: G not finite and positive (in 'england_latent.stan', line 116, column 61 to column 97)
+	Exception: G not finite and positive (in 'england_latent.stan', line 116, column 61 to column 97)
+	Exception: G not finite and positive (in 'england_latent.stan', line 116, column 61 to column 97)
+	Exception: G not finite and positive (in 'england_latent.stan', line 116, column 61 to column 97)
+	Exception: G not finite and positive (in 'england_latent.stan', line 116, column 61 to column 97)
+	Exception: G not finite and positive (in 'england_latent.stan', line 116, column 61 to column 97)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england_latent.stan', line 152, column 6 to column 75)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england_latent.stan', line 152, column 6 to column 75)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england_latent.stan', line 152, column 6 to column 75)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england_latent.stan', line 152, column 6 to column 75)
+	Exception: G not finite and positive (in 'england_latent.stan', line 116, column 61 to column 97)
+	Exception: G not finite and positive (in 'england_latent.stan', line 116, column 61 to column 97)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england_latent.stan', line 152, column 6 to column 75)
+Exception: G not finite and positive (in 'england_latent.stan', line 116, column 61 to column 97)
+	Exception: G not finite and positive (in 'england_latent.stan', line 116, column 61 to column 97)
+	Exception: G not finite and positive (in 'england_latent.stan', line 116, column 61 to column 97)
+	Exception: G not finite and positive (in 'england_latent.stan', line 116, column 61 to column 97)
+	Exception: G not finite and positive (in 'england_latent.stan', line 116, column 61 to column 97)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england_latent.stan', line 152, column 6 to column 75)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england_latent.stan', line 152, column 6 to column 75)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england_latent.stan', line 152, column 6 to column 75)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england_latent.stan', line 152, column 6 to column 75)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england_latent.stan', line 152, column 6 to column 75)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england_latent.stan', line 152, column 6 to column 75)
+	Exception: G not finite and positive (in 'england_latent.stan', line 116, column 61 to column 97)
+	Exception: G not finite and positive (in 'england_latent.stan', line 116, column 61 to column 97)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england_latent.stan', line 152, column 6 to column 75)
+Exception: G not finite and positive (in 'england_latent.stan', line 116, column 61 to column 97)
+	Exception: G not finite and positive (in 'england_latent.stan', line 116, column 61 to column 97)
+	Exception: G not finite and positive (in 'england_latent.stan', line 116, column 61 to column 97)
+	Exception: G not finite and positive (in 'england_latent.stan', line 116, column 61 to column 97)
+	Exception: G not finite and positive (in 'england_latent.stan', line 116, column 61 to column 97)
+	Exception: G not finite and positive (in 'england_latent.stan', line 116, column 61 to column 97)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england_latent.stan', line 152, column 6 to column 75)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england_latent.stan', line 152, column 6 to column 75)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england_latent.stan', line 152, column 6 to column 75)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england_latent.stan', line 152, column 6 to column 75)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england_latent.stan', line 152, column 6 to column 75)
+	Exception: G not finite and positive (in 'england_latent.stan', line 116, column 61 to column 97)
+	Exception: G not finite and positive (in 'england_latent.stan', line 116, column 61 to column 97)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england_latent.stan', line 152, column 6 to column 75)
+Consider re-running with show_console=True if the above output is unclear!
+07:48:57 - cmdstanpy - WARNING - Some chains may have failed to converge.
+	Chain 1 had 999 iterations at max treedepth (99.9%)
+	Chain 2 had 999 iterations at max treedepth (99.9%)
+	Chain 3 had 999 iterations at max treedepth (99.9%)
+	Chain 4 had 999 iterations at max treedepth (99.9%)
+	Use the "diagnose()" method on the CmdStanMCMC object to see further information.
+        period  split               key                                                       model  window       start  group  n_tested  n_pos  observed_pct  interior  baseline_pct  pred_median_pct  pred_lo_pct  pred_hi_pct  covered    pit  log_pred_density
+0   summer2021      1  latent_adapt_ons  Hidden infections, random-walk susceptibility by age + ONS       1  2021-07-03    0-9      9233    138         1.495      True         1.151            1.668        1.321        2.036     True  0.163            -4.177
+1   summer2021      1  latent_adapt_ons  Hidden infections, random-walk susceptibility by age + ONS       1  2021-07-03  10-19      7539    150         1.990      True         1.753            2.374        1.923        2.905     True  0.050            -5.116
+2   summer2021      1  latent_adapt_ons  Hidden infections, random-walk susceptibility by age + ONS       1  2021-07-03  20-49     40511    430         1.061      True         0.762            1.052        0.913        1.205     True  0.547            -4.358
+3   summer2021      1  latent_adapt_ons  Hidden infections, random-walk susceptibility by age + ONS       1  2021-07-03  50-69     49117    262         0.533      True         0.375            0.480        0.403        0.566     True  0.887            -4.749
+4   summer2021      1  latent_adapt_ons  Hidden infections, random-walk susceptibility by age + ONS       1  2021-07-03    70+     28861     71         0.246      True         0.241            0.256        0.194        0.336     True  0.375            -3.292
+5   summer2021      1  latent_adapt_ons  Hidden infections, random-walk susceptibility by age + ONS       3  2021-07-31    0-9      8070    183         2.268      True         1.959            1.400        1.103        1.722    False  1.000           -16.048
+6   summer2021      1  latent_adapt_ons  Hidden infections, random-walk susceptibility by age + ONS       3  2021-07-31  10-19      6658    175         2.628      True         2.930            2.283        1.847        2.764     True  0.916            -4.762
+7   summer2021      1  latent_adapt_ons  Hidden infections, random-walk susceptibility by age + ONS       3  2021-07-31  20-49     38032    439         1.154      True         1.246            1.099        0.960        1.259     True  0.756            -4.572
+8   summer2021      1  latent_adapt_ons  Hidden infections, random-walk susceptibility by age + ONS       3  2021-07-31  50-69     49191    340         0.691      True         0.776            0.622        0.535        0.718     True  0.927            -5.163
+9   summer2021      1  latent_adapt_ons  Hidden infections, random-walk susceptibility by age + ONS       3  2021-07-31    70+     29207    111         0.380      True         0.488            0.411        0.325        0.507     True  0.258            -3.691
+10  summer2021      1  latent_adapt_ons  Hidden infections, random-walk susceptibility by age + ONS       5  2021-08-28    0-9      8899    169         1.899     False         1.898            2.394        1.888        3.023     True  0.029            -5.805
+11  summer2021      1  latent_adapt_ons  Hidden infections, random-walk susceptibility by age + ONS       5  2021-08-28  10-19      7425    199         2.680     False         2.500            2.869        2.168        3.704     True  0.300            -4.353
+12  summer2021      1  latent_adapt_ons  Hidden infections, random-walk susceptibility by age + ONS       5  2021-08-28  20-49     39561    388         0.981     False         1.185            1.180        0.948        1.431     True  0.048            -6.088
+13  summer2021      1  latent_adapt_ons  Hidden infections, random-walk susceptibility by age + ONS       5  2021-08-28  50-69     50014    403         0.806     False         0.878            0.946        0.800        1.134     True  0.031            -6.311
+14  summer2021      1  latent_adapt_ons  Hidden infections, random-walk susceptibility by age + ONS       5  2021-08-28    70+     29988    192         0.640     False         0.538            0.680        0.534        0.827     True  0.293            -4.174

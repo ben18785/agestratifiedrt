@@ -1,0 +1,25 @@
+denmark2021 comix_adapt_tests - CoMix x random-walk susceptibility, reporting follows tests
+06:24:58 - cmdstanpy - WARNING - Non-fatal error during sampling:
+Exception: G not finite and positive (in 'denmark.stan', line 80, column 59 to column 95)
+	Exception: G not finite and positive (in 'denmark.stan', line 80, column 59 to column 95)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'denmark.stan', line 108, column 36 to column 98)
+	Exception: G not finite and positive (in 'denmark.stan', line 80, column 59 to column 95)
+Exception: G not finite and positive (in 'denmark.stan', line 80, column 59 to column 95)
+	Exception: G not finite and positive (in 'denmark.stan', line 80, column 59 to column 95)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'denmark.stan', line 108, column 36 to column 98)
+	Exception: G not finite and positive (in 'denmark.stan', line 80, column 59 to column 95)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'denmark.stan', line 108, column 36 to column 98)
+Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'denmark.stan', line 108, column 36 to column 98)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'denmark.stan', line 108, column 36 to column 98)
+	Exception: G not finite and positive (in 'denmark.stan', line 80, column 59 to column 95)
+Exception: G not finite and positive (in 'denmark.stan', line 80, column 59 to column 95)
+	Exception: G not finite and positive (in 'denmark.stan', line 80, column 59 to column 95)
+	Exception: G not finite and positive (in 'denmark.stan', line 80, column 59 to column 95)
+	Exception: G not finite and positive (in 'denmark.stan', line 80, column 59 to column 95)
+Consider re-running with show_console=True if the above output is unclear!
+06:24:58 - cmdstanpy - WARNING - Some chains may have failed to converge.
+	Chain 1 had 2 divergent transitions (0.2%)
+	Chain 3 had 2 divergent transitions (0.2%)
+	Chain 4 had 6 divergent transitions (0.6%)
+	Use the "diagnose()" method on the CmdStanMCMC object to see further information.
+{'model': 'CoMix x random-walk susceptibility, reporting follows tests', 'max_rhat': 1.00222, 'divergences': 10, 'share_max_treedepth': 0.0, 'beta': '0.31 (0.05 to 0.56)', 'a_raw': '0.30; 2.26; 1.14; 2.41', 'b_raw': '1.67; 1.61; 1.26; 1.54', 'rho': '0.47', 'sigA': '0.166'}

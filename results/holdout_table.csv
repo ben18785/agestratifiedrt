@@ -11,9 +11,19 @@ autumn2021,CoMix x random-walk susceptibility by age + ONS,25,0.76,0.48,0.16,0.1
 autumn2021,"Hidden infections, CoMix, reporting sd by age + ONS",35,0.83,0.45,0.09,0.16,0.77
 autumn2021,"Hidden infections, random-walk susceptibility by age + ONS",35,0.83,0.49,0.08,0.16,0.74
 autumn2021,"Single group, totals + ONS, weekly reporting",5,0.4,0.49,0.13,0.19,0.6
+omicron,"CoMix x multipliers, reporting sd by age + ONS",15,0.2,0.54,0.28,0.17,0.27
+omicron,CoMix x random-walk susceptibility by age + ONS,15,0.4,0.58,0.32,0.17,0.27
+omicron,"Hidden infections, CoMix, reporting sd by age + ONS",25,0.88,0.49,0.14,0.35,0.76
+omicron,"Hidden infections, random-walk susceptibility by age + ONS",25,0.88,0.47,0.08,0.35,0.88
+omicron,"Single group, totals + ONS, weekly reporting",3,1.0,0.45,0.19,0.1,0.33
 spring2021,"CoMix x multipliers, reporting sd by age + ONS",35,0.8,0.5,0.26,0.33,0.54
 spring2021,"CoMix x multipliers, weekly reporting + ONS",35,0.8,0.5,0.26,0.33,0.51
 spring2021,CoMix x random-walk susceptibility by age + ONS,35,0.77,0.51,0.25,0.33,0.6
 spring2021,"Hidden infections, CoMix, reporting sd by age + ONS",40,0.7,0.51,0.24,0.29,0.57
 spring2021,"Hidden infections, random-walk susceptibility by age + ONS",40,0.7,0.5,0.24,0.29,0.52
 spring2021,"Single group, totals + ONS, weekly reporting",7,0.71,0.48,0.14,0.26,0.71
+summer2021,"CoMix x multipliers, reporting sd by age + ONS",20,0.65,0.42,0.22,0.23,0.65
+summer2021,CoMix x random-walk susceptibility by age + ONS,20,0.55,0.43,0.21,0.23,0.6
+summer2021,"Hidden infections, CoMix, reporting sd by age + ONS",30,0.83,0.45,0.13,0.27,0.7
+summer2021,"Hidden infections, random-walk susceptibility by age + ONS",30,0.87,0.45,0.13,0.27,0.7
+summer2021,"Single group, totals + ONS, weekly reporting",4,0.5,0.48,0.18,0.16,0.5

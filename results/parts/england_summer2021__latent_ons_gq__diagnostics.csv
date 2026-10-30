@@ -1,0 +1,2 @@
+model,max_rhat,min_ess_R,divergences,share_max_treedepth,a_raw,b_raw
+"Hidden infections, CoMix, reporting sd by age + ONS",1.04946,131,1,1.0,0.30; 11.48; 0.81; 2.92,1.69; 1.13; 1.40; 1.39

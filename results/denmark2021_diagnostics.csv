@@ -1,0 +1,8 @@
+model,max_rhat,divergences,share_max_treedepth,beta,a_raw,b_raw,rho,sigA
+"Single group, totals",1.00491,79,0.0,,,,,
+"Single group, reporting follows tests",1.00684,125,0.0,0.39 (-0.44 to 1.19),,,,
+"CoMix x multipliers, constant reporting",1.00224,2,0.0,,0.35; 1.96; 0.63; 4.81,1.95; 1.68; 1.35; 0.87,,
+"CoMix x multipliers, weekly reporting (cases only)",1.0052,0,0.004,,0.48; 3.42; 1.32; 0.75,1.65; 1.78; 1.60; 2.35,,
+"CoMix x multipliers, reporting follows tests",1.00202,0,0.0,0.53 (0.27 to 0.81),0.36; 2.96; 0.52; 5.06,1.60; 1.32; 0.91; 0.73,,
+"CoMix x multipliers, reporting follows tests + random walk",1.00374,2,0.001,0.29 (0.05 to 0.52),0.42; 4.85; 0.89; 0.74,1.58; 1.47; 1.33; 2.01,,
+"CoMix x random-walk susceptibility, reporting follows tests",1.00222,10,0.0,0.31 (0.05 to 0.56),0.30; 2.26; 1.14; 2.41,1.67; 1.61; 1.26; 1.54,0.47,0.166

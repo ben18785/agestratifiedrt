@@ -1,0 +1,22 @@
+denmark2021 comix_const - CoMix x multipliers, constant reporting
+05:51:59 - cmdstanpy - WARNING - Non-fatal error during sampling:
+Exception: G not finite and positive (in 'denmark.stan', line 80, column 59 to column 95)
+	Exception: G not finite and positive (in 'denmark.stan', line 80, column 59 to column 95)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'denmark.stan', line 108, column 36 to column 98)
+	Exception: G not finite and positive (in 'denmark.stan', line 80, column 59 to column 95)
+Exception: G not finite and positive (in 'denmark.stan', line 80, column 59 to column 95)
+	Exception: G not finite and positive (in 'denmark.stan', line 80, column 59 to column 95)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'denmark.stan', line 108, column 36 to column 98)
+	Exception: G not finite and positive (in 'denmark.stan', line 80, column 59 to column 95)
+Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'denmark.stan', line 108, column 36 to column 98)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'denmark.stan', line 108, column 36 to column 98)
+	Exception: G not finite and positive (in 'denmark.stan', line 80, column 59 to column 95)
+Exception: G not finite and positive (in 'denmark.stan', line 80, column 59 to column 95)
+	Exception: G not finite and positive (in 'denmark.stan', line 80, column 59 to column 95)
+	Exception: G not finite and positive (in 'denmark.stan', line 80, column 59 to column 95)
+	Exception: G not finite and positive (in 'denmark.stan', line 80, column 59 to column 95)
+Consider re-running with show_console=True if the above output is unclear!
+05:52:00 - cmdstanpy - WARNING - Some chains may have failed to converge.
+	Chain 2 had 2 divergent transitions (0.2%)
+	Use the "diagnose()" method on the CmdStanMCMC object to see further information.
+{'model': 'CoMix x multipliers, constant reporting', 'max_rhat': 1.00224, 'divergences': 2, 'share_max_treedepth': 0.0, 'a_raw': '0.35; 1.96; 0.63; 4.81', 'b_raw': '1.95; 1.68; 1.35; 0.87'}

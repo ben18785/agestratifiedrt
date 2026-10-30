@@ -1,0 +1,15 @@
+model,group,week_start,median,lo,hi
+"Single group, totals + ONS, weekly reporting",all,2021-06-07,0.60049951,0.35750450575000003,0.79638620125
+"Single group, totals + ONS, weekly reporting",all,2021-06-14,0.614222935,0.424478537,0.7791810110000001
+"Single group, totals + ONS, weekly reporting",all,2021-06-21,0.6288036349999999,0.50162134225,0.7548589777500001
+"Single group, totals + ONS, weekly reporting",all,2021-06-28,0.65550544,0.57975435825,0.739282109
+"Single group, totals + ONS, weekly reporting",all,2021-07-05,0.608066575,0.55977180775,0.6646787264999999
+"Single group, totals + ONS, weekly reporting",all,2021-07-12,0.604115935,0.5510004632500001,0.67267331675
+"Single group, totals + ONS, weekly reporting",all,2021-07-19,0.44592960000000004,0.40633705675,0.49107361450000003
+"Single group, totals + ONS, weekly reporting",all,2021-07-26,0.38447592500000005,0.3437558375,0.42702981825
+"Single group, totals + ONS, weekly reporting",all,2021-08-02,0.41726615499999997,0.38137420899999996,0.4553947915
+"Single group, totals + ONS, weekly reporting",all,2021-08-09,0.42112197,0.3808676285,0.46946353825000003
+"Single group, totals + ONS, weekly reporting",all,2021-08-16,0.444415455,0.40716288749999996,0.48571932425000003
+"Single group, totals + ONS, weekly reporting",all,2021-08-23,0.41468315,0.35846789975000004,0.4779907225
+"Single group, totals + ONS, weekly reporting",all,2021-08-30,0.425559945,0.33049451975,0.54070627975
+"Single group, totals + ONS, weekly reporting",all,2021-09-06,0.42415970000000003,0.29947630925,0.5784946897500001
