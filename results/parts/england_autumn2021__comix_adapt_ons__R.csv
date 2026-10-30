@@ -1,0 +1,17 @@
+model,week_start,median,lo,hi
+CoMix x random-walk susceptibility by age + ONS,2021-08-16,0.89372996,0.507174184,1.6249058600000001
+CoMix x random-walk susceptibility by age + ONS,2021-08-23,0.876986255,0.52188340125,1.48412426
+CoMix x random-walk susceptibility by age + ONS,2021-08-30,0.8645459200000001,0.5582648100000001,1.2836478150000001
+CoMix x random-walk susceptibility by age + ONS,2021-09-06,0.852534065,0.7734774680000001,0.9315440275
+CoMix x random-walk susceptibility by age + ONS,2021-09-13,1.3787018,1.2734358625,1.5006752125
+CoMix x random-walk susceptibility by age + ONS,2021-09-20,1.06211645,1.00636651,1.1208134975
+CoMix x random-walk susceptibility by age + ONS,2021-09-27,1.0650225,1.0150934775,1.11834255
+CoMix x random-walk susceptibility by age + ONS,2021-10-04,1.1907478999999999,1.1358099750000001,1.2472038625000001
+CoMix x random-walk susceptibility by age + ONS,2021-10-11,1.1183075,1.06552685,1.17547587
+CoMix x random-walk susceptibility by age + ONS,2021-10-18,0.86839816,0.8166546385000001,0.9431540695
+CoMix x random-walk susceptibility by age + ONS,2021-10-25,1.06722655,1.0123796625,1.1235242324999999
+CoMix x random-walk susceptibility by age + ONS,2021-11-01,0.9306487,0.87759583825,0.9872571675
+CoMix x random-walk susceptibility by age + ONS,2021-11-08,1.0807394,1.0180173275,1.14959293
+CoMix x random-walk susceptibility by age + ONS,2021-11-15,1.00125695,0.9459337550000001,1.0607257125
+CoMix x random-walk susceptibility by age + ONS,2021-11-22,0.9894989249999999,0.9354834325,1.0481348675000002
+CoMix x random-walk susceptibility by age + ONS,2021-11-29,0.9465778499999999,0.89333391525,1.0060267

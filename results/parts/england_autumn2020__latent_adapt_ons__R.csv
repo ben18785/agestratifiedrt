@@ -1,0 +1,18 @@
+model,week_start,median,lo,hi
+"Hidden infections, random-walk susceptibility by age + ONS",2020-08-03,1.01258305,0.77290731425,1.3399692450000003
+"Hidden infections, random-walk susceptibility by age + ONS",2020-08-10,0.7608207300000001,0.60523275525,0.9559578022500002
+"Hidden infections, random-walk susceptibility by age + ONS",2020-08-17,1.03609525,0.87428165225,1.235195685
+"Hidden infections, random-walk susceptibility by age + ONS",2020-08-24,1.6003954999999999,1.3442359425,1.890855235
+"Hidden infections, random-walk susceptibility by age + ONS",2020-08-31,1.6351654,1.3950822775,1.9520806925
+"Hidden infections, random-walk susceptibility by age + ONS",2020-09-07,0.770695345,0.6281187155,0.9431402569999999
+"Hidden infections, random-walk susceptibility by age + ONS",2020-09-14,1.95147185,1.6538535875,2.270380265
+"Hidden infections, random-walk susceptibility by age + ONS",2020-09-21,1.40816425,1.2165964075,1.6245841025
+"Hidden infections, random-walk susceptibility by age + ONS",2020-09-28,1.51850525,1.3061071725,1.746046175
+"Hidden infections, random-walk susceptibility by age + ONS",2020-10-05,0.963050315,0.8204546715000001,1.12874863
+"Hidden infections, random-walk susceptibility by age + ONS",2020-10-12,1.280247,1.0933010875,1.5263682275
+"Hidden infections, random-walk susceptibility by age + ONS",2020-10-19,1.0111742000000001,0.86455621075,1.1674229825
+"Hidden infections, random-walk susceptibility by age + ONS",2020-10-26,1.1092627,0.94870083775,1.29149686
+"Hidden infections, random-walk susceptibility by age + ONS",2020-11-02,1.06871955,0.9349650125,1.227595745
+"Hidden infections, random-walk susceptibility by age + ONS",2020-11-09,0.76507229,0.6485079122499999,0.896209001
+"Hidden infections, random-walk susceptibility by age + ONS",2020-11-16,0.67803927,0.56594202175,0.7923060175000001
+"Hidden infections, random-walk susceptibility by age + ONS",2020-11-23,0.93375589,0.745031836,1.1204963175000002

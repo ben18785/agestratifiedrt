@@ -1,8 +1,10 @@
-model,max_rhat,divergences,a_raw,b_raw,min_ess_R,share_max_treedepth
-"Single group, totals",1.00291,0,,,,
-"Single group, totals + ONS, weekly reporting",1.00383,1,,,,
-"CoMix x multipliers, constant reporting",1.00099,0,0.21; 1.25; 0.11; 0.49,2.62; 4.24; 4.31; 6.51,,
-"CoMix x multipliers, weekly reporting",1.00148,0,0.20; 2.61; 0.72; 6.40,1.61; 3.17; 2.35; 2.09,,
-"CoMix x multipliers, weekly reporting + ONS",1.00189,0,0.27; 5.43; 0.67; 1.36,1.28; 1.56; 1.55; 2.40,,
-"CoMix x multipliers, reporting sd by age + ONS",1.00257,0,0.24; 5.17; 0.65; 1.21,1.27; 1.56; 1.55; 2.41,2175.0,0.0
-"Hidden infections, CoMix, reporting sd by age + ONS",1.04446,1,0.33; 9.92; 0.87; 1.05,1.28; 1.41; 1.39; 1.96,101.0,1.0
+model,max_rhat,divergences,a_raw,b_raw,min_ess_R,share_max_treedepth,rho,sigA
+"Single group, totals",1.00291,0,,,,,,
+"Single group, totals + ONS, weekly reporting",1.00383,1,,,,,,
+"CoMix x multipliers, constant reporting",1.00099,0,0.21; 1.25; 0.11; 0.49,2.62; 4.24; 4.31; 6.51,,,,
+"CoMix x multipliers, weekly reporting",1.00148,0,0.20; 2.61; 0.72; 6.40,1.61; 3.17; 2.35; 2.09,,,,
+"CoMix x multipliers, weekly reporting + ONS",1.00189,0,0.27; 5.43; 0.67; 1.36,1.28; 1.56; 1.55; 2.40,,,,
+"CoMix x multipliers, reporting sd by age + ONS",1.00257,0,0.24; 5.17; 0.65; 1.21,1.27; 1.56; 1.55; 2.41,2175.0,0.0,,
+"Hidden infections, CoMix, reporting sd by age + ONS",1.04446,1,0.33; 9.92; 0.87; 1.05,1.28; 1.41; 1.39; 1.96,101.0,1.0,,
+CoMix x random-walk susceptibility by age + ONS,1.00786,0,0.19; 1.60; 1.46; 33.33,1.15; 0.94; 0.49; 0.16,296.0,0.751,0.14,0.147
+"Hidden infections, random-walk susceptibility by age + ONS",1.06052,0,0.31; 2.80; 4.91; 1.22,1.04; 1.15; 0.83; 0.93,127.0,1.0,0.38,0.109

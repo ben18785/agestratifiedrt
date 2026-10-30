@@ -132,3 +132,41 @@ model,week_start,median,lo,hi
 "Hidden infections, CoMix, reporting sd by age + ONS",2021-04-26,0.986875265,0.88166299875,1.1266333375
 "Hidden infections, CoMix, reporting sd by age + ONS",2021-05-03,1.0406999,0.908268337,1.192649205
 "Hidden infections, CoMix, reporting sd by age + ONS",2021-05-10,0.955270145,0.781139053,1.1600174025
+CoMix x random-walk susceptibility by age + ONS,2021-01-04,0.78120783,0.511055514,1.2272765
+CoMix x random-walk susceptibility by age + ONS,2021-01-11,0.763539415,0.5283110155,1.1659943725000002
+CoMix x random-walk susceptibility by age + ONS,2021-01-18,0.7533992350000001,0.5649616392500001,1.0165664875
+CoMix x random-walk susceptibility by age + ONS,2021-01-25,0.743086635,0.66058018425,0.821241587
+CoMix x random-walk susceptibility by age + ONS,2021-02-01,0.735832395,0.673129003,0.80049802775
+CoMix x random-walk susceptibility by age + ONS,2021-02-08,0.733125525,0.6730771885,0.795191199
+CoMix x random-walk susceptibility by age + ONS,2021-02-15,0.796885295,0.7217489735,0.867840807
+CoMix x random-walk susceptibility by age + ONS,2021-02-22,0.696276515,0.63424071425,0.76714921525
+CoMix x random-walk susceptibility by age + ONS,2021-03-01,0.792063865,0.7186076285,0.86992955525
+CoMix x random-walk susceptibility by age + ONS,2021-03-08,0.85948855,0.78236963825,0.96023180875
+CoMix x random-walk susceptibility by age + ONS,2021-03-15,0.92081024,0.83597854,1.0344498750000002
+CoMix x random-walk susceptibility by age + ONS,2021-03-22,0.9061592549999999,0.8310357580000001,0.99107375975
+CoMix x random-walk susceptibility by age + ONS,2021-03-29,0.7385568499999999,0.65267663975,0.8634701802500001
+CoMix x random-walk susceptibility by age + ONS,2021-04-05,0.9354354650000001,0.851289018,1.0357384325
+CoMix x random-walk susceptibility by age + ONS,2021-04-12,0.874874025,0.802077178,0.962405568
+CoMix x random-walk susceptibility by age + ONS,2021-04-19,0.8571022749999999,0.76948099775,0.94174728475
+CoMix x random-walk susceptibility by age + ONS,2021-04-26,0.827864225,0.74832700825,0.9098594747500001
+CoMix x random-walk susceptibility by age + ONS,2021-05-03,1.0250768,0.91582136225,1.121598335
+CoMix x random-walk susceptibility by age + ONS,2021-05-10,0.911614245,0.829434052,0.99624369625
+"Hidden infections, random-walk susceptibility by age + ONS",2021-01-04,0.82494505,0.71354304925,0.961393489
+"Hidden infections, random-walk susceptibility by age + ONS",2021-01-11,0.8160106300000001,0.72622466725,0.92805641125
+"Hidden infections, random-walk susceptibility by age + ONS",2021-01-18,0.7631876,0.6777402675,0.86623104225
+"Hidden infections, random-walk susceptibility by age + ONS",2021-01-25,0.800397665,0.70770990775,0.9003071455
+"Hidden infections, random-walk susceptibility by age + ONS",2021-02-01,0.722068915,0.63658257075,0.81271406
+"Hidden infections, random-walk susceptibility by age + ONS",2021-02-08,0.84478694,0.73563768125,0.95498973
+"Hidden infections, random-walk susceptibility by age + ONS",2021-02-15,0.74606704,0.6566659027499999,0.8446474575
+"Hidden infections, random-walk susceptibility by age + ONS",2021-02-22,0.689411505,0.60061681675,0.8157904715000001
+"Hidden infections, random-walk susceptibility by age + ONS",2021-03-01,0.98220123,0.859391686,1.1238123624999998
+"Hidden infections, random-walk susceptibility by age + ONS",2021-03-08,0.920485535,0.8209025165,1.041638855
+"Hidden infections, random-walk susceptibility by age + ONS",2021-03-15,0.978248855,0.855201593,1.1081042925000002
+"Hidden infections, random-walk susceptibility by age + ONS",2021-03-22,0.73459819,0.6327593985,0.85305439475
+"Hidden infections, random-walk susceptibility by age + ONS",2021-03-29,0.78679835,0.68901867225,0.8965572745
+"Hidden infections, random-walk susceptibility by age + ONS",2021-04-05,0.886019515,0.787134793,1.0031799575
+"Hidden infections, random-walk susceptibility by age + ONS",2021-04-12,0.98432705,0.87215733,1.118325185
+"Hidden infections, random-walk susceptibility by age + ONS",2021-04-19,0.881214115,0.78175715275,0.9998443610000001
+"Hidden infections, random-walk susceptibility by age + ONS",2021-04-26,0.9652276449999999,0.85164556075,1.0921633275000002
+"Hidden infections, random-walk susceptibility by age + ONS",2021-05-03,1.0231234,0.9080908607499999,1.159881975
+"Hidden infections, random-walk susceptibility by age + ONS",2021-05-10,0.89083752,0.7431616115,1.06034147

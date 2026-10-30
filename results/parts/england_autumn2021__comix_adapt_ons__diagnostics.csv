@@ -1,0 +1,2 @@
+model,max_rhat,min_ess_R,divergences,share_max_treedepth,a_raw,b_raw,rho,sigA
+CoMix x random-walk susceptibility by age + ONS,1.01381,293,0,1.0,0.10; 1.37; 0.27; 1.69,1.82; 0.67; 1.07; 0.77,0.48,0.339

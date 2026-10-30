@@ -1,0 +1,2 @@
+model,max_rhat,min_ess_R,divergences,share_max_treedepth,a_raw,b_raw,rho,sigA
+"Hidden infections, random-walk susceptibility by age + ONS",1.06052,127,0,1.0,0.31; 2.80; 4.91; 1.22,1.04; 1.15; 0.83; 0.93,0.38,0.109

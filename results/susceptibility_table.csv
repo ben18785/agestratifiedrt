@@ -1,0 +1,6 @@
+,S1,S2,S3
+"Single group, totals",0.01 (89%),0.01 (94%),0.02 (89%)
+Susceptibility constant,0.01 (100%),0.01 (94%),0.03 (94%)
+"Coverage x true protection, depletion",0.01 (100%),0.01 (94%),0.01 (100%)
+"Coverage x assumed protection (85%, no waning), depletion",0.01 (100%),0.01 (94%),0.03 (78%)
+Random-walk susceptibility by group,0.01 (94%),0.01 (94%),0.02 (100%)

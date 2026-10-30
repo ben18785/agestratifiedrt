@@ -1,0 +1,52 @@
+autumn2020 0 CoMix x random-walk susceptibility by age + ONS holding out windows [0, 2, 4]
+04:46:08 - cmdstanpy - WARNING - Non-fatal error during sampling:
+Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england.stan', line 136, column 19 to column 76)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england.stan', line 136, column 19 to column 76)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england.stan', line 136, column 19 to column 76)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england.stan', line 136, column 19 to column 76)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: neg_binomial_2_lpmf: Precision parameter is inf, but must be positive finite! (in 'england.stan', line 136, column 19 to column 76)
+Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england.stan', line 136, column 19 to column 76)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: neg_binomial_2_lpmf: Precision parameter is 0, but must be positive finite! (in 'england.stan', line 136, column 19 to column 76)
+Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: neg_binomial_2_lpmf: Location parameter is inf, but must be positive finite! (in 'england.stan', line 136, column 19 to column 76)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+	Exception: G not finite and positive (in 'england.stan', line 110, column 59 to column 95)
+Consider re-running with show_console=True if the above output is unclear!
+04:46:09 - cmdstanpy - WARNING - Some chains may have failed to converge.
+	Chain 1 had 999 iterations at max treedepth (99.9%)
+	Chain 2 had 999 iterations at max treedepth (99.9%)
+	Chain 3 had 999 iterations at max treedepth (99.9%)
+	Chain 4 had 999 iterations at max treedepth (99.9%)
+	Use the "diagnose()" method on the CmdStanMCMC object to see further information.
+        period  split              key                                            model  window       start  group  n_tested  n_pos  observed_pct  interior  baseline_pct  pred_median_pct  pred_lo_pct  pred_hi_pct  covered    pit  log_pred_density
+0   autumn2020      0  comix_adapt_ons  CoMix x random-walk susceptibility by age + ONS       0  2020-08-29    0-9      5016     13         0.259     False         0.233            0.080        0.020        0.179    False  1.000            -7.234
+1   autumn2020      0  comix_adapt_ons  CoMix x random-walk susceptibility by age + ONS       0  2020-08-29  10-19      3761      4         0.106     False         0.459            0.106        0.027        0.239     True  0.445            -1.687
+2   autumn2020      0  comix_adapt_ons  CoMix x random-walk susceptibility by age + ONS       0  2020-08-29  20-49     19329     33         0.171     False         0.267            0.145        0.083        0.212     True  0.804            -3.169
+3   autumn2020      0  comix_adapt_ons  CoMix x random-walk susceptibility by age + ONS       0  2020-08-29  50-69     23679     20         0.084     False         0.214            0.101        0.055        0.160     True  0.267            -2.838
+4   autumn2020      0  comix_adapt_ons  CoMix x random-walk susceptibility by age + ONS       0  2020-08-29    70+     14615     10         0.068     False         0.169            0.096        0.041        0.185     True  0.215            -2.719
+5   autumn2020      0  comix_adapt_ons  CoMix x random-walk susceptibility by age + ONS       2  2020-09-26    0-9     11600     53         0.457      True         0.493            0.733        0.517        0.991    False  0.004            -6.781
+6   autumn2020      0  comix_adapt_ons  CoMix x random-walk susceptibility by age + ONS       2  2020-09-26  10-19      8312     85         1.023      True         0.879            1.588        1.239        1.985    False  0.000            -9.038
+7   autumn2020      0  comix_adapt_ons  CoMix x random-walk susceptibility by age + ONS       2  2020-09-26  20-49     47805    320         0.669      True         0.511            0.605        0.496        0.709     True  0.887            -4.891
+8   autumn2020      0  comix_adapt_ons  CoMix x random-walk susceptibility by age + ONS       2  2020-09-26  50-69     53476    270         0.505      True         0.439            0.484        0.393        0.595     True  0.650            -4.316
+9   autumn2020      0  comix_adapt_ons  CoMix x random-walk susceptibility by age + ONS       2  2020-09-26    70+     32450     96         0.296      True         0.325            0.302        0.210        0.422     True  0.448            -3.740
+10  autumn2020      0  comix_adapt_ons  CoMix x random-walk susceptibility by age + ONS       4  2020-10-24    0-9     11080    148         1.336      True         1.237            1.083        0.830        1.372     True  0.957            -5.342
+11  autumn2020      0  comix_adapt_ons  CoMix x random-walk susceptibility by age + ONS       4  2020-10-24  10-19      8178    151         1.846      True         1.961            2.103        1.712        2.519     True  0.107            -4.485
+12  autumn2020      0  comix_adapt_ons  CoMix x random-walk susceptibility by age + ONS       4  2020-10-24  20-49     46329    614         1.325      True         1.173            1.332        1.179        1.548     True  0.473            -4.539
+13  autumn2020      0  comix_adapt_ons  CoMix x random-walk susceptibility by age + ONS       4  2020-10-24  50-69     52669    606         1.151      True         0.979            1.151        0.995        1.352     True  0.496            -4.703
+14  autumn2020      0  comix_adapt_ons  CoMix x random-walk susceptibility by age + ONS       4  2020-10-24    70+     30538    216         0.707      True         0.615            0.828        0.635        1.100     True  0.132            -4.947

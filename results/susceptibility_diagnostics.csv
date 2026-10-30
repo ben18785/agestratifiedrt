@@ -1,0 +1,16 @@
+scenario,fit,max_rhat,divergences
+S1,adapt,1.00669,0
+S1,guessed,1.00231,0
+S1,ignore,1.00317,0
+S1,totals,1.00149,0
+S1,truth,1.00197,0
+S2,adapt,1.00124,0
+S2,guessed,1.00397,0
+S2,ignore,1.00247,0
+S2,totals,1.00336,0
+S2,truth,1.00397,0
+S3,adapt,1.00209,11
+S3,guessed,1.0026,0
+S3,ignore,1.00216,1
+S3,totals,1.00198,0
+S3,truth,1.00417,1
