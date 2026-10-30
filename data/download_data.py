@@ -9,6 +9,8 @@ Sources (all open licences):
     https://www.ons.gov.uk/peoplepopulationandcommunity/healthandsocialcare/conditionsanddiseases/datasets/coronaviruscovid19infectionsurveydata
   UKHSA coronavirus dashboard archive, vaccinations by age and upper-tier local authority
     (Open Government Licence v3.0); only the needed files are read from the 760 MB archive
+  UKHSA, R value and growth rate time series (Open Government Licence v3.0)
+    https://www.gov.uk/guidance/the-r-value-and-growth-rate
   ONS mid-2020 population estimates for England by single year of age, via Nomis
     (Open Government Licence v3.0) https://www.nomisweb.co.uk
 Usage: python data/download_data.py
@@ -35,6 +37,9 @@ FILES = {
     # releases of 16 and 30 April 2021: daily modelled positivity by age/school year (28 Feb to 24 Apr 2021)
     "ons_cis/ons_cis_20210416.xlsx": f"{ONS}/previous/v19/covid19infectionsurveydatasets202104161.xlsx",
     "ons_cis/ons_cis_20210430.xlsx": f"{ONS}/previous/v22/covid19infectionsurveydatasets20210430eng1.xlsx",
+    # government (SPI-M-O / UKHSA) published R ranges for England, May 2020 to Dec 2022
+    "external/r_growth_timeseries_20221221.ods": "https://assets.publishing.service.gov.uk/media/63a46e3ed3bf7f375c7d833d/"
+                                                 "221221_R_and_growth_rate_time_series_for_publication_v1.0.ods",
 }
 VACC_ZIP = "https://archive.ukhsa-dashboard.data.gov.uk/coronavirus-dashboard/vaccinations.zip"
 POP_URL = ("https://www.nomisweb.co.uk/api/v01/dataset/NM_2002_1.data.csv?geography=2092957699&date=2020"
