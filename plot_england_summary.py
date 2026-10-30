@@ -38,9 +38,13 @@ for ax, (tag, title, events) in zip(axes, PERIODS):
     ax.axhline(1, color="black", lw=0.6)
     lo, hi = 0.5, min(2.2, res[res.week_start >= start].hi.max() + 0.05)
     log_r_axis(ax, lo, hi)
+    prev, level = None, 0
     for d, lab in events.items():
-        ax.axvline(pd.Timestamp(d), ls="--", color="grey", lw=0.7)
-        ax.text(pd.Timestamp(d) + pd.Timedelta(days=1), hi * 0.97, lab, fontsize=7, color="grey", va="top")
+        d = pd.Timestamp(d)
+        level = level + 1 if prev is not None and (d - prev).days < 10 else 0   # stack labels of close events
+        prev = d
+        ax.axvline(d, ls="--", color="grey", lw=0.7)
+        ax.text(d + pd.Timedelta(days=1), hi * 0.97 * 0.9 ** level, lab, fontsize=7, color="grey", va="top")
     ax.set_title(title, fontsize=9, loc="left")
     ax.set_ylabel("$R_t$")
     ax.xaxis.set_major_locator(mdates.MonthLocator())
